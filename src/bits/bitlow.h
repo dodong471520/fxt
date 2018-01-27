@@ -200,11 +200,12 @@ static inline ulong low_zeros(ulong x)
 static inline ulong low_match(ulong x, ulong y)
 // Return word that contains all bits at the low end where x and y match.
 // If x = *0W and y = *1W, then 00W is returned.
+// Example: 01001100,11011100 --> 00001100
 {
-    x ^= y;   // bit-wise difference
-    x &= -x;  // lowest bit that differs in both words
-    x -= 1;   // mask that covers equal bits at low end
-    x &= y;   // isolate matching bits
+    x ^= y;   // 10010000 bit-wise difference
+    x &= -x;  // 00010000 lowest bit that differs in both words
+    x -= 1;   // 00001111 mask that covers equal bits at low end
+    x &= y;   // 00001100 isolate matching bits
     return x;
 }
 // -------------------------
