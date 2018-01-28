@@ -19,6 +19,7 @@
 static inline ulong single_ones(ulong x)
 // Return word with only the isolated ones of x set.
 // Assume outside values are 0.
+// 01011 -> 01000
 {
     return  x & ~( (x<<1) | (x>>1) );
 }
@@ -52,6 +53,7 @@ static inline ulong single_zeros_xi(ulong x)
 static inline ulong single_values(ulong x)
 // Return word where only the isolated ones and zeros of x are set.
 // Assume outside values are 0.
+// 0010100 -> 0011100
 {
     return  (x ^ (x<<1)) & (x ^ (x>>1));
 }
@@ -68,6 +70,7 @@ static inline ulong single_values_xi(ulong x)
 
 static inline ulong border_ones(ulong x)
 // Return word where only those ones of x are set that lie next to a zero.
+// 1110100 -> 1010100
 {
 //    ulong t = x & (x>>1) & (x<<1);  // interior_ones(x)
 //    return  x ^ t;
@@ -78,6 +81,7 @@ static inline ulong border_ones(ulong x)
 static inline ulong border_values(ulong x)
 // Return word where those bits of x are set that lie on a transition.
 // Assume outside values are 0.
+// 0001100 -> 0011110
 {
     return  (x ^ (x<<1)) | (x ^ (x>>1));
 }
@@ -103,6 +107,7 @@ static inline ulong low_border_ones(ulong x)
 static inline ulong block_border_ones(ulong x)
 // Return word where only those ones of x are set
 //   that are at the border of a block of at least 2 ones.
+//   0101110 -> 0001010
 {
     return  x & ( (x<<1) ^ (x>>1) );
 }
@@ -111,6 +116,7 @@ static inline ulong block_border_ones(ulong x)
 static inline ulong low_block_border_ones(ulong x)
 // Return word where only those ones of x are set
 //   that are at left of a border of a block of at least 2 ones.
+//   0101110 -> 0000010
 {
     ulong t = x & ( (x<<1) ^ (x>>1) );  // block_border_ones()
     return  t & (x>>1);
@@ -119,7 +125,7 @@ static inline ulong low_block_border_ones(ulong x)
 
 static inline ulong high_block_border_ones(ulong x)
 // Return word where only those ones of x are set
-//   that are at right of a border of a block of at least 2 ones.
+//   that are at right of a border of a block of at least 2 ones//  01110010 -> 01000000.
 {
     ulong t = x & ( (x<<1) ^ (x>>1) );  // block_border_ones()
     return  t & (x<<1);
@@ -130,6 +136,7 @@ static inline ulong high_block_border_ones(ulong x)
 static inline ulong block_ones(ulong x)
 // Return word where only those ones of x are set
 //   that are part of a block of at least 2 ones.
+//   010101100 -> 000001100
 {
     return  x & ( (x<<1) | (x>>1) );
 }

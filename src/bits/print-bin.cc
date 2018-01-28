@@ -31,7 +31,14 @@ print_bin(const char *bla, unsigned long long x, ulong pd/*=0*/, const char *c01
 
     const char *d = ( 0==c01 ?  n01 : c01 );
 
-    for (  ; 0!=m; m>>=1)  cout << d[ 0!=(x & m) ];
+    for (  ; 0!=m; m>>=1)
+    {
+      if(m&0x8888888888888888 && m!=0x8000000000000000)
+      {
+        cout<<',';
+      }
+      cout << d[ 0!=(x & m) ];
+    }
 }
 // -------------------------
 
