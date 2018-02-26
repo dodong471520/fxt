@@ -18,6 +18,7 @@ static inline ulong bit_cyclic_match(ulong x, ulong y)
 //   how often the right arg must be rotated right (to match the left)
 // or, equivalently:
 //   how often the left arg must be rotated left (to match the right)
+//   0x01000000,0x10000000-> 1
 {
     ulong r = 0;
     do
@@ -34,6 +35,7 @@ static inline ulong bit_cyclic_match(ulong x, ulong y)
 static inline ulong bit_cyclic_match(ulong x, ulong y, ulong n)
 // Return  r if x==rotate_right(y, r, n) else return ~0UL
 //  (using n-bit words)
+//  0x00000000_00010000,0x00000000_00000001,32 -> 16
 {
     ulong r = 0;
     do

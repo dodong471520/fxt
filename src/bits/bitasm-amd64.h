@@ -17,6 +17,7 @@
 #ifdef HAVE_AMD64_POPCNT
 //#warning HAVE_AMD64_POPCNT
 static inline ulong asm_bit_count(ulong x)
+// 01010 -> 2
 {
     asm ("popcntq %0, %0" : "=r" (x) : "0" (x));
     return x;
@@ -35,6 +36,7 @@ static inline ulong asm_bit_count(ulong x)
 
 static inline ulong asm_bsf(ulong x)
 // Bit Scan Forward
+// 01010 -> 1
 {
     asm ("bsfq %0, %0" : "=r" (x) : "0" (x));
     return x;
@@ -44,6 +46,7 @@ static inline ulong asm_bsf(ulong x)
 
 static inline ulong asm_bsr(ulong x)
 // Bit Scan Reverse
+// 01010 -> 3
 {
     asm ("bsrq %0, %0" : "=r" (x) : "0" (x));
     return x;

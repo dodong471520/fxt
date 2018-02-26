@@ -1,3 +1,4 @@
+// lidong
 #if !defined  HAVE_THUE_MORSE_H__
 #define       HAVE_THUE_MORSE_H__
 // This file is part of the FXT library.
@@ -33,15 +34,23 @@ public:
 
     ulong next()
     {
+        const int len=16;
+        // printf("\nk:%lu",k_);
         ulong x = k_ ^ (k_ + 1);
+        // print_bin_l("\nx1 ",x,len);
         ++k_;
         x ^= x>>1;        // highest bit that changed with increment
 #if BITS_PER_LONG > 32
+        // print_bin_l("\nx2 ",x,len);
         x &= 0x5555555555555555UL;
 #else
         x &= 0x55555555UL;
 #endif
+        // print_bin_l("\nx3 ",x,len);
+        // print_bin_l("\ntm1 ",tm_,len);
         tm_ ^= ( x!=0 );  // change if highest changed bit was at even index
+        // print_bin_l("\ntm2 ",tm_,len);
+        // printf("\n");
         return tm_;
     }
 };

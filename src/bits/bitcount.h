@@ -15,6 +15,7 @@ static inline ulong bit_count(ulong x)
 // The sequence of values returned for x = 0, 1, 2, 3, ... is
 // 0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4, 1, ...
 // (OEIS sequence A000120).
+// 010101 -> 3
 {
 #ifdef HAVE_AMD64_POPCNT  // currently not auto-detected
 
@@ -82,6 +83,8 @@ static inline ulong bit_count(ulong x)
 
 static inline ulong bit_count_15(ulong x)
 // Return number of set bits, must have at most 15 set bits.
+// 011101 -> 4
+// 11111111111111111 -> 2
 {
 #if  BITS_PER_LONG == 32
     x -=  (x>>1) & 0x55555555UL;                        // 0-2 in 2 bits
@@ -101,6 +104,8 @@ static inline ulong bit_count_15(ulong x)
 
 static inline ulong bit_count_3(ulong x)
 // Return number of set bits, must have at most 3 set bits.
+// 010101 -> 3
+// 011101 -> 1
 {
 #if  BITS_PER_LONG == 32
     x -=  (x>>1) & 0x55555555UL;  // 0-2 in 2 bits
@@ -129,6 +134,7 @@ static inline int bit_count_cmp(const ulong &a, const ulong &b)
 
 static inline ulong bit_count_sparse(ulong x)
 // Return number of bits set.
+// 010101 -> 3
 {
 #if 0
     // The loop will execute once for each bit of x set:
@@ -157,6 +163,7 @@ static inline ulong bit_count_dense(ulong x)
 // Return number of bits set.
 // The loop (of bit_count_sparse()) will execute once for
 //   each unset bit (i.e. zero) of x.
+//   11101 -> 4
 {
     return  BITS_PER_LONG - bit_count_sparse( ~x );
 }
@@ -182,7 +189,7 @@ static inline ulong bit_block_ge2_count(ulong x)
 // E.g.:
 // ..1..11111...111.  -> 2
 // ...1..11111...111  -> 2
-// ......1.....1.1..  -> 0
+// .....11.....1.1..  -> 0
 // .........111.1111  -> 2
 {
     // return bit_block_count( interior_ones(x) );
@@ -194,6 +201,7 @@ static inline ulong bit_block_ge2_count(ulong x)
 static inline ulong bit_count_01(ulong x)
 // Return number of bits in a word
 // for words of the special form 00...0001...11
+// 010101 -> 5
 {
 #if defined  BITS_USE_ASM
     if ( 1>=x )  return x;

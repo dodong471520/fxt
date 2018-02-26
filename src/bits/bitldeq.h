@@ -1,3 +1,4 @@
+//lidong
 #if !defined HAVE_BITLDEQ_H__
 #define      HAVE_BITLDEQ_H__
 // This file is part of the FXT library.
@@ -14,6 +15,8 @@ static inline bool ld_eq(ulong x, ulong y)
 // ld_eq(x,y) correctly returns false
 // whereas ld(x) == ld(y) gives true
 // (because ld(x) returns 0 for both x==1 and x==0).
+// 0111010, 0110100 -> true
+// 0111010, 0010100 -> false
 {
     return  ( (x^y) <= (x&y) );
 }
@@ -21,6 +24,8 @@ static inline bool ld_eq(ulong x, ulong y)
 
 static inline bool ld_neq(ulong x, ulong y)
 // Return whether floor(log2(x))!=floor(log2(y))
+// 0111010 , 0010100 -> true
+// 0111010 , 0110100 -> false
 {
     return  ( (x^y) > (x&y) );
 }

@@ -1,3 +1,4 @@
+// lidong
 #if !defined HAVE_BITCYCLIC_DIST_H__
 #define      HAVE_BITCYCLIC_DIST_H__
 // This file is part of the FXT library.
@@ -14,6 +15,8 @@
 static inline ulong bit_cyclic_dist(ulong a, ulong b)
 // Return minimal bitcount of (t ^ b)
 // where t runs through the cyclic rotations of a.
+// 0xf0f0,0x00f0 -> 4
+// 0xff00,0x0ff0 -> 0
 {
     ulong d = ~0UL;
     ulong t = a;
@@ -33,6 +36,8 @@ static inline ulong bit_cyclic_dist(ulong a, ulong b, ulong n)
 // Return minimal bitcount of (t ^ b)
 // where t runs through the cyclic rotations of a.
 // Using n-bit words.
+// 0xf0f0,0x00f0,8 -> 0
+// 0xff00,0x0ff0,8 -> 4
 {
     ulong d = ~0UL;
     const ulong m = ~0UL >> (BITS_PER_LONG - n);

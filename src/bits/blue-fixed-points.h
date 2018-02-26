@@ -1,3 +1,4 @@
+// lidong
 #if !defined  HAVE_BLUE_FIXED_POINTS_H__
 #define       HAVE_BLUE_FIXED_POINTS_H__
 // This file is part of the FXT library.
@@ -8,6 +9,7 @@
 
 #include "fxttypes.h"
 #include "bits/revgraycode.h"
+#include "bits/print-bin.h"
 
 
 static inline ulong blue_fixed_point(ulong s)
@@ -33,14 +35,20 @@ static inline ulong blue_fixed_point(ulong s)
 //  15 = ..1111 :    ...11.1.11 =      107
 //  16 = .1.... :    .1...1.... =      272
 //  17 = .1...1 :    .1.11.1... =      360
+//  blue_code(blue_fixed_point(a))=blue_fixed_point(a)
 {
     if ( 0==s )  return 0;
     ulong f = 1;
     while ( s>1 )
     {
+        // print_bin_l("\n\ns:",s);
+        // print_bin_l("\nf1:",f);
         f ^= (f<<1);
+        // print_bin_l("\nf2:",f);
         f <<= 1;
+        // print_bin_l("\nf3:",f);
         f |= (s&1);
+        // print_bin_l("\nf4:",f);
         s >>= 1;
     }
     return f;
@@ -50,6 +58,7 @@ static inline ulong blue_fixed_point(ulong s)
 
 static inline ulong blue_fixed_point_idx(ulong f)
 // Inverse of blue_fixed_point()
+// blue_fixed_point_idx(blue_fixed_point(a))=a
 {
     ulong s = 1;
     while ( f )

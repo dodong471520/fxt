@@ -1,3 +1,4 @@
+// lidong
 // This file is part of the FXT library.
 // Copyright (C) 2010, 2014 Joerg Arndt
 // License: GNU General Public License version 3 or later,

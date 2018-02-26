@@ -17,6 +17,7 @@
 static const char n01[] = {'.', '1'};
 //static const char n01[] = {'0', '1'};
 
+static const char split_char=',';
 
 void
 print_bin(const char *bla, unsigned long long x, ulong pd/*=0*/, const char *c01/*=0*/)
@@ -33,12 +34,40 @@ print_bin(const char *bla, unsigned long long x, ulong pd/*=0*/, const char *c01
 
     for (  ; 0!=m; m>>=1)
     {
-      if(m&0x8888888888888888 && m!=0x8000000000000000)
+      if(m&0x8888888888888888 && m!=((ulong)1<<(pd-1)))
       {
-        cout<<',';
+        cout<<split_char;
       }
       cout << d[ 0!=(x & m) ];
     }
+}
+
+void
+print_bin(const char *bla, ulong x, ulong pd/*=0*/, const char *c01/*=0*/)
+// Print x to radix-2.
+// pd: how many bits to print.
+{
+    cout << bla;
+
+    if ( 0==pd )  pd = BITS_PER_LONG;
+    ulong m = 1ULL << (BITS_PER_LONG-1);
+    m >>= (BITS_PER_LONG-pd);
+
+    const char *d = ( 0==c01 ?  n01 : c01 );
+
+    for (  ; 0!=m; m>>=1)
+    {
+      if(m&0x8888888888888888 && m!=((ulong)1<<(pd-1)))
+      {
+        cout<<split_char;
+      }
+      cout << d[ 0!=(x & m) ];
+    }
+}
+void print_bin_l(const char *bla,ulong x,ulong pd)
+{
+    static const char tmp[]="01";
+    print_bin(bla,x,pd,tmp);
 }
 // -------------------------
 

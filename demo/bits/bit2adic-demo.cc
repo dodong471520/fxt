@@ -30,6 +30,8 @@ show2adic(ulong x)
         ulong i = inv2adic(x);  // inverse
         cout << endl;
         print_bin("    inv = ", i, pn);
+        printf(" = %lu",i);
+        print_bin("\ninv * a = ",x * i, pn);
         jjassert( 1UL == x*i );
     }
 

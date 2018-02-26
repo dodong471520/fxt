@@ -1,3 +1,4 @@
+// lidong
 #if !defined  HAVE_BITPERIODIC_H__
 #define       HAVE_BITPERIODIC_H__
 // This file is part of the FXT library.
@@ -13,6 +14,7 @@ static inline ulong bit_copy_periodic(ulong a, ulong p)
 // Return word that consists of the lowest p bits of a repeated.
 // E.g.: if p==3 and a=*****xyz (8-bit), the return yzxyzxyz.
 // Must have p>0.
+// 0x00000abc,12 -> 0xbcabcabc
 {
     a &= ( ~0UL >> (BITS_PER_LONG-p) );
     for (ulong s=p; s<BITS_PER_LONG; s<<=1)  { a |= (a<<s); }
@@ -25,6 +27,7 @@ static inline ulong bit_copy_periodic(ulong a, ulong p, ulong ldn)
 // in the lowest ldn bits (upper bits are zero).
 // E.g.: if p==3, ldn=7 and a=*****xyz (8-bit), the return 0zxyzxyz.
 // Must have p>0 and ldn>0.
+// 0x00000abc,12,24 -> 0x00abcabc
 {
     a &= ( ~0UL >> (BITS_PER_LONG-p) );
     for (ulong s=p; s<ldn; s<<=1)  { a |= (a<<s); }

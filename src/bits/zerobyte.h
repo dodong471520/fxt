@@ -1,3 +1,4 @@
+// lidong
 #if !defined HAVE_ZEROBYTE_H__
 #define      HAVE_ZEROBYTE_H__
 // This file is part of the FXT library.
@@ -16,6 +17,9 @@ static inline ulong contains_zero_byte(ulong x)
 //
 // To scan for other values than zero (e.g. 0xa5) use:
 //  contains_zero_byte( x ^ 0xa5a5a5a5UL )
+//  0 -> 0x8080808080808080
+//  11 -> 0x8080808080808000
+//  0x1010101010101010 -> 0
 {
 #if 1
 

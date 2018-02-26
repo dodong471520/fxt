@@ -13,6 +13,8 @@ static inline ulong first_comb(ulong k)
 // Return the first combination of (i.e. smallest word with) k bits,
 // i.e.  00..001111..1 (k low bits set)
 // Must have:  0 <= k <= BITS_PER_LONG
+// 2 -> 011
+// 3 -> 111
 {
 //    ulong x = ~0UL;
 //    if ( BITS_PER_LONG != k )  x = ~(x<<k);
@@ -27,6 +29,9 @@ static inline ulong last_comb(ulong k, ulong n=BITS_PER_LONG)
 // Return the last combination of (biggest n-bit word with) k bits
 // i.e.  1111..100..00 (k high bits set)
 // Must have:  0 <= k <= n <= BITS_PER_LONG
+// 2 -> 1100,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,
+// 3 -> 1110,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,0000,
+
 {
 //    if ( BITS_PER_LONG == k )  return  ~0UL;
 //    else return  ((1UL<<k)-1) << (n - k);

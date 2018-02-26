@@ -1,3 +1,4 @@
+// lidong
 #if !defined  HAVE_GRSNEGATIVE_H__
 #define       HAVE_GRSNEGATIVE_H__
 // This file is part of the FXT library.
@@ -20,7 +21,10 @@ static inline ulong grs_negative_q(ulong x)
 //  126,131,134,139,140, ...
 //
 // Algorithm: count bit pairs modulo 2
+// 111 -> 2 -> 0, 1111 -> 3 -> 1
 //
+//  5 -> 0
+//  6 -> 1
 {
     return  parity( x & (x>>1) );
 }
@@ -29,14 +33,26 @@ static inline ulong grs_negative_q(ulong x)
 
 static inline ulong grs_next(ulong k, ulong g)
 // With g == grs_negative_q(k), compute grs_negative_q(k+1).
+// 4,0 -> 0
+// 5,0 -> 1
 {
 #if BITS_PER_LONG > 32
     const ulong cm = 0x5555555555555554UL;  // 64-bit version
 #else
     const ulong cm = 0x55555554UL;
 #endif
+    const int len=16;
+    // printf("\nk:%lu,g:%lu",k,g);
+    // print_bin_l("\nk ",k,len);
     ulong h = ~k;  h &= -h;  // == lowest_zero(k);
+    // print_bin_l("\nh ",h,len);
+    // print_bin_l("\nm ",cm,len);
     g ^= ( ((h&cm) ^ ((k>>1)&h)) !=0 );
+    // print_bin_l("\n3 ",h&cm,len);
+    // print_bin_l("\n4 ",(k>>1)&h,len);
+    // print_bin_l("\n5 ",(h&cm)^((k>>1)&h),len);
+    // printf("\ng:%lu",g);
+    // printf("\n");
     return  g;
 }
 // -------------------------

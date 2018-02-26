@@ -1,3 +1,4 @@
+// lidong
 #if !defined  HAVE_BITSUBSETQ_H__
 #define       HAVE_BITSUBSETQ_H__
 // This file is part of the FXT library.
@@ -10,6 +11,9 @@
 static inline bool is_subset(ulong u, ulong e)
 // Return whether the set bits of u are a subset of the set bits of e.
 // That is, as bitsets, test whether u is a subset of e.
+// 0110 1110 -> true
+// 0011 1110 -> false
+// 1110 1110 -> true
 {
     return  ( (u & e)==u );
 //    return  ( (u & ~e)==0 );
@@ -19,6 +23,8 @@ static inline bool is_subset(ulong u, ulong e)
 
 static inline bool is_proper_subset(ulong u, ulong e)
 // Return whether u (as bitset) is a proper subset of e.
+// 0110 1110 -> true
+// 1110 1110 -> false
 {
 //    return  ( (u<e) && ( (u & e)==u ) );
     return  ( (u<e) & ((u & e)==u) );  // avoid branch

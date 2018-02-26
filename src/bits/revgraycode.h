@@ -1,3 +1,4 @@
+// lidong
 #if !defined HAVE_REVGRAYCODE_H__
 #define      HAVE_REVGRAYCODE_H__
 // This file is part of the FXT library.
@@ -15,6 +16,7 @@ static inline ulong rev_gray_code(ulong x)
 // Also: multiplication by x+1 as binary polynomial.
 // Also: return x^2+x in binary normal basis.
 // rev_gray_code(x) == revbin( gray_code( revbin(x) ) )
+// 1010 -> 11110
 {
     return  x ^ (x<<1);
 }
@@ -29,6 +31,7 @@ static inline ulong inverse_rev_gray_code(ulong x)
 // Also: return solution of z = x^2+x in binary normal basis.
 // Note: the statements can be reordered at will.
 // inverse_rev_gray_code(x) == revbin( inverse_gray_code( revbin(x) ) )
+// 1010 -> 0110
 {
     // use: rev_gray ** BITSPERLONG == id:
     x ^= x<<1;  // rev_gray ** 1

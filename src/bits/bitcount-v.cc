@@ -1,3 +1,4 @@
+// lidong
 // This file is part of the FXT library.
 // Copyright (C) 2010, 2011, 2012 Joerg Arndt
 // License: GNU General Public License version 3 or later,
@@ -12,6 +13,7 @@
 static inline ulong bit_count_v15(const ulong *x)
 // Return sum(j=0, 14, bit_count(x[j]) )
 // Technique is "vertical" addition.
+// a[0]=0B001,a[1]=0B011 -> 3
 {
 //#define PP(k) { cout << "x[" << setw(2) << k << "]="; print_bin("", x[k], 8); print_bin("  a0=", a0, 8); print_bin("  a1=", a1, 8); print_bin("  a2=", a2, 8); print_bin("  a3=", a3, 8); cout << endl; }
 #define PP(k)
@@ -48,6 +50,7 @@ static inline ulong bit_count_v15(const ulong *x)
 ulong
 bit_count_v(const ulong *x, ulong n)
 // Return sum(j=0, n-1, bit_count(x[j]) )
+// a[0]=0B001,a[1]=0B011 -> 3
 {
     ulong b = 0;
     const ulong *xe = x + n + 1;

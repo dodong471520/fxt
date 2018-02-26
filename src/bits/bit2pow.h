@@ -1,3 +1,4 @@
+//lidogn
 #if !defined HAVE_BIT2POW_H__
 #define      HAVE_BIT2POW_H__
 // This file is part of the FXT library.
@@ -15,6 +16,7 @@ static inline ulong ld(ulong x)
 // Return floor(log2(x)),
 // i.e. return k so that 2^k <= x < 2^(k+1)
 // If x==0, then 0 is returned (!)
+// 001010 -> 3
 {
 //    ulong k = 0;
 //    while ( x>>=1 )  { ++k; }
@@ -53,6 +55,8 @@ static inline ulong ld(ulong x)
 
 static inline bool is_pow_of_2(ulong x)
 // Return whether x == 0(!) or x == 2**k
+// 01000  -> true
+// 01010  -> false
 {
     return  !(x & (x-1));
 //    return  ((x & -x) == x);
@@ -61,6 +65,8 @@ static inline bool is_pow_of_2(ulong x)
 
 static inline bool one_bit_q(ulong x)
 // Return whether x \in {1,2,4,8,16,...}
+// 01000 -> true
+// 01010 -> false
 {
     ulong m = x - 1;
     return  (((x^m)>>1) == m);
@@ -73,6 +79,8 @@ static inline ulong next_pow_of_2(ulong x)
 // Return x if x=2**k
 // else return 2**ceil(log_2(x))
 // Exception: returns 0 for x==0
+// 01010  -> 10000
+// 01000  -> 01000
 {
     if ( is_pow_of_2(x) )  return x;
 
@@ -111,6 +119,8 @@ static inline ulong next_pow_of_2(ulong x)
 static inline ulong next_exp_of_2(ulong x)
 // Return k if x=2**k else return k+1.
 // Exception: returns 0 for x==0.
+// 01010  -> 4
+// 01000  -> 3
 {
     if ( x <= 1 )  return 0;
     return ld(x-1) + 1;

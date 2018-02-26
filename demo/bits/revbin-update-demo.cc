@@ -1,3 +1,4 @@
+// lidong
 
 #include "bits/revbin-upd.h"
 
@@ -47,6 +48,8 @@ main(int argc, char **argv)
     {
         print_bin("  ", k, ldn);
         print_bin("  :  ", r1, ldn);
+        print_bin("  :  ", h, ldn);
+        printf(" : %lu,%lu,%lu",k,h,r1);
         cout << endl;
 //        print_bin("  ", r2, ldn);  cout << endl;
         jjassert( r1==r2 );

@@ -30,5 +30,7 @@ void print_bin_vec_diff(const char*bla,
 // bits/print-bitset.cc:
 void print_bit_set(const char *bla, ulong x, ulong rq=0);
 
+void print_bin_l(const char *bla,ulong x,ulong pd=0);
+
 
 #endif  // !defined HAVE_PRINT_BIN_H__

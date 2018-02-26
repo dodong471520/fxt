@@ -1,3 +1,4 @@
+// lidong
 #if !defined HAVE_TINYFACTORS_H__
 #define      HAVE_TINYFACTORS_H__
 // This file is part of the FXT library.
@@ -12,6 +13,8 @@
 static inline bool is_tiny_prime(ulong n)
 // For n < BITS_PER_LONG (!)
 // return whether n is prime
+// 3 -> true
+// 4 -> false
 {
 #if  ( BITS_PER_LONG <= 32 )
     return  ( 1UL == (( 2693408940UL>> n) & 1));

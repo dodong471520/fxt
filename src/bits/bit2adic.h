@@ -19,10 +19,16 @@ static inline ulong inv2adic(ulong x)
     if ( 0==(x&1) )  return 0;  // not invertible
     ulong i = x;  // correct to three bits at least
     ulong p;
+    // print_bin_l("\nx:       ",x);
     do
     {
+        // print_bin_l("\ni:       ",i);
+        // print_bin_l("\np:       ",p);
         p = i * x;
+        // print_bin_l("\ni*x:     ",p);
         i *= (2UL - p);
+        // print_bin_l("\ni:       ",i);
+        // printf("\n");
     }
     while ( p!=1 );
     return  i;

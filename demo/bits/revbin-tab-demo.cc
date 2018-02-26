@@ -1,3 +1,4 @@
+// lidong
 
 #include "bits/revbin.h"
 
@@ -29,10 +30,10 @@ main(int argc, char **argv)
     {
         x ^= revbin(k);  // ./bin 30  4.40s user 0.02s system 100% cpu 4.422 total
 
-//        x ^= revbin_t(k);  // ./bin 30  11.11s user 0.06s system 99% cpu 11.170 total
+       // x ^= revbin_t(k);  // ./bin 30  11.11s user 0.06s system 99% cpu 11.170 total
 
         // cf.:
-//        x ^= bit_zip(k);  // ./bin 30  10.75s user 0.05s system 99% cpu 10.805 total
+       // x ^= bit_zip(k);  // ./bin 30  10.75s user 0.05s system 99% cpu 10.805 total
     }
 
     cout << " ct=" << n << endl;

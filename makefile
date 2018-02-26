@@ -32,8 +32,9 @@ FXT_CXXFLAGS += $(FXT_EXTRA_FLAGS)
 
 # Uncomment to use AMD64 popcnt (bit-count) instruction
 # (should better be auto-detected):
-#FXT_CXXFLAGS += -DHAVE_AMD64_POPCNT
+# FXT_CXXFLAGS += -DHAVE_AMD64_POPCNT
 
+FXT_CXXFLAGS+=-O0 -g
 
 
 ## set CXXFLAGS only if not supplied:

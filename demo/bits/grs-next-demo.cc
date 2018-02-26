@@ -1,3 +1,4 @@
+// lidong
 
 
 #include "bits/grsnegative.h"
@@ -15,7 +16,8 @@
 int
 main(int argc, char **argv)
 {
-    ulong n = 65;
+    // ulong n = 65;
+    ulong n = 8;
     NXARG(n, "Print this many values of the sequence.");
     ulong k0 = 0;
     NXARG(k0, "Start point of the sequence.");

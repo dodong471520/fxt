@@ -1,3 +1,4 @@
+// lidong
 #if !defined HAVE_REVBIN_H__
 #define      HAVE_REVBIN_H__
 // This file is part of the FXT library.
@@ -14,6 +15,7 @@
 
 static inline ulong bswap(ulong x)
 // Return word with reversed byte order.
+// 0x10 -> 0x1000,0000,0000,0000
 {
 #ifdef BITS_USE_ASM
     x = asm_bswap(x);
@@ -30,6 +32,7 @@ static inline ulong bswap(ulong x)
 
 static inline ulong revbin(ulong x)
 // Return x with reversed bit order.
+// 0x10 -> 0x800,0000,0000
 {
 #if 1
     x = bit_swap_1(x);
@@ -59,6 +62,7 @@ extern const unsigned char revbin_tab[256];
 static inline ulong revbin_t(ulong x)
 // Return x with reversed bit order.
 // Table based version.
+// 0x10 -> 0x800,0000,0000
 {
 #if 1  // unrolled version:
     ulong r      = revbin_tab[ x & 255 ];  x >>= 8;
@@ -90,6 +94,7 @@ static inline ulong revbin_t(ulong x)
 static inline ulong revbin_t_le32(ulong x)
 // Return x with reversed bit order.
 // Table based version for lengths less or equal 32 bits.
+// 0x10 -> 0x800,0000
 {
     ulong r      = revbin_tab[ x & 255 ];  x >>= 8;
     r <<= 8;  r |= revbin_tab[ x & 255 ];  x >>= 8;
@@ -102,6 +107,7 @@ static inline ulong revbin_t_le32(ulong x)
 static inline ulong revbin_t_le16(ulong x)
 // Return x with reversed bit order.
 // Table based version for lengths less or equal 16 bits.
+// 0x10 -> 0x800
 {
     ulong r      = revbin_tab[ x & 255 ];  x >>= 8;
     r <<= 8;  r |= revbin_tab[ x ];
@@ -113,6 +119,7 @@ static inline ulong revbin_t_le16(ulong x)
 
 static inline ulong xrevbin(ulong a, ulong x)
 // Symbolic power of revbin.
+// 101011,11100 -> 1110100000000000
 {
     x &= (BITS_PER_LONG-1);  // modulo BITS_PER_LONG
     ulong s = BITS_PER_LONG >> 1;
@@ -134,6 +141,7 @@ static inline ulong revbin(ulong x, ulong ldn)
 // Return word with the ldn least significant bits
 //   (i.e. bit_0 ... bit_{ldn-1})  of x reversed,
 //   the other bits are set to zero.
+//   00010000,8 -> 00001000
 {
     return  revbin(x) >> (BITS_PER_LONG-ldn);
 

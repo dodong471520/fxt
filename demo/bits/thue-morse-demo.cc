@@ -1,4 +1,4 @@
-
+// lidong
 #include "bits/thue-morse.h"
 
 #include "fxttypes.h"

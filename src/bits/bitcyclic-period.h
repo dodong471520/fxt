@@ -1,3 +1,4 @@
+// lidong
 #if !defined HAVE_BITCYCLIC_PERIOD_H__
 #define      HAVE_BITCYCLIC_PERIOD_H__
 // This file is part of the FXT library.
@@ -20,6 +21,7 @@ static inline ulong bit_cyclic_period(ulong x)
 //
 // The returned value is a divisor of the word length,
 //   i.e. 1,2,4,8,...,BITS_PER_LONG.
+//   0f0f0f0f -> 8
 {
     ulong r = 1;
     do

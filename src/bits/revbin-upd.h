@@ -1,3 +1,4 @@
+// lidong
 #if !defined HAVE_REVBIN_UPD_H__
 #define      HAVE_REVBIN_UPD_H__
 // This file is part of the FXT library.
@@ -14,6 +15,8 @@ static inline ulong revbin_upd(ulong r, ulong h)
 // Let n=2**ldn and h=n/2.
 // Then, with r == revbin(x, ldn) at entry, return revbin(x+1, ldn)
 // NOTE: routine will hang if called with r the all-ones word
+// 11010,10000 -> 00110
+// 00110,10000 -> 10110
 {
     while ( ! ((r^=h) & h) )  h >>= 1;
     return  r;
@@ -28,6 +31,12 @@ extern ulong revbin_upd_tab[BITS_PER_LONG];
 
 static inline void make_revbin_upd_tab(ulong h)
 // Initialize lookup table used by revbin_tupd()
+// 5
+// 10000
+// 11000
+// 11100
+// 11110
+// 11111
 {
     utab[0] = h;  // == n/2 == 1UL<<(ldn-1);
     for (ulong i=1; h!=0; ++i)
@@ -44,6 +53,9 @@ static inline ulong revbin_tupd(ulong r, ulong k)
 // NOTE 1: need to call make_revbin_upd_tab(ldn) before usage
 //         where ldn=log_2(n)
 // NOTE 2: different argument structure than revbin_upd()
+// 00000,0 -> 10000
+// 10000,1 -> 01000
+// 10010,9 -> 01010
 {
     k = lowest_one_idx( ~k );  // lowest zero idx
     r ^= utab[k];

@@ -28,6 +28,8 @@ static inline ulong byte_parity(ulong x)
 
 static inline ulong parity(ulong x)
 // Return 0 if the number of set bits is even, else 1
+// 10101 -> 1
+// 10100 -> 0
 {
 #if defined  BITS_USE_ASM    // use x86 asm code
     return  asm_parity(x);

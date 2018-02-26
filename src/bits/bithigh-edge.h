@@ -1,3 +1,4 @@
+//lidong
 #if !defined HAVE_BITHIGH_EDGE_H__
 #define      HAVE_BITHIGH_EDGE_H__
 // This file is part of the FXT library.
@@ -17,6 +18,7 @@ static inline ulong highest_one_01edge(ulong x)
 //
 // Feed the result into bit_count() to get
 //   the index of the highest bit set.
+//   00100 -> 00111
 {
 #if defined  BITS_USE_ASM
 

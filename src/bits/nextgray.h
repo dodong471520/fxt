@@ -1,3 +1,4 @@
+// lidong
 #if !defined  HAVE_NEXTGRAY_H__
 #define       HAVE_NEXTGRAY_H__
 // This file is part of the FXT library.
@@ -44,6 +45,7 @@ static inline ulong next_gray2(ulong x)
 // Convert an arbitrary (Gray code) word g to
 //   x = (g<<1) ^ parity(g)
 // in order to use this routine.
+// 011 -> 110
 {
     x ^= 1;
     x ^= (lowest_one(x) << 1);

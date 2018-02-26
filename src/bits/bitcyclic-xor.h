@@ -17,6 +17,8 @@ static inline ulong bit_cyclic_rxor(ulong x)
 // Similar to Gray code, but the bit shifted
 // out at the right is moved to the highest bit.
 // The returned word has an even number of bits set.
+// 1010 -> 1111
+// 1110 -> 1001
 {
     return x ^ bit_rotate_right(x, 1);
 }
@@ -45,6 +47,8 @@ static inline ulong bit_cyclic_lxor(ulong x)
 // Similar to reversed Gray code, but the bit shifted
 // out at the left is moved to the lowest bit.
 // The returned word has an even number of bits set.
+// 1010 -> 11110
+// 1110 -> 10010
 {
     return x ^ bit_rotate_left(x, 1);
 }

@@ -1,3 +1,4 @@
+// lidong
 #if !defined  HAVE_BITXTRANSFORMS_H__
 #define       HAVE_BITXTRANSFORMS_H__
 // This file is part of the FXT library.
@@ -10,6 +11,7 @@
 
 
 static inline ulong blue_xcode(ulong a, ulong x)
+// Z(x) Z(y) = Z(x+y)
 {
     x &= (BITS_PER_LONG-1);  // modulo BITS_PER_LONG
     ulong s = BITS_PER_LONG >> 1;

@@ -8,24 +8,53 @@ $	makefile	/^	-for f in $$(cat $(TMP1)); do echo $$(basename $$f); done  | sort 
 $	makefile	/^	-for f in $$(cat $(TMP2)); do echo "$$f:"; find . -name $$f; echo ; done$/;"	p	file:	signature:(TMP2)
 $	makefile	/^	@for f in $(FXTHDRS); do $(CXX) -DFXT_NO_WARN_HDR -MM -MT $${f} $(IFLAGS) $$f >> $(TMPDEPH) ;  done$/;"	p	file:	signature:(FXTHDRS)
 $	makefile	/^	@for f in $(FXTHDRS); do $(CXX) -DFXT_NO_WARN_HDR -MM -MT $${f} $(IFLAGS) $$f >> $(TMPDEPH) ;  done$/;"	p	file:	signature:(TMPDEPH)
-$	src/convolution/fftcnvl.o	/^º/;"	v
+$	src/bits/crc32.o	/^/;"	v
+$	src/bpol/bitpol-normal.o	/^/;"	v
+$	src/bpol/bitpol2lhca.o	/^/;"	v
+$	src/bpol/gf2n-minpoly.o	/^ª/;"	v
+$	src/bpol/gf2n-solvequadratic.o	/^ª/;"	v
+$	src/bpol/normal-mult.o	/^œ/;"	v
+$	src/comb/partition-conj.o	/^/;"	v
+$	src/comb/print-composition-unimodal.o	/^Ò/;"	v
+$	src/comb/print-gray.o	/^)/;"	v
+$	src/fht/fht0.o	/^ELF/;"	v
+$	src/fht/skipfht.o	/^/;"	v
+$	src/graph/mk-fibrep-gray-digraph.o	/^/;"	v
+$	src/mod/modinit.o	/^/;"	v
+$	src/mod/quadresidue.o	/^'ª/;"	v
+$	src/perm/perminvert.o	/^/;"	v
 $	tags	/^$	makefile	\/^	@for f in $(FXTHDRS); do $(CXX) -DFXT_NO_WARN_HDR -MM -MT $${f} $(IFLAGS) $$f >> $(TMPDEPH) ;  done$\/;"	p	file:	signature:(TMPDEPH)$/;"	p	file:	signature:(FXTHDRS)
 $	tags	/^$	makefile	\/^	@for f in $(FXTHDRS); do $(CXX) -DFXT_NO_WARN_HDR -MM -MT $${f} $(IFLAGS) $$f >> $(TMPDEPH) ;  done$\/;"	p	file:	signature:(TMPDEPH)$/;"	p	file:	signature:(TMPDEPH)
 $	tags	/^$$	makefile	\/^	-for f in $$(cat $(TMP1)); do echo $$(basename $$f); done  | sort | uniq -d > $(TMP2)$\/;"	p	file:	signature:(basename $$f)$/;"	p	file:	signature:(TMP1)
 $	tags	/^$h	scripts\/chkundoc.zsh	\/^for h in $(cat $TMP2); do grep $h $TMP1 >\\\/dev\\\/null || echo $h; done$\/;"	v$/;"	p	file:	signature:(cat $TMP2)
 $$	makefile	/^	-for f in $$(cat $(TMP1)); do echo $$(basename $$f); done  | sort | uniq -d > $(TMP2)$/;"	p	file:	signature:(basename $$f)
 $$	tags	/^$$	makefile	\/^	-for f in $$(cat $(TMP1)); do echo $$(basename $$f); done  | sort | uniq -d > $(TMP2)$\/;"	p	file:	signature:(basename $$f)$/;"	p	file:	signature:(basename $$f)
+$0	bin.s	/^	movl	$0, %eax	#,$/;"	v
+$0	bin.s	/^	movl	$0, %edx	#,$/;"	v
 $0	scripts/replace	/^THIS='replace'; # `basename $0`;$/;"	v
-$8t	src/dctdst/dctzapata.o	/^ELF/;"	v
+$1	bin.s	/^	andl	$1, %eax	#, D.2902$/;"	v
+$1	bin.s	/^	andl	$1, %eax	#, D.2905$/;"	v
+$10	bin.s	/^	movl	$10, %edi	#,$/;"	v
+$15	bin.s	/^	andl	$15, %eax	#, tmp156$/;"	v
+$16	bin.s	/^	shrq	$16, %rax	#, D.2910$/;"	v
+$2	bin.s	/^	movl	$2, %esi	#,$/;"	v
+$2	bin.s	/^	shrq	$2, %rax	#, D.2900$/;"	v
+$2	bin.s	/^	shrq	$2, %rax	#, D.2905$/;"	v
+$3	bin.s	/^	andl	$3, %eax	#, tmp163$/;"	v
+$32	bin.s	/^	shrq	$32, %rax	#, D.2910$/;"	v
+$4	bin.s	/^	shrq	$4, %rax	#, D.2900$/;"	v
+$4	bin.s	/^	shrq	$4, %rax	#, D.2905$/;"	v
+$54	bin.s	/^	movl	$54, %edi	#,$/;"	v
+$56	bin.s	/^	shrq	$56, %rax	#, D.2901$/;"	v
+$72340172838076673	bin.s	/^	movabsq	$72340172838076673, %rax	#, tmp104$/;"	v
+$72340172838076673	bin.s	/^	movabsq	$72340172838076673, %rax	#, tmp122$/;"	v
+$8	bin.s	/^	shrq	$8, %rax	#, D.2910$/;"	v
 $DDIRS	scripts/make-demo-main.sh	/^for d in $DDIRS; do$/;"	v
 $E	scripts/eval-bench-log.pl	/^$E = 0; # to skip to first program, set to 1 to parse fxt-demos$/;"	v
-$H	src/comb/binary-huffman.o	/^ELF/;"	v
-$H	src/mod/sqrtmod.o	/^ELF/;"	v
-$H	src/ntt/nttdif2.o	/^ELF/;"	v
 $HDRS	scripts/make-demo-list.sh	/^        for h in $HDRS; do$/;"	v
-$M	src/mod/sqrtmod.o	/^ELF/;"	v
 $V	scripts/build-old.zsh	/^    echo $V;$/;"	v
 $V	scripts/diff-old.zsh	/^    echo $V;$/;"	v
+$_ZZ11print_bin_lPKcmE3tmp	bin.s	/^	movl	$_ZZ11print_bin_lPKcmE3tmp, %ecx	#,$/;"	v
 $c	scripts/attic/chklyndon.sh	/^    echo $c;$/;"	v
 $commentsq	scripts/autodoc.pl	/^$commentsq = 1;   # whether comments before function body will be printed$/;"	v
 $echoclass	scripts/autodoc.pl	/^$echoclass = 1;   # whether to echo class declarations$/;"	v
@@ -52,17 +81,17 @@ $srcfile	scripts/autodoc.pl	/^$srcfile = '';    # source file name given in head
 $srcfilepr	scripts/autodoc.pl	/^$srcfilepr = 0;   # whether source file name already printed$/;"	v
 $srclinect	scripts/autodoc.pl	/^$srclinect = 0;   # line counter in srcfile$/;"	v
 $srcopenq	scripts/autodoc.pl	/^$srcopenq = 0;    # whether srcfile is open$/;"	v
-$u	src/fft/rowcnvls.o	/^ELF/;"	v
 A	demo/comb/shift-subsets-demo.cc	/^void A(ulong x)  \/\/ shifts-order for subsets$/;"	f	signature:(ulong x)
 A	doc/wfl-hilbert-doc.txt	/^generator morphism for  A  is found  A  again; retain the symbol  A , and$/;"	v
 A	scripts/mgd.sh	/^    A=$A\/$(basename $2);$/;"	v
 A	src/ds/centered-array2d.h	/^    array2d<Type> A;$/;"	m	class:centered_array2d	access:private
 A	src/ds/centered-array3d.h	/^    array3d<Type> A;$/;"	m	class:centered_array3d	access:private
+A	src/ntt/nttlearn.o	/^*/;"	v
 AAHS_STEP_4	test/test-bits.cc	778;"	d	file:
-ALLOCA	src/fxtalloca.h	17;"	d
-ALLOCA	src/fxtalloca.h	20;"	d
-ALLOCA	src/fxtalloca.h	24;"	d
-ALLOCA	src/fxtalloca.h	27;"	d
+ALLOCA	src/fxtalloca.h	18;"	d
+ALLOCA	src/fxtalloca.h	21;"	d
+ALLOCA	src/fxtalloca.h	25;"	d
+ALLOCA	src/fxtalloca.h	28;"	d
 ALTALT	src/graph/lyndon-gray.h	29;"	d
 ALT_ALGORITM	src/graph/lyndon-gray.h	25;"	d
 ALT_ALGORITM	src/graph/lyndon-gray.h	260;"	d
@@ -74,9 +103,7 @@ ARRAY_LEN	src/array-len.h	9;"	d
 ASCENT_ALT_RGS_FIXARRAYS	src/comb/ascent-alt-rgs.h	14;"	d
 ASCENT_RGS_FIXARRAYS	src/comb/ascent-rgs.h	16;"	d
 ASCENT_RGS_SUBSET_LEX_FIXARRAYS	src/comb/ascent-rgs-subset-lex.h	17;"	d
-AS_FXTBOOK	demo/bits/debruijn-lookup-demo.cc	15;"	d	file:
-ATUH	src/graph/mk-debruijn-digraph.o	/^ELF/;"	v
-AUL	src/chirpzt/slowfracft.o	/^ELF/;"	v
+AS_FXTBOOK	demo/bits/debruijn-lookup-demo.cc	17;"	d	file:
 A_	src/comb/dyck-pref2.h	/^    ulong *A_;   \/\/ aux., length n-2$/;"	m	class:dyck_pref2	access:public
 Abs	demo/seq/A187081-demo.cc	/^static inline Type Abs(const Type &x)$/;"	f	file:	signature:(const Type &x)
 Abs	src/aux0/attic/sign.h	/^static inline Type Abs(const Type &x)$/;"	f	signature:(const Type &x)
@@ -91,20 +118,35 @@ B	doc/wfl-hilbert-doc.txt	/^    ( B(j), B(j+1) )    if  j  =  0 ,$/;"	p	file:	si
 B	doc/wfl-hilbert-doc.txt	/^separate walks through  (l-1)-cells, consecutive along a Gray path  B(j) ,$/;"	p	file:	signature:(j)
 B	doc/wfl-hilbert-doc.txt	/^which is completely determined by  B(j) : its entry is fixed by adjacency to$/;"	p	file:	signature:(j)
 B	scripts/mgd.sh	/^    B=$B\/$(basename $1);$/;"	v
-B	src/wavelet/daubechies.o	/^ELF/;"	v
+B	src/aux1/bytescan.o	/^ë/;"	v
+B	src/bits/bitcount-v.o	/^i/;"	v
+B	src/bits/bitcount-v.o	/^/;"	v
+B	src/bmat/bitmat-mult-mm.o	/^/;"	v
+B	src/bpol/bitpol-normal.o	/^/;"	v
+B	src/bpol/bitpol2lhca.o	/^/;"	v
+B	src/bpol/lhcarule-minweight.o	/^ELF/;"	v
+B	src/bpol/normal-mult.o	/^œ/;"	v
+B	src/comb/composition-nz-rank.o	/^/;"	v
+B	src/comb/composition-nz-rank.o	/^/;"	v
+B	src/comb/delta2gray.o	/^-/;"	v
+B	src/comb/delta2gray.o	/^/;"	v
+B	src/comb/partition-conj.o	/^.?:;nI@–B/;"	v
+B	src/comb/partition-conj.o	/^/;"	v
+B	src/mod/kronecker.o	/^á/;"	v
+B	src/perm/permcompose.o	/^/;"	v
 BH	test/test-bits.cc	927;"	d	file:
 BITSUBSET_GRAY_METHOD1	src/bits/bitsubset-gray.h	12;"	d
-BITS_PER_LONG	demo/bits/debruijn-lookup-demo.cc	18;"	d	file:
-BITS_PER_LONG	demo/bits/debruijn-lookup-demo.cc	19;"	d	file:
+BITS_PER_LONG	demo/bits/debruijn-lookup-demo.cc	20;"	d	file:
+BITS_PER_LONG	demo/bits/debruijn-lookup-demo.cc	21;"	d	file:
 BITS_PER_LONG	src/bits/bitsperlong.h	14;"	d
 BITS_PER_LONG	src/bits/bitsperlong.h	18;"	d
 BITS_PER_LONG	src/bits/bitsperlong.h	21;"	d
 BITS_PER_LONG_LONG	src/bits/bitsperlong.h	38;"	d
-BITS_USE_ASM	src/bits/bitasm.h	18;"	d
-BITS_USE_ASM	src/bits/bitasm.h	23;"	d
-BITS_USE_ASM_AMD64	src/bits/bitasm.h	24;"	d
-BITS_USE_ASM_I386	src/bits/bitasm.h	19;"	d
-BITS_USE_ASM_SSE	src/bits/bitasm.h	26;"	d
+BITS_USE_ASM	src/bits/bitasm.h	19;"	d
+BITS_USE_ASM	src/bits/bitasm.h	24;"	d
+BITS_USE_ASM_AMD64	src/bits/bitasm.h	25;"	d
+BITS_USE_ASM_I386	src/bits/bitasm.h	20;"	d
+BITS_USE_ASM_SSE	src/bits/bitasm.h	27;"	d
 BIT_BUTTERFLY_VER	src/bits/bitbutterfly.h	14;"	d
 BIT_BUTTERFLY_VER	src/bits/bitbutterfly.h	177;"	d
 BMI_OPT	src/bmat/bitmat-inverse.cc	17;"	d	file:
@@ -125,7 +167,7 @@ C	demo/bits/dragon-r7-2-texpic-demo.cc	/^double C[csn], S[csn];  \/\/ direction 
 C	demo/bits/dragon-r7-texpic-demo.cc	/^double C[csn], S[csn];  \/\/ direction vectors$/;"	v
 C	demo/bits/dragon-r9-texpic-demo.cc	/^double C[csn], S[csn];  \/\/ direction vectors$/;"	v
 C	demo/bits/dragon3-texpic-demo.cc	/^double C[csn], S[csn];  \/\/ direction vectors$/;"	v
-C	src/bits/crc32.o	/^/;"	v
+C	src/comb/print-set.o	/^/;"	v
 CASE	demo/comb/string-subst-hilbert3d-demo.cc	172;"	d	file:
 CATALAN_RGS_SUBSET_LEX_SC	src/comb/catalan-rgs-subset-lex.h	20;"	d
 CATALAN_STEP_RGS_SUBSET_LEXREV_FIXARRAYS	src/comb/catalan-step-rgs-subset-lexrev.h	16;"	d
@@ -261,7 +303,23 @@ Cplx	demo/bits/radix-m1pi-demo.cc	/^typedef complex<long> Cplx;$/;"	t	file:
 Cplx	demo/bits/radix-m1pi-to-z-demo.cc	/^typedef complex<long> Cplx;$/;"	t	file:
 Cstr	demo/sort/sort-string-demo.cc	/^typedef const char * Cstr;$/;"	t	file:
 D	demo/seq/A005576-demo.cc	/^const bool D = false;  \/\/ for debug$/;"	v
-D	src/comb/catalan.o	/^ELF/;"	v
+D	src/bits/crc32.o	/^/;"	v
+D	src/fht/skipfht.o	/^/;"	v
+D	src/fht/skipfht.o	/^ELF/;"	v
+D$	src/comb/mixedradix2num.o	/^ELF/;"	v
+D$	src/mod/sqrtmod.o	/^H‹D$8éò/;"	v
+D$	src/mod/sqrtmod.o	/^¸/;"	v
+D$0H	src/chirpzt/fftfract.o	/^H‹D$ H)D$8HƒD$0H‹D$0H;$‚\\ÿÿÿHƒÄ@[ÃATUSHƒì`H‰|$H‰t$òD$H‹D$HÀHƒèH‰Çè9ýÿÿHƒÀH‰D$@H‹D$@º/;"	v
+D$0H	src/comb/print-composition-aa.o	/^ELF/;"	v
+D$0H	src/comb/print-young-tab-rgs-aa.o	/^ELF/;"	v
+D$0H	src/comb/setpart-rgs-gray.o	/^ELF/;"	v
+D$8H	src/comb/fact2cyclic.o	/^ELF/;"	v
+D$8H	src/comb/fact2perm.o	/^ELF/;"	v
+D$8H	src/comb/setpart-rgs-gray.o	/^ELF/;"	v
+D$HH	src/comb/print-catalan-path-aa.o	/^ELF/;"	v
+D$PH	src/mod/sqrtmod.o	/^¸/;"	v
+D$hH	src/comb/print-catalan-path-aa.o	/^ELF/;"	v
+D$pH	src/graph/mk-fibrep-gray-digraph.o	/^ELF/;"	v
 DELTA	demo/graph/graph-mtl-demo.cc	27;"	d	file:
 DESCENT_RGS_FIXARRAYS	src/comb/descent-rgs.h	16;"	d
 DIFFFILENAME	scripts/replace	/^        D|+D) DIFFFILENAME=$OPTARG;$/;"	v
@@ -343,6 +401,7 @@ Daub8	src/wavelet/daubechies.cc	/^static const double Daub8[] =$/;"	v	file:
 Daub9	src/wavelet/daubechies.cc	/^static const double Daub9[] =$/;"	v	file:
 E	doc/wfl-hilbert-doc.txt	/^Denote by  ( E(j), F(j) )  the  j-th such edge-pair --- relative to its base,$/;"	p	file:	signature:(j)
 E	doc/wfl-hilbert-doc.txt	/^It becomes natural to regard the triplet of functions  B,E,F  as an enhanced$/;"	v
+E	src/bpol/bitpol-print.o	/^"/;"	v
 ECHO	test/test.h	60;"	d
 EFFS_STEP_8	test/test-bits.cc	781;"	d	file:
 EMU_CALL	src/comb/attic/combminchange.cc	15;"	d	file:
@@ -369,6 +428,7 @@ F	demo/comb/composition-nz-gray-rec-demo.cc	/^void F(ulong n, ulong m=0)$/;"	f	s
 F	demo/comb/composition-nz-subset-lex-rec-demo.cc	/^void F(ulong n, ulong m)$/;"	f	signature:(ulong n, ulong m)
 F	demo/comb/shift-subsets-demo.cc	/^void F(ulong x)$/;"	f	signature:(ulong x)
 F	demo/perm/perm-decomp-demo.cc	343;"	d	file:
+F	src/aux0/version.o	/^/;"	v
 FAST_REVBIN	src/perm/revbinpermute.h	113;"	d
 FAST_REVBIN	src/perm/revbinpermute.h	18;"	d
 FAST_REVBIN	src/perm/revbinpermute0.h	115;"	d
@@ -396,8 +456,8 @@ FINAL_RADIX_16	doc/fht-doc.txt	129;"	d	file:
 FINAL_RADIX_16	doc/fht-doc.txt	71;"	d	file:
 FINAL_RADIX_16	src/fht/cfhtdif.cc	33;"	d	file:
 FINAL_RADIX_16	src/fht/fhtdif.cc	29;"	d	file:
-FORCE_ALLOCA_H	src/fxtalloca.h	10;"	d
-FORCE_ALLOCA_H	src/fxtalloca.h	13;"	d
+FORCE_ALLOCA_H	src/fxtalloca.h	11;"	d
+FORCE_ALLOCA_H	src/fxtalloca.h	14;"	d
 FQUIET	scripts/replace	/^        Q|+Q) FQUIET=1;  QUIET=1;$/;"	v
 FROM	scripts/mkcompl.sh	/^FROM=`basename $NAME`;$/;"	v
 FXT_SILENT_NXARG	demo/comb/string-subst-demo.cc	16;"	d	file:
@@ -409,6 +469,7 @@ G	doc/wfl-hilbert-doc.txt	/^the canonical Gray code mapping  j -> G(j) , where$/
 G	src/bits/bitsubset-gray.h	/^    ulong G;  \/\/ subsets in Gray code order$/;"	m	class:bit_subset_gray	access:protected
 G	src/comb/perm-st-gray.h	/^    perm_gray_rot1 *G;  \/\/ underlying permutations$/;"	m	class:perm_st_gray	access:public
 GC	demo/mod/modarithtables-demo.cc	29;"	d	file:
+GD	src/convolution/matrixfftcnvla.o	/^ELF/;"	v
 GEN	src/comb/attic/combminchange.cc	11;"	d	file:
 GENX	demo/gf2n/gf2n-trace0-generators-demo.cc	18;"	d	file:
 GF2n	src/bpol/gf2n.h	/^    \/*explicit*\/ GF2n(const GF2n &g) : v_(g.v_)  { ; }$/;"	f	class:GF2n	access:public	signature:(const GF2n &g)
@@ -500,20 +561,49 @@ GP64	src/perm/shortgraypermute.h	41;"	d
 GP8	src/perm/shortgraypermute.h	111;"	d
 GP8	src/perm/shortgraypermute.h	29;"	d
 H	doc/wfl-hilbert-doc.txt	/^If A -> G,H,J,K then conjugates of 3-cycle.$/;"	v
+H	src/aux1/bytescan.o	/^ELF/;"	v
+H	src/bits/bitcount-v.o	/^ELF/;"	v
 H	src/bits/bitsubset-gray.h	/^    ulong H;  \/\/ highest bit in S.V;  needed for the prev() method$/;"	m	class:bit_subset_gray	access:protected
-H	src/bmat/bitmat-inverse.o	/^/;"	v
-H	src/bpol/gf2n.o	/^/;"	v
-H	src/comb/big-fact2perm.o	/^ELF/;"	v
-H	src/comb/print-zero-map-rgs.o	/^ELF/;"	v
-H	src/comb/string-subst.o	/^ELF/;"	v
-H	src/convolution/twodimfhtcnvl.o	/^ELF/;"	v
-H	src/fft/fhtfft.o	/^ELF/;"	v
-H	src/mod/chebyshev2.o	/^ELF/;"	v
-H	src/mod/eratosthenes.o	/^ELF/;"	v
-H	src/mod/modinit.o	/^ELF/;"	v
-H	src/mod/sqrtmod.o	/^ELF/;"	v
-H	src/ntt/slowntt.o	/^ELF/;"	v
-H	src/perm/printcycles.o	/^ELF/;"	v
+H	src/bmat/bitmat-mult-mm.o	/^ELF/;"	v
+H	src/bmat/bitmat-nullspace.o	/^ELF/;"	v
+H	src/comb/composition-nz-rank.o	/^ELF/;"	v
+H	src/comb/delta2gray.o	/^ELF/;"	v
+H	src/comb/fact2num.o	/^ELF/;"	v
+H	src/comb/fact2perm.o	/^ELF/;"	v
+H	src/comb/ksubset-rec.o	/^ELF/;"	v
+H	src/comb/mixedradix-init.o	/^ELF/;"	v
+H	src/comb/mixedradix2num.o	/^ELF/;"	v
+H	src/comb/mset-perm-lex-rec.o	/^ELF/;"	v
+H	src/comb/paren-string-to-rgs.o	/^ELF/;"	v
+H	src/comb/partition-conj.o	/^¸/;"	v
+H	src/comb/partition-gen.o	/^ELF/;"	v
+H	src/comb/print-catalan-path-aa.o	/^ELF/;"	v
+H	src/comb/print-composition-aa.o	/^ELF/;"	v
+H	src/comb/print-mset.o	/^H‹D$@H‰D$HHƒD$@H‹D$@H;D$rÇ¾/;"	v
+H	src/comb/print-set.o	/^ELF/;"	v
+H	src/comb/print-young-tab-rgs-aa.o	/^ELF/;"	v
+H	src/comb/test-gray.o	/^ELF/;"	v
+H	src/comb/tree-lev-seq-aux.o	/^ELF/;"	v
+H	src/convolution/matrixfftcnvla.o	/^/;"	v
+H	src/fft/fft8difcore.o	/^ELF/;"	v
+H	src/fft/fft8ditcore.o	/^ELF/;"	v
+H	src/fft/matrixfft.o	/^ELF/;"	v
+H	src/fht/cfht0.o	/^L‹BH‹H‹@H‰ÏL‰L$òT$L‰D$ò\\$H‰T$òD$H‰D$òL$è/;"	v
+H	src/fht/cfht0.o	/^L‹BH‹H‹@H‰ÏL‰L$òT$L‰D$ò\\$H‰T$òD$H‰D$òL$è8/;"	v
+H	src/fht/cfht0.o	/^L‹BH‹H‹@H‰ÏL‰L$òT$L‰D$ò\\$H‰T$òD$H‰D$òL$è¦/;"	v
+H	src/fht/fht0.o	/^/;"	v
+H	src/fht/fht0.o	/^ELF/;"	v
+H	src/fht/fhtdif2.o	/^ELF/;"	v
+H	src/fht/skipfht.o	/^/;"	v
+H	src/graph/lyndon-cmp.o	/^ELF/;"	v
+H	src/graph/mk-fibrep-gray-digraph.o	/^ELF/;"	v
+H	src/graph/mk-lyndon-gray-digraph.o	/^H‹D$H‰D$HƒD$H‹D$H;$’À„Àu¹H‹D$HƒÄ ÃH‰|$ØH‰t$ÐH‹D$ÐH‹Å/;"	v
+H	src/graph/print-path.o	/^ELF/;"	v
+H	src/graph/search-digraph-trylucky.o	/^ELF/;"	v
+H	src/mod/perfpow.o	/^ELF/;"	v
+H	src/mod/sqrtmod.o	/^H‹D$hé¶/;"	v
+H	src/perm/perminvert.o	/^XK‘Ÿ/;"	v
+H	src/sort/radixsort.o	/^ELF/;"	v
 HAVE_ACGRAY_H__	src/comb/acgray.h	2;"	d
 HAVE_ACYCLIC_MAP_H__	src/comb/acyclic-map.h	2;"	d
 HAVE_ALLSETPARTITIONS_H__	src/comb/attic/allsetpartitions.h	2;"	d
@@ -543,7 +633,7 @@ HAVE_AUX1DOUBLE_H__	src/aux1/attic/aux1double.h	2;"	d
 HAVE_AUX1_ALL_H__	src/aux1-all.h	2;"	d
 HAVE_AUX2_ALL_H__	src/aux2-all.h	2;"	d
 HAVE_AUXPRINT_H__	src/aux1/attic/auxprint.h	2;"	d
-HAVE_AVERAGE_H__	src/bits/average.h	2;"	d
+HAVE_AVERAGE_H__	src/bits/average.h	3;"	d
 HAVE_BALANCED_ORDERED_TREE_LEV_SEQ_H__	src/comb/balanced-ordered-tree-lev-seq.h	2;"	d
 HAVE_BIG_FACT2PERM_H__	src/comb/big-fact2perm.h	2;"	d
 HAVE_BIN2NAF_H__	src/bits/bin2naf.h	2;"	d
@@ -556,10 +646,10 @@ HAVE_BINOMIAL_H__	src/aux0/binomial.h	2;"	d
 HAVE_BIN_TO_SL_GRAY_H__	src/bits/bin-to-sl-gray.h	2;"	d
 HAVE_BIT2ADIC_H__	src/bits/bit2adic.h	2;"	d
 HAVE_BIT2COMPOSITION_H__	src/bits/attic/bit2composition.h	2;"	d
-HAVE_BIT2POW_H__	src/bits/bit2pow.h	2;"	d
+HAVE_BIT2POW_H__	src/bits/bit2pow.h	3;"	d
 HAVE_BITARRAY_H__	src/ds/bitarray.h	2;"	d
 HAVE_BITASM_AMD64_H__	src/bits/bitasm-amd64.h	2;"	d
-HAVE_BITASM_H__	src/bits/bitasm.h	2;"	d
+HAVE_BITASM_H__	src/bits/bitasm.h	3;"	d
 HAVE_BITASM_I386_H__	src/bits/bitasm-i386.h	2;"	d
 HAVE_BITASM_SSE_H__	src/bits/bitasm-sse.h	2;"	d
 HAVE_BITBLOCK_H__	src/bits/bitblock.h	2;"	d
@@ -572,23 +662,23 @@ HAVE_BITCOUNT_H__	src/bits/bitcount.h	2;"	d
 HAVE_BITCOUNT_WEIGHT_H__	src/walsh/bitcount-weight.h	2;"	d
 HAVE_BITCYCLIC_DIST_H__	src/bits/bitcyclic-dist.h	2;"	d
 HAVE_BITCYCLIC_MATCH_H__	src/bits/bitcyclic-match.h	2;"	d
-HAVE_BITCYCLIC_MINMAX_H__	src/bits/bitcyclic-minmax.h	2;"	d
-HAVE_BITCYCLIC_PERIOD_H__	src/bits/bitcyclic-period.h	2;"	d
+HAVE_BITCYCLIC_MINMAX_H__	src/bits/bitcyclic-minmax.h	3;"	d
+HAVE_BITCYCLIC_PERIOD_H__	src/bits/bitcyclic-period.h	3;"	d
 HAVE_BITCYCLIC_XOR_H__	src/bits/bitcyclic-xor.h	2;"	d
 HAVE_BITDEMOS_H__	demo/bits/bitdemos.h	2;"	d
 HAVE_BITFIBGRAY_H__	src/bits/bitfibgray.h	2;"	d
 HAVE_BITGATHER_H__	src/bits/bitgather.h	2;"	d
 HAVE_BITGRAYPERMUTE_H__	src/bits/bitgraypermute.h	2;"	d
-HAVE_BITHIGH_EDGE_H__	src/bits/bithigh-edge.h	2;"	d
+HAVE_BITHIGH_EDGE_H__	src/bits/bithigh-edge.h	3;"	d
 HAVE_BITHIGH_H__	src/bits/bithigh.h	2;"	d
-HAVE_BITLDEQ_H__	src/bits/bitldeq.h	2;"	d
+HAVE_BITLDEQ_H__	src/bits/bitldeq.h	3;"	d
 HAVE_BITLEX_H__	src/bits/bitlex.h	2;"	d
 HAVE_BITLOW_EDGE_H__	src/bits/bitlow-edge.h	2;"	d
 HAVE_BITLOW_H__	src/bits/bitlow.h	2;"	d
 HAVE_BITMAT_FUNCS_H__	src/bmat/bitmat-funcs.h	2;"	d
 HAVE_BITMAT_INLINE_H__	src/bmat/bitmat-inline.h	2;"	d
 HAVE_BITMROTATE_H__	src/bits/attic/bitmrotate.h	2;"	d
-HAVE_BITPERIODIC_H__	src/bits/bitperiodic.h	2;"	d
+HAVE_BITPERIODIC_H__	src/bits/bitperiodic.h	3;"	d
 HAVE_BITPOLMOD_ARITH_H__	src/bpol/bitpolmod-arith.h	2;"	d
 HAVE_BITPOLMOD_MINPOLY_H__	src/bpol/bitpolmod-minpoly.h	2;"	d
 HAVE_BITPOLMOD_MULTREV_H__	src/bpol/attic/bitpolmod-multrev.h	2;"	d
@@ -604,12 +694,12 @@ HAVE_BITPOL_PRIMITIVE_H__	src/bpol/bitpol-primitive.h	2;"	d
 HAVE_BITPOL_PRINT_H__	src/bpol/bitpol-print.h	2;"	d
 HAVE_BITPOL_SQUAREFREE_H__	src/bpol/bitpol-squarefree.h	2;"	d
 HAVE_BITPOL_SRP_H__	src/bpol/bitpol-srp.h	2;"	d
-HAVE_BITROTATE_H__	src/bits/bitrotate.h	2;"	d
+HAVE_BITROTATE_H__	src/bits/bitrotate.h	3;"	d
 HAVE_BITSEPARATE_H__	src/bits/bitseparate.h	2;"	d
 HAVE_BITSEQUENCY_H__	src/bits/bitsequency.h	2;"	d
 HAVE_BITSET2SET_H__	src/bits/bitset2set.h	2;"	d
 HAVE_BITSPERLONG_H__	src/bits/bitsperlong.h	2;"	d
-HAVE_BITSUBSETQ_H__	src/bits/bitsubsetq.h	2;"	d
+HAVE_BITSUBSETQ_H__	src/bits/bitsubsetq.h	3;"	d
 HAVE_BITSUBSET_GRAY_H__	src/bits/bitsubset-gray.h	2;"	d
 HAVE_BITSUBSET_H__	src/bits/bitsubset.h	2;"	d
 HAVE_BITSWAP_H__	src/bits/bitswap.h	2;"	d
@@ -634,7 +724,7 @@ HAVE_BLUE_FIXED_POINTS_H__	src/bits/blue-fixed-points.h	2;"	d
 HAVE_BMAT_ALL_H__	src/bmat-all.h	2;"	d
 HAVE_BOUNDING_BOX_H__	src/ds/bounding-box.h	2;"	d
 HAVE_BPOL_ALL_H__	src/bpol-all.h	2;"	d
-HAVE_BRANCHLESS_H__	src/bits/branchless.h	2;"	d
+HAVE_BRANCHLESS_H__	src/bits/branchless.h	3;"	d
 HAVE_BSEARCHAPPROX_H__	src/sort/bsearchapprox.h	2;"	d
 HAVE_BSEARCHFUNC_H__	src/sort/bsearchfunc.h	2;"	d
 HAVE_BSEARCHIDXFUNC_H__	src/sort/bsearchidxfunc.h	2;"	d
@@ -789,7 +879,7 @@ HAVE_FIBREP_SUBSET_LEXREV_H__	src/bits/fibrep-subset-lexrev.h	2;"	d
 HAVE_FIB_HAAR_H__	src/haar/fib-haar.h	2;"	d
 HAVE_FIB_WALSH_H__	src/walsh/fib-walsh.h	2;"	d
 HAVE_FUNCEMU_H__	src/aux0/attic/funcemu.h	2;"	d
-HAVE_FXTALLOCA_H__	src/fxtalloca.h	2;"	d
+HAVE_FXTALLOCA_H__	src/fxtalloca.h	3;"	d
 HAVE_FXTIO_H__	src/fxtio.h	2;"	d
 HAVE_FXTTYPES_H__	src/fxttypes.h	2;"	d
 HAVE_GCD_H__	src/aux0/gcd.h	2;"	d
@@ -861,7 +951,7 @@ HAVE_IS_SYMMETRIC_H__	src/comb/is-symmetric.h	2;"	d
 HAVE_IS_UNIMODAL_H__	src/comb/is-unimodal.h	2;"	d
 HAVE_IS_YOUNG_TAB_RGS_H__	src/comb/is-young-tab-rgs.h	2;"	d
 HAVE_IS_ZERO_MAP_RGS_H__	src/comb/is-zero-map-rgs.h	2;"	d
-HAVE_ITH_ONE_IDX_H__	src/bits/ith-one-idx.h	2;"	d
+HAVE_ITH_ONE_IDX_H__	src/bits/ith-one-idx.h	3;"	d
 HAVE_JJASSERT_H__	src/jjassert.h	2;"	d
 HAVE_KOLAKOSKI_SEQ_H__	src/bits/kolakoski-seq.h	2;"	d
 HAVE_KPERM_GRAY_H__	src/comb/kperm-gray.h	2;"	d
@@ -1210,7 +1300,7 @@ HAVE_TEST_H__	test/test.h	2;"	d
 HAVE_TEX_LINE_H__	src/aux0/tex-line.h	2;"	d
 HAVE_THUE_MORSE_H__	src/bits/thue-morse.h	2;"	d
 HAVE_TIMER_H__	src/aux0/attic/timer.h	2;"	d
-HAVE_TINYFACTORS_H__	src/bits/tinyfactors.h	2;"	d
+HAVE_TINYFACTORS_H__	src/bits/tinyfactors.h	3;"	d
 HAVE_TOEPLITZ_H__	src/matrix/attic/toeplitz.h	2;"	d
 HAVE_TRANSPOSE2_H__	src/aux2/attic/transpose2.h	2;"	d
 HAVE_TRANSPOSE2_H__	src/aux2/transpose2.h	2;"	d
@@ -1277,12 +1367,25 @@ HT	src/bits/lin2hilbert.cc	33;"	d	file:
 Hamiltonian	doc/wfl-hilbert-doc.txt	/^    (i) The path is Hamiltonian, proceeding along edges joining nearest$/;"	v
 I	demo/perm/perm-decomp-demo.cc	344;"	d	file:
 I	doc/wfl-hilbert-doc.txt	/^  Generation morphism: start symbol A,I,E at level = 0,1,2 mod 3 stabilises$/;"	v
-I	src/bits/bitcount-v.o	/^ELF/;"	v
-I	src/comb/composition-nz-minc.o	/^ELF/;"	v
-I	src/comb/print-composition-by-sorts.o	/^ELF/;"	v
-I	src/mod/chebyshev1.o	/^ELF/;"	v
-I	src/mod/chebyshev2.o	/^ELF/;"	v
-I	src/perm/permq.o	/^HÑèH9Æ‡È/;"	v
+I	src/aux1/bytescan.o	/^&/;"	v
+I	src/bits/print-bitset.o	/^:;n/;"	v
+I	src/bits/revbin-upd.o	/^9/;"	v
+I	src/bmat/bitmat-mult-mm.o	/^/;"	v
+I	src/bpol/bitpol2lhca.o	/^/;"	v
+I	src/bpol/lhcarule-minweight.o	/^ELF/;"	v
+I	src/bpol/normal-irredpoly.o	/^p/;"	v
+I	src/bpol/primpoly-lowbit.o	/^p/;"	v
+I	src/bpol/primpoly-minweight.o	/^p/;"	v
+I	src/bpol/primpoly-rand.o	/^p/;"	v
+I	src/comb/print-composition-unimodal.o	/^:;n/;"	v
+I	src/comb/print-gray.o	/^:;n/;"	v
+I	src/convolution/fhtcnvla.o	/^/;"	v
+I	src/dctdst/dct4.o	/^/;"	v
+I	src/fft/fhtfft.o	/^/;"	v
+I	src/fht/fhtspect.o	/^/;"	v
+I	src/fht/twodimfht.o	/^/;"	v
+I	src/mod/kronecker.o	/^I/;"	v
+I	src/realfft/realfftbyfht.o	/^/;"	v
 IGNCASE	scripts/replace	/^        i|+i) IGNCASE='i';$/;"	v
 IGP16	src/perm/shortgraypermute.h	121;"	d
 IGP16	src/perm/shortgraypermute.h	203;"	d
@@ -1317,7 +1420,7 @@ INVERSE	demo/comb/perm-heap-demo.cc	19;"	d	file:
 INVERSE	demo/comb/perm-l1r2-gray-demo.cc	20;"	d	file:
 ISOSCENT_RGS_FIXARRAYS	src/comb/isoscent-rgs.h	16;"	d
 J	doc/wfl-hilbert-doc.txt	/^If A -> G,H,J,K then conjugates of 3-cycle.$/;"	v
-J	src/comb/partition-gen.o	/^ELF/;"	v
+J	src/perm/perminvert.o	/^XK‘Ÿ/;"	v
 JJ_ASSERT_ABORT	src/jjassert.h	13;"	d
 JJ_ASSERT_DEFAULT	src/jjassert.h	18;"	d
 JJ_ASSERT_IGNORE	src/jjassert.h	12;"	d
@@ -1328,22 +1431,16 @@ K	demo/comb/combination-enup-rec-demo.cc	/^ulong K;    \/\/ number of ones in wo
 K	demo/comb/combination-gray-rec-demo.cc	/^ulong K;    \/\/ number of bits in words$/;"	v
 K	demo/comb/mixedradix-sl-gray-rec-demo.cc	/^ulong K;$/;"	v
 K	demo/comb/necklace-cat-demo.cc	/^ulong K;  \/\/ K-ary$/;"	v
-K	src/comb/tree-lev-seq-aux.o	/^ELF/;"	v
+K	src/perm/printcycles.o	/^Ý/;"	v
 KEEPGOING	scripts/chkifdef.sh	/^        k|+k) KEEPGOING=1;$/;"	v
 KEEPGOING	scripts/chkifdef.sh	/^KEEPGOING=0;$/;"	v
 K_	src/comb/attic/composition-chase.h	/^    ulong N_, K_;  \/\/ N=n+k-1 choose K=n$/;"	m	class:composition_chase	access:public
 Kc	demo/comb/composition-gray-rec-demo.cc	/^ulong Nc, Kc;$/;"	v
 Kp	demo/comb/composition-gray-rec-demo.cc	/^ulong Np, Kp;$/;"	v
-L	src/comb/big-fact2perm.o	/^ELF/;"	v
-L	src/comb/combination-rec.o	/^/;"	v
-L	src/comb/mset-perm-lex-rec.o	/^/;"	v
-L	src/comb/partition-conj.o	/^óÃ„/;"	v
-L	src/convolution/twodimfhtcnvl.o	/^ELF/;"	v
-L	src/fft/cfftwrap.o	/^/;"	v
-L	src/fft/fftsplitradix.o	/^ELF/;"	v
-L	src/fht/skipfht.o	/^/;"	v
-L	src/graph/search-digraph.o	/^ë„/;"	v
-L	src/mod/maxorder.o	/^ELF/;"	v
+L	src/bpol/gf2n-order.o	/^%/;"	v
+L	src/convolution/fftcnvl.o	/^/;"	v
+L	src/correlation/fftcorr.o	/^/;"	v
+L	src/mod/quadresidue.o	/^/;"	v
 L3_rec	demo/comb/no1111-gray-demo.cc	/^void L3_rec(long p1, long p2, bool z)$/;"	f	signature:(long p1, long p2, bool z)
 LAST	scripts/build-old.zsh	/^LAST=$(\\ls -1t ${MYZBAKDIR} | head -n 20 | tac )$/;"	v
 LAST	scripts/diff-old.zsh	/^LAST=$(\\ls -1t ${MYZBAKDIR} | head -n 50 | tac )$/;"	v
@@ -1368,9 +1465,12 @@ LX	src/ntt/nttdif4.cc	/^static const ulong LX = 2;$/;"	v	file:
 LX	src/ntt/nttdit4.cc	/^static const ulong LX = 2;$/;"	v	file:
 Lunnon	doc/wfl-hilbert-doc.txt	/^        Draft version 2   Fred Lunnon, Maynooth 01\/05\/13$/;"	v
 M	demo/comb/schroeder-tree-demo.cc	/^int Comp[MAX], S[MAX], c[TMAX], q[TMAX], M[TMAX], t[MAX];$/;"	v
+M	src/convolution/fftcnvl.o	/^/;"	v
+M	src/correlation/fftcorr.o	/^/;"	v
+M	src/perm/permq.o	/^ELF/;"	v
 M3	demo/comb/string-subst-hilbert3d-demo.cc	/^typedef matrix<int> M3;$/;"	t	file:
 MAKEFLAGS	scripts/run-tests.sh	/^export MAKEFLAGS='';$/;"	v
-MASK	demo/bits/debruijn-lookup-demo.cc	25;"	d	file:
+MASK	demo/bits/debruijn-lookup-demo.cc	27;"	d	file:
 MAT	src/matrix/attic/cholesky.h	113;"	d
 MAT	src/matrix/attic/cholesky.h	11;"	d
 MAT	src/matrix/attic/matrixsymmetryq.h	11;"	d
@@ -1428,8 +1528,7 @@ N	demo/graph/sta-graph-acgray-demo.cc	/^ulong N=0;  \/\/ 2**n$/;"	v
 N	demo/graph/sta-graph-macgray-demo.cc	/^ulong N=0;  \/\/ 2**n$/;"	v
 N	demo/seq/A178514-demo.cc	/^ulong N;  \/\/ set to n in main()$/;"	v
 N	demo/seq/A218396-demo.cc	27;"	d	file:
-N	src/ntt/nttdif2.o	/^ELF/;"	v
-N	src/ntt/nttdit2.o	/^M…ÒLHÐIƒÆHƒD$ I9Þ…_þÿÿÝØÝØÝØÝØHƒD$(H‹D$(H9D$0ƒ¥ýÿÿÝØëÝØHƒÄh[]A\\A]A^A_Ã@/;"	v
+N	src/graph/mk-fibrep-gray-digraph.o	/^/;"	v
 NCHAR	src/comb/string-subst.h	/^    static const ulong NCHAR = 128;$/;"	m	class:string_subst	access:public
 NDEBUG	src/aux0/attic/funcemu.h	104;"	d
 NEG	src/comb/attic/combminchange.cc	12;"	d	file:
@@ -1444,7 +1543,7 @@ N_	src/comb/attic/composition-chase.h	/^    ulong N_, K_;  \/\/ N=n+k-1 choose K
 N_	src/comb/check-kpermgen.h	/^    ulong N_;$/;"	m	class:check_kpermgen	access:public
 Nc	demo/comb/composition-gray-rec-demo.cc	/^ulong Nc, Kc;$/;"	v
 Np	demo/comb/composition-gray-rec-demo.cc	/^ulong Np, Kp;$/;"	v
-O	src/bpol/gf2n.o	/^/;"	v
+O	src/fht/slowht.o	/^O;/;"	v
 OK	src/comb/acyclic-map.h	/^    bool OK()  const$/;"	f	class:acyclic_map	access:public	signature:() const
 OK	src/comb/arrangement-rgs.h	/^    bool OK()  const$/;"	f	class:arrangement_rgs	access:public	signature:() const
 OK	src/comb/ascent-alt-rgs.h	/^    bool OK()  const$/;"	f	class:ascent_alt_rgs	access:public	signature:() const
@@ -1591,6 +1690,9 @@ P	demo/comb/combination-pref-demo.cc	/^ulong *S, *P;$/;"	v
 P	src/comb/arrangement-lex.h	/^    perm_lex_inv P;$/;"	m	class:arrangement_lex	access:private
 P	src/comb/hilbert-ndim-rec.h	/^    ulong P[32];  \/\/ size == max dim$/;"	m	class:hilbert_ndim_rec	access:public
 P	src/comb/hilbert-ndim.h	/^    ulong P[32];  \/\/ size == max dim$/;"	m	class:hilbert_ndim	access:public
+P	src/comb/partition-conj.o	/^/;"	v
+P	src/comb/partition-conj.o	/^/;"	v
+P	src/fht/skipfht.o	/^/;"	v
 P1	demo/perm/perm-decomp-demo.cc	190;"	d	file:
 P2	demo/perm/perm-decomp-demo.cc	191;"	d	file:
 PAD	demo/perm/cycles-demo.cc	22;"	d	file:
@@ -1620,8 +1722,8 @@ PERM_TROTTER_OPT	src/comb/perm-trotter.h	14;"	d
 PF	demo/perm/perm-decomp-demo.cc	/^typedef  void (*PF)(ulong *, ulong);$/;"	t	file:
 PGRF_SUCC_BY_INV	src/comb/perm-gray-rfact.h	17;"	d
 PP	demo/bits/hilbert-demo.cc	18;"	d	file:
-PP	src/bits/bitcount-v.cc	17;"	d	file:
-PP	src/bits/bitcount-v.cc	38;"	d	file:
+PP	src/bits/bitcount-v.cc	19;"	d	file:
+PP	src/bits/bitcount-v.cc	40;"	d	file:
 PP	src/mod/moduli.txt	15;"	d	file:
 PP	src/mod/moduli.txt	175;"	d	file:
 PQ_	src/bpol/mersenne-coprime.h	/^    priority_queue<umod_t, umod_t> PQ_;$/;"	m	class:mersenne_coprime	access:public
@@ -1636,6 +1738,7 @@ PRINT_VAL	demo/ds/bitarray-demo.cc	16;"	d	file:
 PROCESS	demo/comb/combination-lam-demo.cc	39;"	d	file:
 PRX	demo/comb/necklace-demo.cc	28;"	d	file:
 PRX	demo/seq/A215327-demo.cc	32;"	d	file:
+PWi	src/comb/print-gray.o	/^)/;"	v
 P_	src/comb/mset-perm-gray.h	/^    ulong *P_;   \/\/ permutation$/;"	m	class:mset_perm_gray	access:public
 Pnt	src/ds/bounding-box.h	/^    typedef point2d<Type> Pnt;$/;"	t	class:bounding_box	access:private
 Pnt	src/ds/centered-array2d.h	/^    typedef point2d<long> Pnt;$/;"	t	class:centered_array2d	access:private
@@ -1650,6 +1753,7 @@ Print	demo/fft/locrec-demo.cc	/^void Print(ulong f, ulong n)$/;"	f	signature:(ul
 Print	demo/perm/swap-blocks-demo.cc	/^void Print(const char *g, const char* bla)$/;"	f	signature:(const char *g, const char* bla)
 Print0	demo/perm/swap-blocks-demo.cc	/^void Print0(const char *g, ulong x1, ulong n1, ulong x2, ulong n2)$/;"	f	signature:(const char *g, ulong x1, ulong n1, ulong x2, ulong n2)
 Q	scripts/chkdemo-etargets.sh	/^            Q=0;$/;"	v
+Q	src/bmat/bitmat-hessenberg.o	/^/;"	v
 Q	src/comb/hilbert-ndim-rec.h	/^    ulong Q[32];  \/\/ size == max dim$/;"	m	class:hilbert_ndim_rec	access:public
 QQ	demo/perm/perm-decomp-demo.cc	154;"	d	file:
 QQ	demo/perm/perm-decomp-demo.cc	180;"	d	file:
@@ -1680,6 +1784,7 @@ REVBIN_PERMUTE_UNROLL	src/perm/attic/revbinpermute.h	6;"	d
 RULER_FUNC_MAX_ARRAY_LEN	src/comb/ruler-func.h	12;"	d
 ReAlloc	src/realloc.h	/^inline Type *ReAlloc(Type *p, ulong n, ulong \/*nold*\/)$/;"	f	signature:(Type *p, ulong n, ulong )
 ReAlloc	src/realloc.h	/^inline Type *ReAlloc(Type *p, ulong n, ulong nold)$/;"	f	signature:(Type *p, ulong n, ulong nold)
+Rm	src/comb/print-partition-conj.o	/^/;"	v
 S	demo/bits/dragon-curve-texpic-demo.cc	/^double C[csn], S[csn];  \/\/ direction vectors$/;"	v
 S	demo/bits/dragon-hex-texpic-demo.cc	/^double C[csn], S[csn];  \/\/ direction vectors$/;"	v
 S	demo/bits/dragon-r13-texpic-demo.cc	/^double C[csn], S[csn];  \/\/ direction vectors$/;"	v
@@ -1694,6 +1799,7 @@ S	demo/comb/schroeder-tree-demo.cc	/^int Comp[MAX], S[MAX], c[TMAX], q[TMAX], M[
 S	demo/seq/A218396-demo.cc	/^ulong S[N]; \/\/ allowed set$/;"	v
 S	src/bits/bitsubset-gray.h	/^    bit_subset S;$/;"	m	class:bit_subset_gray	access:protected
 S	src/comb/paren-string-to-rgs.cc	/^static const char *S = ".1";$/;"	v	file:
+S	src/comb/partition-conj.o	/^/;"	v
 S1	demo/comb/no111-gray-demo.cc	102;"	d	file:
 S1	demo/comb/no111-gray-demo.cc	86;"	d	file:
 S1	demo/comb/no1111-gray-demo.cc	105;"	d	file:
@@ -1781,6 +1887,7 @@ SUBSET_GRAY_MAX_ARRAY_LEN	src/comb/subset-gray.h	12;"	d
 SZ	fxt-2018.01.08.tar.gz	/^‹/;"	v
 S_	src/comb/ksubset-gray.h	/^    ulong *S_;  \/\/ set in S[1,2,...,k] with elements \\in {1,2,...,n}$/;"	m	class:ksubset_gray	access:public
 Searching	fxt.lsm	/^                Sorting, Searching, Stack (FIFO), Queue (LIFO), heap and priority-queue.$/;"	v
+Sf	src/comb/print-gray.o	/^)/;"	v
 Sin	src/fht/hartleyshift.h	148;"	d
 Sin	src/fht/hartleyshift.h	17;"	d
 SinCos	doc/aux0-doc.txt	/^static inline Complex SinCos(double phi);$/;"	p	file:	signature:(double phi)
@@ -1788,10 +1895,14 @@ SinCos	doc/aux0-doc.txt	/^static inline void SinCos(double a, double *s, double 
 SinCos	src/aux0/attic/sincos.cc	/^SinCos(double a, double *s, double *c)$/;"	f	signature:(double a, double *s, double *c)
 SinCos	src/aux0/csincos.h	/^static inline Complex SinCos(double phi)$/;"	f	signature:(double phi)
 SinCos	src/aux0/sincos.h	/^static inline void SinCos(double a, double *s, double *c)$/;"	f	signature:(double a, double *s, double *c)
+Sks	src/fft/matrixfft.o	/^/;"	v
+Sks	src/fft/matrixfft.o	/^ˆ(/;"	v
 Smat	demo/comb/conference-quadres-demo.cc	/^typedef matrix<int>  Smat;  \/\/ matrix with integer entries$/;"	t	file:
 Smat	demo/comb/hadamard-srs-demo.cc	/^typedef matrix<int>  Smat;  \/\/ matrix with integer entries$/;"	t	file:
 Stack	fxt.lsm	/^                Sorting, Searching, Stack (FIFO), Queue (LIFO), heap and priority-queue.$/;"	p	file:	signature:(FIFO)
-T$	src/ntt/nttcnvl.o	/^ELF/;"	v
+T	src/bpol/normalpoly-dual.o	/^da/;"	v
+T	src/comb/partition-conj.o	/^/;"	v
+T$HH	src/comb/print-set.o	/^ELF/;"	v
 TABLE_TYPE	demo/seq/A182372-demo.cc	/^typedef unsigned char TABLE_TYPE;$/;"	t	file:
 TEST	demo/gf2n/gf2n-minpoly-demo.cc	20;"	d	file:
 TEST	demo/gf2n/gf2n-minpoly-demo.cc	25;"	d	file:
@@ -1828,7 +1939,14 @@ Transform	fxt.lsm	/^                Reed-Muller transform, Haar Transform, Wavel
 Type	demo/bits/pcrc64-demo.cc	17;"	d	file:
 Type	demo/seq/A003040-demo.cc	/^typedef ulong Type;$/;"	t	file:
 Type	demo/seq/A218293-demo.cc	/^typedef ulong Type;$/;"	t	file:
+U	src/aux0/version.o	/^/;"	v
 U	src/bits/bitsubset.h	/^    ulong U;  \/\/ current subset$/;"	m	class:bit_subset	access:protected
+U	src/bpol/bitpol-print.o	/^/;"	v
+U	src/comb/print-catalan-step-rgs-aa.o	/^/;"	v
+U	src/comb/print-composition-aa.o	/^/;"	v
+U	src/comb/print-composition-unimodal.o	/^/;"	v
+U	src/comb/print-mset.o	/^/;"	v
+U	src/comb/print-partition-conj.o	/^/;"	v
 USE_COND	demo/comb/partition-gen-demo.cc	16;"	d	file:
 USE_C_REALLOC	src/realloc.h	40;"	d
 USE_GCD	demo/gf2n/gf2n-trace0-generators-demo.cc	17;"	d	file:
@@ -1857,11 +1975,12 @@ USE_TRIG_REC	src/fht/fhtloc2.h	122;"	d
 USE_TRIG_REC	src/fht/fhtloc2.h	19;"	d
 USE_WALSH_GRAY	src/walsh/dyadiccnvl.h	102;"	d
 V	src/bits/bitsubset.h	/^    ulong V;  \/\/ the full set$/;"	m	class:bit_subset	access:protected
+V	src/fht/skipfht.o	/^/;"	v
 V3	demo/comb/string-subst-hilbert3d-demo.cc	/^typedef vector<int> V3;$/;"	t	file:
 VERX	src/mod/chebyshev1.cc	84;"	d	file:
 VERX	src/mod/chebyshev2.cc	59;"	d	file:
-VV	src/bits/bitcount-v.cc	19;"	d	file:
-VV	src/bits/bitcount-v.cc	37;"	d	file:
+VV	src/bits/bitcount-v.cc	21;"	d	file:
+VV	src/bits/bitcount-v.cc	39;"	d	file:
 VV	src/dctdst/dct4.cc	13;"	d	file:
 Vec	src/ds/centered-array2d.h	/^    typedef vector2d<long> Vec;$/;"	t	class:centered_array2d	access:private
 Vec	src/ds/centered-array3d.h	/^    typedef vector3d<long> Vec;$/;"	t	class:centered_array3d	access:private
@@ -1875,9 +1994,11 @@ WFL_MAXDIM	src/comb/wfl-hilbert.h	12;"	d
 WFL_MAXLEV	src/comb/wfl-hilbert.h	10;"	d
 WFL_NUMLEV	src/comb/wfl-hilbert.h	11;"	d
 WORD	demo/bits/bitdemos.h	57;"	d
-X	src/comb/mixedradix2num.o	/^ELF/;"	v
+X	src/chirpzt/fftfract.o	/^/;"	v
+X	src/fht/skipfht.o	/^/;"	v
 X	src/graph/lyndon-gray.h	158;"	d
 X	src/graph/lyndon-gray.h	163;"	d
+X	src/perm/perminvert.o	/^XK‘Ÿ/;"	v
 X	test/test-bits.cc	1104;"	d	file:
 XX	src/mod/moduli.txt	16;"	d	file:
 XX	src/mod/moduli.txt	176;"	d	file:
@@ -1888,6 +2009,7 @@ Y_rec	demo/comb/perm-l1r2-gray-demo.cc	/^void Y_rec(ulong d, bool z)$/;"	f	signa
 Y_rec	demo/comb/perm-right1-gray-demo.cc	/^void Y_rec(ulong d, bool z)$/;"	f	signature:(ulong d, bool z)
 Z	demo/fft/gen-walsh-demo.cc	104;"	d	file:
 Z	demo/fft/gen-walsh-demo.cc	17;"	d	file:
+Z	src/fht/fhtdit2.o	/^/;"	v
 ZEBRA_HACK	demo/comb/subset-debruijn-demo.cc	17;"	d	file:
 ZP_USE_REVBIN_CORE	doc/convolution-doc.txt	286;"	d	file:
 ZP_USE_REVBIN_CORE	doc/convolution-doc.txt	302;"	d	file:
@@ -1897,6 +2019,8 @@ ZP_USE_REVBIN_CORE	src/convolution/fhtcnvl.cc	20;"	d	file:
 ZP_USE_REVBIN_CORE	src/convolution/fhtcnvla.cc	20;"	d	file:
 ZP_USE_REVBIN_CORE	src/convolution/fhtloccnvl.cc	15;"	d	file:
 ZP_USE_REVBIN_CORE	src/convolution/fhtloccnvla.cc	13;"	d	file:
+_	src/convolution/fftcnvl.o	/^/;"	v
+_	src/correlation/fftcorr.o	/^/;"	v
 _CMP1_	src/ds/attic/priorityqueue1.h	138;"	d
 _CMP1_	src/ds/attic/priorityqueue1.h	19;"	d
 _CMP1_	src/ds/attic/priorityqueue1.h	24;"	d
@@ -1915,10 +2039,24 @@ _CMP_	src/ds/priorityqueue.h	19;"	d
 _CMP_	src/ds/priorityqueue.h	24;"	d
 _GLIBCPP_HAVE_SINCOS	src/aux0/sincos.h	31;"	d
 __JJSTRING	src/jjassert.h	41;"	d
+a	123	/^a:0000,0000,0000,0000,0000,0000,1000,0000$/;"	v
+a	123	/^a:0000,0000,0000,0000,0000,0000,1100,0000$/;"	v
+a	123	/^a:0000,0000,0000,0000,0110,0000,1100,0000$/;"	v
+a	123	/^a:0000,0000,0000,0000,0110,0000,1110,0000$/;"	v
+a	123	/^a:0000,0000,0001,1000,0111,1000,1110,0000$/;"	v
+a	123	/^a:0000,0000,0001,1000,0111,1000,1111,0000$/;"	v
+a	123	/^a:0000,0011,0001,1111,0111,1110,1111,0000$/;"	v
+a	123	/^a:0000,0011,0001,1111,0111,1110,1111,1000$/;"	v
+a	123	/^a:0011,0011,1111,1111,1111,1111,1111,1000$/;"	v
+a	123	/^a:0011,0011,1111,1111,1111,1111,1111,1100$/;"	v
+a	123	/^a:1111,1111,1111,1111,1111,1111,1111,1100$/;"	v
+a	123	/^a:1111,1111,1111,1111,1111,1111,1111,1110$/;"	v
+a	123	/^a:1111,1111,1111,1111,1111,1111,1111,1111$/;"	v
 a	demo/comb/composition-nz-gray-rec-demo.cc	/^ulong *a;  \/\/ composition$/;"	v
 a	demo/comb/composition-nz-subset-lex-rec-demo.cc	/^ulong *a;  \/\/ composition$/;"	v
 a	demo/seq/A179009-demo.cc	/^const ulong *a = 0;$/;"	v
 a	scripts/bench.zsh	/^            a=$(echo $aa | tr '@' ' ' );$/;"	v
+a	src/chirpzt/fftarblen.o	/^ELF/;"	v
 a	src/comb/attic/partition-dist-lex-rec-demo.cc	/^ulong *a;$/;"	v
 a	src/comb/attic/partition-lex-rec-demo.cc	/^ulong *a;$/;"	v
 a	src/comb/lyndon-words.h	/^    ulong a;  \/\/ first (smallest) letter$/;"	m	class:lyndon_words	access:protected
@@ -2126,6 +2264,7 @@ add_sat16	doc/bits-doc.txt	/^static inline ushort add_sat16(ushort a, ushort b);
 add_sat16	src/bits/branchless.h	/^static inline ushort add_sat16(ushort a, ushort b)$/;"	f	signature:(ushort a, ushort b)
 add_val	src/aux2/attic/arith2d.h	/^inline void add_val(Type **f, ulong nr, ulong nc, Type s)$/;"	f	signature:(Type **f, ulong nr, ulong nc, Type s)
 adj_swap	src/graph/mk-perm-gray-digraph.cc	/^static inline void adj_swap(ulong *x, ulong c)$/;"	f	file:	signature:(ulong *x, ulong c)
+al	bin.s	/^	movzbl	%al, %eax	# tmp150, tmp149$/;"	v
 al	src/aux0/attic/trigrec.h	/^    Type al, be;$/;"	m	class:trigrec	access:private
 all	src/comb/perm-restrpref.h	/^    ulong all()$/;"	f	class:perm_restrpref	access:public	signature:()
 all_branching_numbers	src/comb/tree-lev-seq-aux.h	/^    void all_branching_numbers(const ulong *a, ulong n, ulong *b, ulong *s)  const$/;"	f	class:tree_lev_seq_aux	access:public	signature:(const ulong *a, ulong n, ulong *b, ulong *s) const
@@ -2479,6 +2618,7 @@ aux	src/comb/tree-lev-seq.h	/^    tree_lev_seq_aux aux;$/;"	m	class:tree_lev_seq
 auxil$	tags	/^$showaux	scripts\/autodoc.pl	\/^$showaux = 1;     # whether to print funcs marked as auxil$\/;"	v$/;"	v
 average	doc/bits-doc.txt	/^static inline ulong average(ulong x, ulong y);$/;"	p	file:	signature:(ulong x, ulong y)
 average	src/bits/average.h	/^static inline ulong average(ulong x, ulong y)$/;"	f	signature:(ulong x, ulong y)
+ax	bin.s	/^	movzwl	%ax, %eax	# tmp143, tmp142$/;"	v
 ax_	src/ds/bounding-box.h	/^    Type ix_, ax_;  \/\/ min-x, max-x$/;"	m	class:bounding_box	access:protected
 axiom_	src/comb/string-subst.h	/^    uchar *axiom_;  \/\/ the axiom$/;"	m	class:string_subst	access:public
 axiom_str_	src/comb/lindenmayer-system.h	/^    std::string axiom_str_;$/;"	m	class:lindenmayer_system	access:protected
@@ -3230,6 +3370,8 @@ bitset2deltaset	doc/bits-doc.txt	/^static inline ulong bitset2deltaset(ulong b, 
 bitset2deltaset	src/bits/bitset2set.h	/^static inline ulong bitset2deltaset(ulong b, ulong *f, ulong n)$/;"	f	signature:(ulong b, ulong *f, ulong n)
 bitset2set	doc/bits-doc.txt	/^static inline ulong bitset2set(ulong b, ulong *f, ulong n, ulong off=0);$/;"	p	file:	signature:(ulong b, ulong *f, ulong n, ulong off=0)
 bitset2set	src/bits/bitset2set.h	/^static inline ulong bitset2set(ulong b, ulong *f, ulong n, ulong off=0)$/;"	f	signature:(ulong b, ulong *f, ulong n, ulong off=0)
+bla	bin.s	/^	movq	%rdi, 8(%rsp)	# bla, bla$/;"	v
+bla	bin.s	/^	movq	8(%rsp), %rax	# bla, tmp84$/;"	v
 block_border_ones	doc/bits-doc.txt	/^static inline ulong block_border_ones(ulong x);$/;"	p	file:	signature:(ulong x)
 block_border_ones	src/bits/bit-isolate.h	/^static inline ulong block_border_ones(ulong x)$/;"	f	signature:(ulong x)
 block_ones	doc/bits-doc.txt	/^static inline ulong block_ones(ulong x);$/;"	p	file:	signature:(ulong x)
@@ -3332,7 +3474,13 @@ byte_parity	src/bits/parity.h	/^static inline ulong byte_parity(ulong x)$/;"	f	s
 c	demo/comb/composition-gray-rec-demo.cc	/^ulong *c;  \/\/ combination data (Kc elements)$/;"	v
 c	demo/comb/schroeder-tree-demo.cc	/^int Comp[MAX], S[MAX], c[TMAX], q[TMAX], M[TMAX], t[MAX];$/;"	v
 c	demo/comb/shift-subsets-demo.cc	/^ulong c, ct=1;$/;"	v
-c	src/bpol/gf2n.o	/^/;"	v
+c	src/convolution/fhtcnvla.o	/^/;"	v
+c	src/dctdst/dct4.o	/^/;"	v
+c	src/fft/fhtfft.o	/^/;"	v
+c	src/fht/fht0.o	/^/;"	v
+c	src/fht/fhtspect.o	/^/;"	v
+c	src/fht/twodimfht.o	/^/;"	v
+c	src/realfft/realfftbyfht.o	/^/;"	v
 c01	demo/bits/bitdemos.h	/^static const char c01[] = ".1";$/;"	v
 c_	src/bits/crc32.h	/^    uint c_;  \/\/ a binary primitive polynomial$/;"	m	class:crc32	access:public
 c_	src/bits/crc64.h	/^    uint64 c_;  \/\/ a binary primitive polynomial$/;"	m	class:crc64	access:public
@@ -3734,6 +3882,11 @@ chop	demo/fft/fft-arblen-demo.cc	/^chop(double x, double eps=1e-9)$/;"	f	signatu
 chop	src/aux0/attic/aux0double.cc	/^chop(double &x, double eps=1e-6)$/;"	f	signature:(double &x, double eps=1e-6)
 chop	src/aux0/attic/aux0double.h	/^void chop(double &x, double eps=1e-6);$/;"	p	signature:(double &x, double eps=1e-6)
 chop0	src/aux0/tex-line.cc	/^static inline double chop0(double x)  { if ( fabs(x)<0.001 )  x=0.0;  return x; }$/;"	f	file:	signature:(double x)
+cl	bin.s	/^	shrq	%cl, -16(%rsp)	# tmp178, x2$/;"	v
+cl	bin.s	/^	shrq	%cl, -24(%rsp)	# tmp177, x4$/;"	v
+cl	bin.s	/^	shrq	%cl, -32(%rsp)	# tmp176, x8$/;"	v
+cl	bin.s	/^	shrq	%cl, -48(%rsp)	# tmp175, x16$/;"	v
+cl	bin.s	/^	shrq	%cl, -72(%rsp)	# tmp179, x$/;"	v
 cl_	src/comb/attic/all-compositions-minchange.h	/^    composition_colex cl_;$/;"	m	class:all_compositions_minchange	access:public
 clear	src/ds/bitarray.h	/^    void clear(ulong n)$/;"	f	class:bitarray	access:public	signature:(ulong n)
 clear_all	src/ds/bitarray.h	/^    void clear_all()$/;"	f	class:bitarray	access:public	signature:()
@@ -5076,6 +5229,7 @@ crc64::shift	src/bits/crc64.h	/^    void shift()$/;"	f	class:crc64	access:public
 crc64::word_in	src/bits/crc64.h	/^    uint64 word_in(uint64 w)$/;"	f	class:crc64	access:public	signature:(uint64 w)
 crc64::~crc64	src/bits/crc64.h	/^    ~crc64()  {;}$/;"	f	class:crc64	access:public	signature:()
 crsms_gen	demo/comb/necklace-cat-demo.cc	/^void crsms_gen(ulong n, ulong j)$/;"	f	signature:(ulong n, ulong j)
+cs	src/bpol/bitpol-factor.o	/^cs/;"	v
 csn	demo/bits/dragon-curve-texpic-demo.cc	/^const ulong csn = 4;  \/\/ 90 degrees$/;"	v
 csn	demo/bits/dragon-hex-texpic-demo.cc	/^const ulong csn = 6;  \/\/ 60 degrees$/;"	v
 csn	demo/bits/dragon-r13-texpic-demo.cc	/^const ulong csn = 4;  \/\/ 90 degrees$/;"	v
@@ -5095,6 +5249,7 @@ cswap_gt	doc/bits-doc.txt	/^static inline void cswap_gt(ulong &a, ulong &b);$/;"
 cswap_gt	src/bits/cswap.h	/^static inline void cswap_gt(ulong &a, ulong &b)$/;"	f	signature:(ulong &a, ulong &b)
 cswap_lt	doc/bits-doc.txt	/^static inline void cswap_lt(ulong &a, ulong &b);$/;"	p	file:	signature:(ulong &a, ulong &b)
 cswap_lt	src/bits/cswap.h	/^static inline void cswap_lt(ulong &a, ulong &b)$/;"	f	signature:(ulong &a, ulong &b)
+ct	bin.s	/^	movq	-40(%rsp), %rax	# ct, tmp124$/;"	v
 ct	demo/arith/zero-divisors-demo.cc	/^ulong ct;$/;"	v
 ct	demo/arith/zero-divisors-pairs-demo.cc	/^ulong ct;$/;"	v
 ct	demo/bits/revbin-rec-demo.cc	/^ulong N, ct;$/;"	v
@@ -5244,9 +5399,12 @@ cyclic_perm::~cyclic_perm	src/comb/cyclic-perm.h	/^    ~cyclic_perm()$/;"	f	clas
 czi	demo/seq/A178514-demo.cc	/^ulong czi[32];$/;"	v
 d	doc/wfl-hilbert-doc.txt	/^d = 3, l = 2 walk ---$/;"	v
 d	doc/wfl-hilbert-doc.txt	/^vector  [n] ; when  d = 2  the walk is a scaled-up convergent to the classical$/;"	v
+d	src/aux0/version.o	/^¼"/;"	v
 d	src/comb/hilbert-ndim-rec.h	/^    ulong d;  \/\/ number of dimensions 2<=d<=32$/;"	m	class:hilbert_ndim_rec	access:public
 d	src/comb/hilbert-ndim.h	/^    ulong d;  \/\/ number of dimensions 2<=d<=32$/;"	m	class:hilbert_ndim	access:public
 d	src/comb/paren-gray.h	/^    ulong *l, *d, *e;$/;"	m	class:paren_gray	access:private
+d	src/graph/mk-fibrep-gray-digraph.o	/^/;"	v
+d	src/perm/printcycles.o	/^Ý/;"	v
 d0_	src/comb/perm-trotter.h	/^    ulong d0_;   \/\/ direction of element zero$/;"	m	class:perm_trotter	access:public
 d_	src/aux0/attic/funcemu.h	/^    Type  *d_;  \/\/ Data stack$/;"	m	class:funcemu	access:public
 d_	src/comb/attic/perm-minchange.h	/^    ulong *d_;  \/\/ aux$/;"	m	class:perm_minchange	access:public
@@ -5947,6 +6105,7 @@ dyck_rgs_subset_lex::str_	src/comb/dyck-rgs-subset-lex.h	/^    char *str_; \/\/ 
 dyck_rgs_subset_lex::tr_	src/comb/dyck-rgs-subset-lex.h	/^    ulong tr_;  \/\/ current track$/;"	m	class:dyck_rgs_subset_lex	access:public
 dyck_rgs_subset_lex::~dyck_rgs_subset_lex	src/comb/dyck-rgs-subset-lex.h	/^    ~dyck_rgs_subset_lex()$/;"	f	class:dyck_rgs_subset_lex	access:public	signature:()
 e	src/comb/paren-gray.h	/^    ulong *l, *d, *e;$/;"	m	class:paren_gray	access:private
+e	src/fht/fhtdit2.o	/^ELF/;"	v
 e1_	src/ds/priorityqueue.h	/^    Type2 *e1_;  \/\/ events: e1[1..s]  one-based array!$/;"	m	class:priority_queue	access:public
 e_	src/bpol/mersenne-coprime.h	/^    ulong e_;    \/\/ exponent$/;"	m	class:mersenne_coprime	access:public
 e_	src/bpol/necklace2bitpol.h	/^    ulong e_;  \/\/ a^b$/;"	m	class:necklace2bitpol	access:public
@@ -5966,6 +6125,19 @@ easy_ordering_real_complex_fft	src/realfft/realffteasyord.cc	/^easy_ordering_rea
 easy_ordering_real_complex_fft0	doc/realfft-doc.txt	/^void easy_ordering_real_complex_fft0(double *f, ulong ldn, int is\/*=+1*\/);$/;"	p	file:	signature:(double *f, ulong ldn, int is )
 easy_ordering_real_complex_fft0	src/realfft/realfft.h	/^void easy_ordering_real_complex_fft0(double *f, ulong ldn, int is=+1);$/;"	p	signature:(double *f, ulong ldn, int is=+1)
 easy_ordering_real_complex_fft0	src/realfft/realffteasyord.cc	/^easy_ordering_real_complex_fft0(double *f, ulong ldn, int is\/*=+1*\/)$/;"	f	signature:(double *f, ulong ldn, int is )
+eax	bin.lst	/^ 501 0523 B8000000 		movl	$0, %eax	#, D.2912$/;"	v
+eax	bin.s	/^	andl	$1, %eax	#, D.2902$/;"	v
+eax	bin.s	/^	andl	$1, %eax	#, D.2905$/;"	v
+eax	bin.s	/^	andl	$15, %eax	#, tmp156$/;"	v
+eax	bin.s	/^	andl	$3, %eax	#, tmp163$/;"	v
+eax	bin.s	/^	movl	$0, %eax	#, D.2912$/;"	v
+eax	bin.s	/^	movl	$0, %eax	#,$/;"	v
+eax	bin.s	/^	movl	%eax, %eax	# tmp136, tmp135$/;"	v
+eax	bin.s	/^	movl	%eax, %ecx	# D.2906, tmp175$/;"	v
+eax	bin.s	/^	movl	%eax, %ecx	# D.2906, tmp176$/;"	v
+eax	bin.s	/^	movl	%eax, %ecx	# D.2906, tmp177$/;"	v
+eax	bin.s	/^	movl	%eax, %ecx	# D.2906, tmp178$/;"	v
+eax	bin.s	/^	movl	%eax, %ecx	# D.2906, tmp179$/;"	v
 echo	scripts/bench.zsh	/^        echo '------------------------------------------------------------';$/;"	v
 echo	scripts/chkifdef.sh	/^echo;  echo 'OK.'$/;"	v
 echo	scripts/chkxfiles.sh	/^    echo " *** SPURIOUS FILE\/DIR: [$t]" 1>&2;$/;"	v
@@ -5978,8 +6150,22 @@ echo	scripts/replace	/^            echo "can't use '-o' with multiple filenames.
 echo	scripts/replace	/^            echo "cannot open file $DIFFFILENAME";$/;"	v
 echo	scripts/replace	/^    echo "# $0 $@" >> "$DIFFFILENAME";$/;"	v
 ect_	src/comb/perm-mv0.h	/^    ulong ect_;  \/\/ counter for easy case$/;"	m	class:perm_mv0	access:public
+ecx	bin.s	/^	movl	$_ZZ11print_bin_lPKcmE3tmp, %ecx	#,$/;"	v
 edge_idx	src/graph/digraph.cc	/^digraph::edge_idx(ulong p, ulong pn)  const$/;"	f	class:digraph	signature:(ulong p, ulong pn) const
 edge_idx	src/graph/digraph.h	/^    ulong edge_idx(ulong p, ulong pn)  const;$/;"	p	class:digraph	access:public	signature:(ulong p, ulong pn) const
+edi	bin.s	/^	movl	$.LC0, %edi	#,$/;"	v
+edi	bin.s	/^	movl	$.LC1, %edi	#,$/;"	v
+edi	bin.s	/^	movl	$.LC2, %edi	#,$/;"	v
+edi	bin.s	/^	movl	$.LC3, %edi	#,$/;"	v
+edi	bin.s	/^	movl	$.LC4, %edi	#,$/;"	v
+edi	bin.s	/^	movl	$.LC5, %edi	#,$/;"	v
+edi	bin.s	/^	movl	$.LC6, %edi	#,$/;"	v
+edi	bin.s	/^	movl	$.LC7, %edi	#,$/;"	v
+edi	bin.s	/^	movl	$.LC8, %edi	#,$/;"	v
+edi	bin.s	/^	movl	$10, %edi	#,$/;"	v
+edi	bin.s	/^	movl	$54, %edi	#,$/;"	v
+edx	bin.s	/^	movl	$0, %edx	#,$/;"	v
+edx	bin.s	/^	movl	$31, %edx	#,$/;"	v
 egcd	doc/aux0-doc.txt	/^Type egcd(Type u, Type v, Type &tu1, Type &tu2);$/;"	p	file:	signature:(Type u, Type v, Type &tu1, Type &tu2)
 egcd	src/aux0/attic/gcd.cc	/^egcd(long u, long v, long &u1, long &u2)$/;"	f	signature:(long u, long v, long &u1, long &u2)
 egcd	src/aux0/gcd.h	/^Type egcd(Type u, Type v, Type &tu1, Type &tu2)$/;"	f	signature:(Type u, Type v, Type &tu1, Type &tu2)
@@ -6000,6 +6186,8 @@ erastothenes	demo/mod/eratosthenes-demo.cc	/^erastothenes(bitarray &B)$/;"	f	sig
 erastothenes_opt	demo/mod/eratosthenes-demo.cc	/^erastothenes_opt(bitarray &B)$/;"	f	signature:(bitarray &B)
 err_msg_head	src/comb/lindenmayer-system.cc	/^static const char * const err_msg_head = "Error in lindenmayer_system:";$/;"	v	file:
 err_msg_head	src/comb/string-subst.cc	/^static const char * const err_msg_head = "Error in string_subst:";$/;"	v	file:
+esi	bin.s	/^	movl	$2, %esi	#,$/;"	v
+esi	bin.s	/^	movl	$3, %esi	#,$/;"	v
 euler_phi	doc/mod-doc.txt	/^umod_t euler_phi(const factorization &ff);$/;"	p	file:	signature:(const factorization &ff)
 euler_phi	doc/mod-doc.txt	/^umod_t euler_phi(umod_t n);$/;"	p	file:	signature:(umod_t n)
 euler_phi	doc/mod-doc.txt	/^umod_t euler_phi(umod_t pr, ulong ex);$/;"	p	file:	signature:(umod_t pr, ulong ex)
@@ -6055,6 +6243,7 @@ f	demo/comb/hanoi-rec-demo.cc	/^ulong f[3];  \/\/ the three piles$/;"	v
 f	demo/comb/necklace-cat-demo.cc	/^ulong *f;  \/\/ data in f[1..N],  f[0] = 0$/;"	v
 f	demo/comb/necklace-gray-demo.cc	/^ulong *f;  \/\/ data in f[1..N],  f[0] = 0$/;"	v
 f	demo/comb/necklace-gray3-demo.cc	/^long *f;  \/\/ data in f[1..m],  f[0] = 0$/;"	v
+f	src/fft/fftsplitradix.o	/^ELF/;"	v
 f_	src/aux1/attic/array.h	/^    Type *f_;  \/\/ pointer to data$/;"	m	class:array	access:public
 f_	src/comb/composition-nz-minc.h	/^    ulong f_;   \/\/ a[k] <= f * a[k-1]$/;"	m	class:composition_nz_minc	access:public
 f_	src/comb/mixedradix-gray2.h	/^    ulong *f_;  \/\/ focus pointer$/;"	m	class:mixedradix_gray2	access:public
@@ -6941,6 +7130,8 @@ funcemu::tp_	src/aux0/attic/funcemu.h	/^    ulong tp_;  \/\/ sTate stack Pointer
 funcemu::~funcemu	src/aux0/attic/funcemu.h	/^    ~funcemu()$/;"	f	class:funcemu	access:public	signature:()
 fw_	src/bits/bitfibgray.h	/^    ulong fw_, lw_;  \/\/ first and last Fibonacci word in Gray code$/;"	m	class:bit_fibgray	access:public
 fz	src/fht/fhtmayer.txt	/^REAL *fz;$/;"	v
+g	src/convolution/fftcnvl.o	/^/;"	v
+g	src/correlation/fftcorr.o	/^/;"	v
 g03	src/graph/lyndon-gray.h	/^    static inline ulong g03(ulong x) { X(1); X(2); return x; }$/;"	f	class:lyndon_gray	access:public	signature:(ulong x)
 g05	src/graph/lyndon-gray.h	/^    static inline ulong g05(ulong x) { X(1); X(4); return x; }$/;"	f	class:lyndon_gray	access:public	signature:(ulong x)
 g21	src/graph/lyndon-cmp.cc	/^static inline ulong g21(ulong x)$/;"	f	file:	signature:(ulong x)
@@ -7167,7 +7358,10 @@ grs_negative_q	src/bits/grsnegative.h	/^static inline ulong grs_negative_q(ulong
 grs_next	doc/bits-doc.txt	/^static inline ulong grs_next(ulong k, ulong g);$/;"	p	file:	signature:(ulong k, ulong g)
 grs_next	src/bits/grsnegative.h	/^static inline ulong grs_next(ulong k, ulong g)$/;"	f	signature:(ulong k, ulong g)
 h	scripts/make-demo-list.sh	/^        h=include\/$h;$/;"	v
+h	src/bpol/bitpol2lhca.o	/^/;"	v
 h	src/comb/word-stats.h	/^    ulong *h;  \/\/ aux for histogram$/;"	m	class:word_stats	access:private
+h	src/perm/perminvert.o	/^XK‘Ÿ/;"	v
+h	src/perm/printcycles.o	/^Ý/;"	v
 h_	src/bits/bit-sl-gray.h	/^    ulong h_;   \/\/ highest allowed track$/;"	m	class:bit_sl_gray	access:public
 h_	src/bpol/gf2n.cc	/^ulong GF2n::h_ = 0;  \/\/ auxiliary bit-mask for computations$/;"	m	class:GF2n	file:
 h_	src/bpol/gf2n.h	/^    static ulong h_;  \/\/ auxiliary bit-mask for computations$/;"	m	class:GF2n	access:public
@@ -7314,9 +7508,19 @@ histogram	src/comb/word-stats.h	/^    void histogram()  const$/;"	f	class:word_s
 hn	src/comb/word-stats.h	/^    ulong hn;  \/\/ hn+1 values in histogram: h[0..hn]$/;"	m	class:word_stats	access:private
 hswap	demo/perm/perm-decomp-demo.cc	/^hswap(ulong *f, ulong n)$/;"	f	file:	signature:(ulong *f, ulong n)
 htab	src/bits/lin2hilbert.cc	/^static const ulong htab[] = {$/;"	v	file:
+i	bin.s	/^	cmpq	-80(%rsp), %rax	# i, D.2905$/;"	v
+i	bin.s	/^	cmpq	-80(%rsp), %rax	# i, tmp124$/;"	v
+i	bin.s	/^	cmpq	-80(%rsp), %rax	# i, tmp137$/;"	v
+i	bin.s	/^	cmpq	-80(%rsp), %rax	# i, tmp144$/;"	v
+i	bin.s	/^	cmpq	-80(%rsp), %rax	# i, tmp151$/;"	v
+i	bin.s	/^	cmpq	-80(%rsp), %rax	# i, tmp158$/;"	v
+i	bin.s	/^	cmpq	-80(%rsp), %rax	# i, tmp165$/;"	v
 i	fxt-2018.01.08.tar.gz	/^ iø“Ð;_ÌÐñ=0=vŽÞBx3a$/;"	v
 i	src/ds/attic/coroutine-paren-demo.cc	/^    typedef struct { int i,s,k,t; } vars;$/;"	m	struct:paren::__anon2	file:	access:public
+i	src/mod/maxorder.o	/^!/;"	v
+i	src/mod/quadresidue.o	/^!/;"	v
 i	src/perm/attic/partition.h	/^    int i;$/;"	m	class:partition	access:private
+i	src/perm/permcompose.o	/^/;"	v
 i_	src/comb/binary-debruijn.h	/^    ulong i_;   \/\/ position of current digit in current string$/;"	m	class:binary_debruijn	access:public
 i_	src/comb/debruijn.h	/^    ulong i_;   \/\/ position of current digit in current string$/;"	m	class:debruijn	access:public
 i_	src/comb/dyck-rgs-subset-lex.h	/^    ulong i_;   \/\/ k-ary Dyck words: i = k - 1$/;"	m	class:dyck_rgs_subset_lex	access:public
@@ -7661,6 +7865,7 @@ involution_zero_map_rgs::z_	src/comb/involution-zero-map-rgs.h	/^    ulong *z_; 
 involution_zero_map_rgs::~involution_zero_map_rgs	src/comb/involution-zero-map-rgs.h	/^    ~involution_zero_map_rgs()$/;"	f	class:involution_zero_map_rgs	access:public	signature:()
 invsqrt2adic	doc/bits-doc.txt	/^static inline ulong invsqrt2adic(ulong d);$/;"	p	file:	signature:(ulong d)
 invsqrt2adic	src/bits/bit2adic.h	/^static inline ulong invsqrt2adic(ulong d)$/;"	f	signature:(ulong d)
+ios	src/comb/print-set.o	/^/;"	v
 ip_	src/comb/attic/perm-minchange.h	/^    ulong *ip_; \/\/ ip[n] contains the inverse permutation of p[]$/;"	m	class:perm_minchange	access:public
 ip_	src/comb/kperm-lex.h	/^    ulong *ip_; \/\/ inverse permutation$/;"	m	class:kperm_lex	access:public
 ip_	src/comb/perm-ives.h	/^    ulong *ip_;  \/\/ inverse permutation$/;"	m	class:perm_ives	access:public
@@ -7962,6 +8167,14 @@ ix_	src/comb/perm-gray-rot1.h	/^    ulong *ix_;  \/\/ inverse permutation$/;"	m	
 ix_	src/comb/perm-st-gray.h	/^    ulong *ix_;  \/\/ inverse permutation$/;"	m	class:perm_st_gray	access:public
 ix_	src/ds/bounding-box.h	/^    Type ix_, ax_;  \/\/ min-x, max-x$/;"	m	class:bounding_box	access:protected
 iy_	src/ds/bounding-box.h	/^    Type iy_, ay_;  \/\/ min-y, max-y$/;"	m	class:bounding_box	access:protected
+j	123	/^j:0,8$/;"	v
+j	123	/^j:1,8$/;"	v
+j	123	/^j:2,8$/;"	v
+j	123	/^j:3,8$/;"	v
+j	123	/^j:4,8$/;"	v
+j	123	/^j:5,8$/;"	v
+j	123	/^j:6,8$/;"	v
+j	123	/^j:7,8$/;"	v
 j	demo/comb/schroeder-tree-demo.cc	/^int m, k, n, p, top, last, r, numtrees, j, sum;$/;"	v
 j	doc/wfl-hilbert-doc.txt	/^    ( B(j-2), B(j+1) )  if  j  even  &  j > 0 ,$/;"	v
 j	doc/wfl-hilbert-doc.txt	/^    j = yarg(compo(inver(branch[l+1].edge), node) & p2d1);$/;"	v
@@ -7970,7 +8183,24 @@ j	doc/wfl-hilbert-doc.txt	/^Example: assuming  d > 3 , along the canonical path 
 j	doc/wfl-hilbert-doc.txt	/^The next digit of  n  is  2 ; at pace  j = 2  of Gray path  A  is node  3$/;"	v
 j	doc/wfl-hilbert-doc.txt	/^by  B(j) .  Given  j , consider the edge-pair --- relative to its base, and$/;"	v
 j	doc/wfl-hilbert-doc.txt	/^j+2 = 12  with  i = 2 .  The square lies in plane  [?, 1, ?, 1, 0, ..., 0] .$/;"	v
+j	src/chirpzt/fftfract.o	/^/;"	v
+j	src/chirpzt/fftfract.o	/^ELF/;"	v
 j	src/comb/paren-gray.h	/^    ulong n, j;$/;"	m	class:paren_gray	access:private
+j	src/convolution/fhtcnvla.o	/^/;"	v
+j	src/dctdst/dct4.o	/^/;"	v
+j	src/fft/fftdit4.o	/^ELF/;"	v
+j	src/fft/fhtfft.o	/^/;"	v
+j	src/fht/fhtspect.o	/^/;"	v
+j	src/fht/twodimfht.o	/^/;"	v
+j	src/realfft/realfftbyfht.o	/^/;"	v
+j2	123	/^j2:0000,0000,0000,0000,0000,0000,0000,0001$/;"	v
+j2	123	/^j2:0000,0000,0000,0000,0000,0000,0000,0010$/;"	v
+j2	123	/^j2:0000,0000,0000,0000,0000,0000,0000,0100$/;"	v
+j2	123	/^j2:0000,0000,0000,0000,0000,0000,0000,1000$/;"	v
+j2	123	/^j2:0000,0000,0000,0000,0000,0000,0001,0000$/;"	v
+j2	123	/^j2:0000,0000,0000,0000,0000,0000,0010,0000$/;"	v
+j2	123	/^j2:0000,0000,0000,0000,0000,0000,0100,0000$/;"	v
+j2	123	/^j2:0000,0000,0000,0000,0000,0000,1000,0000$/;"	v
 j2_	src/bits/bit-necklace.h	/^    ulong j2_;  \/\/ bit representing j: j2==2**(j-1)$/;"	m	class:bit_necklace	access:public
 j_	src/bits/bit-necklace.h	/^    ulong j_;   \/\/ period of the necklace$/;"	m	class:bit_necklace	access:public
 j_	src/bpol/mersenne-coprime.h	/^    umod_t j_;   \/\/ current index 1 <= j <= 2**e - 1$/;"	m	class:mersenne_coprime	access:public
@@ -8024,12 +8254,15 @@ jump_to_step	src/comb/wfl-hilbert.h	/^    ulong jump_to_step(ulong new_step)$/;"
 k	demo/comb/mset-perm-lex-rec-demo.cc	/^ulong k;    \/\/ number of different sorts of objects$/;"	v
 k	demo/comb/necklace-gray3-demo.cc	/^long k;  \/\/ k-ary necklaces, k==sigma in the paper$/;"	v
 k	demo/comb/schroeder-tree-demo.cc	/^int m, k, n, p, top, last, r, numtrees, j, sum;$/;"	v
-k	src/bits/print-bin.o	/^ELF/;"	v
+k	src/bpol/normalpoly-dual.o	/^t2/;"	v
 k	src/comb/attic/combination-rec-demo.cc	/^ulong n, k; \/\/ (n choose k)$/;"	v
 k	src/comb/dyck-gray2.h	/^    ulong m, k;  \/\/ m ones (and m*(k-1) zeros)$/;"	m	class:dyck_gray2	access:public
 k	src/ds/attic/coroutine-paren-demo.cc	/^    typedef struct { int i,s,k,t; } vars;$/;"	m	struct:paren::__anon2	file:	access:public
 k	src/ds/centered-array2d.h	/^    long k;$/;"	m	class:centered_array2d	access:private
 k	src/ds/centered-array3d.h	/^    long k;$/;"	m	class:centered_array3d	access:private
+k	src/fft/fftdif4.o	/^ELF/;"	v
+k	src/graph/mk-fibrep-gray-digraph.o	/^/;"	v
+k	src/graph/mk-paren-gray-digraph.o	/^k/;"	v
 k	src/perm/attic/partition.h	/^    int k;$/;"	m	class:partition	access:private
 k2	demo/graph/graph-mtl-demo.cc	/^static ulong k2;$/;"	v	file:
 k_	src/bits/bitcombshifts.h	/^    ulong n_, k_;  \/\/ combinations (n choose k)$/;"	m	class:bit_comb_shifts	access:public
@@ -8073,6 +8306,8 @@ k_	src/comb/paren-lex.h	/^    ulong k_;    \/\/ Number of paren pairs$/;"	m	clas
 k_	src/comb/paren.h	/^    ulong k_;    \/\/ Number of paren pairs$/;"	m	class:paren	access:public
 k_	src/comb/subset-gray.h	/^    ulong k_;   \/\/ number of elements in subset$/;"	m	class:subset_gray	access:public
 k_	src/comb/subset-lex.h	/^    ulong k_;   \/\/ index of last element in subset$/;"	m	class:subset_lex	access:public
+kb	src/bpol/bitpol-irred-ben-or.o	/^¸/;"	v
+kb	src/bpol/bitpol-irred-rabin.o	/^¸/;"	v
 kmax_	src/comb/ksubset-gray.h	/^    ulong kmin_, kmax_;  \/\/ kmin <= k <= kmax$/;"	m	class:ksubset_gray	access:public
 kmax_	src/comb/ksubset-rec.h	/^    ulong kmin_, kmax_;  \/\/  k-subsets where kmin<=k<=kma$/;"	m	class:ksubset_rec	access:public
 kmin_	src/comb/ksubset-gray.h	/^    ulong kmin_, kmax_;  \/\/ kmin <= k <= kmax$/;"	m	class:ksubset_gray	access:public
@@ -8216,7 +8451,7 @@ l	doc/wfl-hilbert-doc.txt	/^from  l = 1  upwards, only level  l = 0  requires re
 l	doc/wfl-hilbert-doc.txt	/^remainder vector  [1,1]  at level  l = 1 , using symbol  A  at pace  1  of$/;"	v
 l	src/comb/paren-gray.h	/^    ulong *l, *d, *e;$/;"	m	class:paren_gray	access:private
 l	src/comb/perm-restrpref.h	/^    ulong *l;  \/\/ auxiliary table: links$/;"	m	class:perm_restrpref	access:protected
-l$	src/mod/sqrtmod.o	/^ELF/;"	v
+l	src/graph/mk-fibrep-gray-digraph.o	/^/;"	v
 largest_part	src/comb/partition.h	/^    ulong largest_part()  const$/;"	f	class:partition	access:public	signature:() const
 last	demo/comb/schroeder-tree-demo.cc	/^int m, k, n, p, top, last, r, numtrees, j, sum;$/;"	v
 last	src/bits/bit-rll2.h	/^    void last()$/;"	f	class:bit_rll2	access:public	signature:()
@@ -8649,6 +8884,8 @@ lyngray_dat::rr	src/graph/mk-special-digraphs.h	/^    uchar *rr;  \/\/ rotations
 lyngray_dat::ww	src/graph/mk-special-digraphs.h	/^    ulong *ww;  \/\/ Lyndon words (==sv[] in digraph)$/;"	m	class:lyngray_dat	access:public
 lyngray_dat::~lyngray_dat	src/graph/mk-lyndon-gray-digraph.cc	/^lyngray_dat::~lyngray_dat()$/;"	f	class:lyngray_dat	signature:()
 lyngray_dat::~lyngray_dat	src/graph/mk-special-digraphs.h	/^    ~lyngray_dat();$/;"	p	class:lyngray_dat	access:public	signature:()
+m	bin.s	/^	cmpq	-16(%rsp), %rax	# m, tmp85$/;"	v
+m	bin.s	/^	movq	-16(%rsp), %rax	# m, tmp86$/;"	v
 m	demo/bits/modular-lookup-demo.cc	/^const ulong m = 11;$/;"	v
 m	demo/bits/modular-lookup-demo.cc	/^const ulong m = 37;$/;"	v
 m	demo/bits/modular-lookup-demo.cc	/^const ulong m = 67;$/;"	v
@@ -8657,6 +8894,13 @@ m	demo/graph/graph-debruijn-m-demo.cc	/^ulong m = 0;  \/\/ m-ary De Bruijn graph
 m	demo/graph/sta-graph-acgray-demo.cc	/^ulong m=0;  \/\/ mask = N-1$/;"	v
 m	demo/graph/sta-graph-macgray-demo.cc	/^ulong m=0;  \/\/ mask = N-1$/;"	v
 m	src/comb/dyck-gray2.h	/^    ulong m, k;  \/\/ m ones (and m*(k-1) zeros)$/;"	m	class:dyck_gray2	access:public
+m	src/convolution/fhtcnvla.o	/^/;"	v
+m	src/dctdst/dct4.o	/^/;"	v
+m	src/fft/fhtfft.o	/^/;"	v
+m	src/fht/fht0.o	/^/;"	v
+m	src/fht/fhtspect.o	/^/;"	v
+m	src/fht/twodimfht.o	/^/;"	v
+m	src/realfft/realfftbyfht.o	/^/;"	v
 m0_	src/comb/schroeder-rgs-lex.h	/^    ulong m0_;  \/\/ max of first digit:$/;"	m	class:schroeder_rgs_lex	access:public
 m1_	src/comb/check-mixedradix.h	/^    const ulong *m1_;$/;"	m	class:check_mixedradix	access:public
 m1_	src/comb/mixedradix-colex.h	/^    ulong *m1_;  \/\/ nines (radix minus one) for each digit$/;"	m	class:mixedradix_colex	access:public
@@ -8788,8 +9032,10 @@ m_	src/comb/setpart-rgs-lex.h	/^    ulong *m_;   \/\/ m[k+1] = max(s[0], s[1], .
 m_	src/comb/setpart-rgs-subset-lex.h	/^    ulong *m_;  \/\/ maximum + 1 in prefix (only maitained for m[0, 1, ..., tr])$/;"	m	class:setpart_rgs_subset_lex	access:public
 m_	src/comb/young-tab-rgs.h	/^    ulong m_;   \/\/ number of allowed values for digits (== max height of tableaux)$/;"	m	class:young_tab_rgs	access:public
 m_lowest_one_idx	demo/bits/modular-lookup-demo.cc	/^inline ulong m_lowest_one_idx(ulong x)$/;"	f	signature:(ulong x)
+ma	bin.s	/^	movq	%rdx, (%rsp)	# ma, ma$/;"	v
+ma	bin.s	/^	movq	(%rsp), %rax	# ma, tmp87$/;"	v
 ma_	src/perm/attic/cycles.h	/^    ulong ma_, mi_; \/\/ max\/min length of cycles$/;"	m	class:cycles	access:public
-main	a.cc	/^int main(int argc,char** argv)$/;"	f	signature:(int argc,char** argv)
+main	a.cc	/^int main()$/;"	f	signature:()
 main	demo/arith/briggs-log-demo.cc	/^main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
 main	demo/arith/cayley-dickson-demo.cc	/^main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
 main	demo/arith/cordic-circ-demo.cc	/^main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
@@ -9698,6 +9944,10 @@ mersenne_walsh_nn	doc/walsh-doc.txt	/^inline void mersenne_walsh_nn(double *a, u
 mersenne_walsh_nn	src/walsh/mers-walsh.h	/^inline void mersenne_walsh_nn(double *a, ulong f0)$/;"	f	signature:(double *a, ulong f0)
 mfact_	src/bpol/gf2n.cc	/^factorization GF2n::mfact_;  \/\/ factorization of max order$/;"	m	class:GF2n	file:
 mfact_	src/bpol/gf2n.h	/^    static factorization mfact_;  \/\/ factorization of max order$/;"	m	class:GF2n	access:public
+mi	bin.s	/^	movq	%rsi, 8(%rsp)	# mi, mi$/;"	v
+mi	bin.s	/^	movq	8(%rsp), %rax	# mi, tmp86$/;"	v
+mi	bin.s	/^	movq	8(%rsp), %rax	# mi, tmp90$/;"	v
+mi	bin.s	/^	subq	8(%rsp), %rax	# mi, D.2909$/;"	v
 mi	src/comb/print-vec.cc	/^static const ulong mi = ARRAY_LEN(sym) - 2;$/;"	v	file:
 mi_	src/comb/cayley-perm.h	/^    ulong mi_;  \/\/ minimum value of max digit (== min value of m_)$/;"	m	class:cayley_perm	access:public
 mi_	src/comb/composition-nz-min.h	/^    ulong mi_;  \/\/ all parts <= mi$/;"	m	class:composition_nz_min	access:public
@@ -10625,8 +10875,10 @@ n	src/comb/paren-gray.h	/^    ulong n, j;$/;"	m	class:paren_gray	access:private
 n	src/comb/perm-restrpref.h	/^    ulong n;   \/\/ number of elements to permute$/;"	m	class:perm_restrpref	access:protected
 n	src/comb/word-stats.h	/^    ulong n;    \/\/ Number of digits$/;"	m	class:word_stats	access:private
 n	src/ds/attic/coroutine-paren-demo.cc	/^    int n;$/;"	m	class:paren	file:	access:protected
+n	src/fht/fhtdif2.o	/^¤/;"	v
 n	src/fht/fhtmayer.txt	/^int n;$/;"	v
 n	src/perm/attic/partition.h	/^    int n;$/;"	m	class:partition	access:private
+n	src/perm/perminvert.o	/^XK‘Ÿ/;"	v
 n01	src/bits/print-bin.cc	/^static const char n01[] = {'.', '1'};$/;"	v	file:
 n01	src/comb/print-set.cc	/^static const char n01[] = {'.', '1'};$/;"	v	file:
 n01pm	src/bits/print-bindiff.cc	/^static const char n01pm[] = {'.', '1', '+', '-'};$/;"	v	file:
@@ -11679,6 +11931,7 @@ nx_	src/ds/array3d.h	/^    ulong nx_, ny_, nz_;  \/\/ dimensions$/;"	m	class:arr
 ny_	src/ds/array3d.h	/^    ulong nx_, ny_, nz_;  \/\/ dimensions$/;"	m	class:array3d	access:protected
 nz_	src/comb/setpart-ck-rgs.h	/^    ulong *nz_; \/\/ ordered list of non-zero digits in a[0,1,...,m-1]$/;"	m	class:setpart_ck_rgs	access:public
 nz_	src/ds/array3d.h	/^    ulong nx_, ny_, nz_;  \/\/ dimensions$/;"	m	class:array3d	access:protected
+o	src/graph/print-path.o	/^/;"	v
 o	src/mod/mersenne-factors.o	/^/;"	v
 objects	fxt.lsm	/^                subsets, multisets, Gray codes, Catalan objects, necklaces, Lyndon words.$/;"	v
 odd2lower	doc/perm-doc.txt	/^inline void odd2lower(Type *f, ulong n);$/;"	p	file:	signature:(Type *f, ulong n)
@@ -11688,6 +11941,7 @@ oddq	src/comb/composition-nz-gray.h	/^    bool oddq(ulong x)  const  { return  0
 oddq	src/comb/composition-nz-gray2.h	/^    bool oddq(ulong x)  const  { return  0 != ( x & 1UL ); }$/;"	f	class:composition_nz_gray2	access:protected	signature:(ulong x) const
 off_range_q	src/aux0/attic/range.h	/^static inline bool off_range_q(Type x, Type xmin, Type xmax)$/;"	f	signature:(Type x, Type xmin, Type xmax)
 offset_copy	src/aux2/attic/copy2d.h	/^void offset_copy(const Type1 *const*src, ulong nrs, ulong ncs,$/;"	f	signature:(const Type1 *const*src, ulong nrs, ulong ncs, Type2 **dst, ulong nrd, ulong ncd, ulong coff=0, ulong roff=0)
+oi	src/mod/modinfo.o	/^./;"	v
 once	doc/wfl-hilbert-doc.txt	/^        neighbours, and visiting each node just once;$/;"	v
 one	src/bpol/gf2n.cc	/^GF2n GF2n::one;  \/\/ one (neutral element wrt. multiplication) in GF(2**n)$/;"	m	class:GF2n	file:
 one	src/bpol/gf2n.h	/^    static GF2n one;  \/\/ one (neutral element wrt. multiplication) in GF(2**n)$/;"	m	class:GF2n	access:public
@@ -12157,8 +12411,12 @@ outer_z_right	src/ds/vector2d.h	/^inline Type outer_z_right(const vector2d<Type>
 p	demo/comb/combination-rec-demo.cc	/^ulong *p;  \/\/ composition$/;"	v
 p	demo/comb/composition-gray-rec-demo.cc	/^ulong *p;  \/\/ composition data (Kp elements)$/;"	v
 p	demo/comb/schroeder-tree-demo.cc	/^int m, k, n, p, top, last, r, numtrees, j, sum;$/;"	v
-p	src/bpol/gf2n.o	/^/;"	v
-p	src/mod/mersenne-exponents.o	/^ELF/;"	v
+p	src/convolution/fftcnvl.o	/^/;"	v
+p	src/convolution/matrixfftcnvla.o	/^/;"	v
+p	src/correlation/fftcorr.o	/^/;"	v
+p	src/perm/perminvert.o	/^/;"	v
+p	src/perm/perminvert.o	/^XK‘Ÿ/;"	v
+p	src/walsh/walsheigen.o	/^/;"	v
 p0_	src/comb/composition-colex2.h	/^    ulong p0_;     \/\/ position of the first nonzero element$/;"	m	class:composition_colex2	access:public
 p1_func	demo/perm/perm-decomp-demo.cc	/^void p1_func(ulong *f, ulong n)$/;"	f	signature:(ulong *f, ulong n)
 p2_func	demo/perm/perm-decomp-demo.cc	/^void p2_func(ulong *f, ulong n)$/;"	f	signature:(ulong *f, ulong n)
@@ -12167,6 +12425,8 @@ p2n	src/bpol/gf2n.cc	/^GF2n::p2n(ulong f)$/;"	f	class:GF2n	signature:(ulong f)
 p2n	src/bpol/gf2n.h	/^    static ulong p2n(ulong f);$/;"	p	class:GF2n	access:public	signature:(ulong f)
 p2n_tab	src/bpol/gf2n.cc	/^ulong GF2n::p2n_tab[BITS_PER_LONG];  \/\/ polynomial to normal$/;"	m	class:GF2n	file:
 p2n_tab	src/bpol/gf2n.h	/^    static ulong p2n_tab[BITS_PER_LONG];  \/\/ polynomial to normal$/;"	m	class:GF2n	access:public
+p8	src/perm/perminvert.o	/^XK‘Ÿ/;"	v
+p9	src/comb/partition-conj.o	/^.?:;nI@–B/;"	v
 p_	src/bpol/all-irredpoly.h	/^    ulong p_;$/;"	m	class:all_irredpoly	access:public
 p_	src/bpol/mersenne-coprime.h	/^    umod_t p_[15];  \/\/ prime factors (OK for e<=128)$/;"	m	class:mersenne_coprime	access:public
 p_	src/comb/ascent-alt-rgs.h	/^    ulong *p_;  \/\/ (prefix) stats: p[d] = number of digits d$/;"	m	class:ascent_alt_rgs	access:public
@@ -13048,6 +13308,7 @@ pct	demo/comb/necklace-cat-demo.cc	/^ulong pct;  \/\/ count pre-necklaces$/;"	v
 pct_	src/graph/digraph-paths.h	/^    ulong pct_;  \/\/ count Paths$/;"	m	class:digraph_paths	access:public
 pdata	src/comb/young-tab-rgs-subset-lex.h	/^    const ulong * pdata()  const  { return st_; }$/;"	f	class:young_tab_rgs_subset_lex	access:public	signature:() const
 pdata	src/comb/young-tab-rgs.h	/^    const ulong * pdata()  const  { return st_; }$/;"	f	class:young_tab_rgs	access:public	signature:() const
+pe	src/mod/modinfo.o	/^./;"	v
 peek	src/aux0/attic/funcemu.h	/^    void peek(Type &x)  { npeek(x, 1); }$/;"	f	class:funcemu	access:public	signature:(Type &x)
 peek	src/aux0/attic/funcemu.h	/^    void peek(Type &x, Type &y) { npeek(y, 1); npeek(x, 2); }$/;"	f	class:funcemu	access:public	signature:(Type &x, Type &y)
 peek	src/aux0/attic/funcemu.h	/^    void peek(Type &x, Type &y, Type &z) { npeek(z, 1); npeek(y, 2); npeek(x, 3); }$/;"	f	class:funcemu	access:public	signature:(Type &x, Type &y, Type &z)
@@ -14199,6 +14460,7 @@ print_base_seq	src/comb/tree-lev-seq-aux.cc	/^tree_lev_seq_aux::print_base_seq(c
 print_base_seq	src/comb/tree-lev-seq-aux.h	/^    void print_base_seq(const char *bla,$/;"	p	class:tree_lev_seq_aux	access:public	signature:(const char *bla, const ulong *a, ulong n, bool dfz=true) const
 print_base_seq	src/comb/tree-lev-seq.h	/^    void print_base_seq(const char *bla, bool dfz=true)  const$/;"	f	class:tree_lev_seq	access:public	signature:(const char *bla, bool dfz=true) const
 print_bin	doc/bits-doc.txt	/^void print_bin(const char *bla, unsigned long long x, ulong pd\/*=0*\/, const char *c01\/*=0*\/);$/;"	p	file:	signature:(const char *bla, unsigned long long x, ulong pd , const char *c01 )
+print_bin	src/bits/print-bin.cc	/^print_bin(const char *bla, ulong x, ulong pd\/*=0*\/, const char *c01\/*=0*\/)$/;"	f	signature:(const char *bla, ulong x, ulong pd , const char *c01 )
 print_bin	src/bits/print-bin.cc	/^print_bin(const char *bla, unsigned long long x, ulong pd\/*=0*\/, const char *c01\/*=0*\/)$/;"	f	signature:(const char *bla, unsigned long long x, ulong pd , const char *c01 )
 print_bin	src/bits/print-bin.h	/^void print_bin(const char *bla, unsigned long long x, ulong pd=0, const char *c01=0);$/;"	p	signature:(const char *bla, unsigned long long x, ulong pd=0, const char *c01=0)
 print_bin_diff	doc/bits-doc.txt	/^void print_bin_diff(const char*bla,$/;"	p	file:	signature:(const char*bla, unsigned long long x1, unsigned long long x2, ulong pd , const char *c01pm )
@@ -14209,6 +14471,9 @@ print_bin_horiz_path	src/graph/attic/debruijngraph.h	/^    void print_bin_horiz_
 print_bin_horiz_path	src/graph/digraph-paths.h	/^    void print_bin_horiz_path()  const$/;"	f	class:digraph_paths	access:public	signature:() const
 print_bin_horiz_path	src/graph/print-path.cc	/^print_bin_horiz_path(const ulong *rv, ulong ng, ulong ngbits, const char *c01\/*=0*\/)$/;"	f	signature:(const ulong *rv, ulong ng, ulong ngbits, const char *c01 )
 print_bin_horiz_path	src/graph/print-path.h	/^void print_bin_horiz_path(const ulong *rv, ulong ng, ulong ngbits, const char *c01=0);$/;"	p	signature:(const ulong *rv, ulong ng, ulong ngbits, const char *c01=0)
+print_bin_l	a.cc	/^void print_bin_l(const char* bla,ulong x)$/;"	f	signature:(const char* bla,ulong x)
+print_bin_l	src/bits/print-bin.cc	/^void print_bin_l(const char *bla,ulong x)$/;"	f	signature:(const char *bla,ulong x)
+print_bin_l	src/bits/print-bin.h	/^void print_bin_l(const char *bla,ulong x);$/;"	p	signature:(const char *bla,ulong x)
 print_bin_path	doc/graph-doc.txt	/^void print_bin_path(const ulong *rv, ulong ng, ulong ngbits);$/;"	p	file:	signature:(const ulong *rv, ulong ng, ulong ngbits)
 print_bin_path	src/graph/attic/debruijngraph.h	/^    void print_bin_path() const$/;"	f	class:debruijn_cycles	access:public	signature:() const
 print_bin_path	src/graph/digraph-paths.h	/^    void print_bin_path() const$/;"	f	class:digraph_paths	access:public	signature:() const
@@ -14571,6 +14836,7 @@ product	src/mod/factor.h	/^    umod_t product() const  { return prod_; }$/;"	f	c
 product_p1	src/comb/mixedradix.h	/^ulong product_p1(const ulong *x, ulong n);$/;"	p	signature:(const ulong *x, ulong n)
 product_p1	src/comb/mixedradix2num.cc	/^product_p1(const ulong *m1, ulong n)$/;"	f	signature:(const ulong *m1, ulong n)
 production	doc/wfl-hilbert-doc.txt	/^  j indexes a <pace> number along a Gray path or production,  0 <= j < 2^d ;$/;"	v
+progbits	bin.s	/^	.section	.debug_str,"MS",@progbits,1$/;"	v
 program	scripts/eval-bench-log.pl	/^$E = 0; # to skip to first program, set to 1 to parse fxt-demos$/;"	v
 program	tags	/^program	scripts\/eval-bench-log.pl	\/^$E = 0; # to skip to first program, set to 1 to parse fxt-demos$\/;"	v$/;"	v
 prpow_	src/mod/factor.h	/^    umod_t prpow_[16];$/;"	m	class:factorization	access:protected
@@ -14615,7 +14881,10 @@ pythag	src/aux0/attic/aux0double.h	/^double pythag(double a, double b);$/;"	p	si
 q	demo/comb/schroeder-tree-demo.cc	/^int Comp[MAX], S[MAX], c[TMAX], q[TMAX], M[TMAX], t[MAX];$/;"	v
 q	demo/perm/perm-decomp-demo.cc	/^static int q = 1;$/;"	v	file:
 q	src/comb/attic/permvisit.h	/^    ulong q;$/;"	m	class:perm_visit	access:protected
+q	src/convolution/fftcnvl.o	/^/;"	v
+q	src/correlation/fftcorr.o	/^/;"	v
 q	src/ds/attic/coroutine-paren-demo.cc	/^    int q;$/;"	m	class:paren	file:	access:protected
+q	src/perm/permcompose.o	/^/;"	v
 qq	demo/comb/perm-involution-naf-demo.cc	/^static bool qq[32];  \/\/ whether element is unused$/;"	v	file:
 qq_	src/graph/attic/debruijngraph.h	/^    ulong *qq_;  \/\/ qq[k] == whether node k has been visited yet$/;"	m	class:debruijn_cycles	access:public
 qq_	src/graph/digraph-paths.h	/^    ulong *qq_;  \/\/ qq[k] == whether node k has been visited yet$/;"	m	class:digraph_paths	access:public
@@ -14650,6 +14919,8 @@ r	demo/comb/mset-perm-lex-rec-demo.cc	/^ulong *r;   \/\/ number of elements '0' 
 r	demo/comb/ntz-gray-demo.cc	/^ulong r;     \/\/ Forbidden substrings are [r, x] where x!=0$/;"	v
 r	demo/comb/pellgen-gray-demo.cc	/^ulong r;     \/\/ Forbidden substrings are [r, x] where x!=0$/;"	v
 r	demo/comb/schroeder-tree-demo.cc	/^int m, k, n, p, top, last, r, numtrees, j, sum;$/;"	v
+r	libfxt.a	/^/;"	v
+r	src/bpol/normalpoly-dual.o	/^t/;"	v
 r_	src/comb/check-kpermgen.h	/^    ulong *r_;  \/\/ for reversed permutations$/;"	m	class:check_kpermgen	access:public
 r_	src/comb/check-permgen.h	/^    ulong *r_;  \/\/ for reversed permutations$/;"	m	class:check_permgen	access:public
 r_	src/comb/combination-chase.h	/^    ulong r_;  \/\/ aux$/;"	m	class:combination_chase	access:public
@@ -14791,6 +15062,74 @@ rarray::sort	src/ds/attic/rarray.h	/^    void sort()  { ::quick_sort(x_, n_); }$
 rarray::unique	src/ds/attic/rarray.h	/^    void unique()  { sort();  ::unique(x_, n_); }$/;"	f	class:rarray	access:public	signature:()
 rarray::x_	src/ds/attic/rarray.h	/^    Type  *x_;  \/\/ data$/;"	m	class:rarray	access:public
 rarray::~rarray	src/ds/attic/rarray.h	/^    ~rarray()  { delete [] x_; }$/;"	f	class:rarray	access:public	signature:()
+rax	bin.s	/^	addq	%rax, %rdx	# tmp118, D.2905$/;"	v
+rax	bin.s	/^	addq	%rax, %rdx	# tmp99, D.2900$/;"	v
+rax	bin.s	/^	addq	%rax, 16(%rsp)	# tmp90, x$/;"	v
+rax	bin.s	/^	andq	%rax, %rdx	# tmp108, D.2905$/;"	v
+rax	bin.s	/^	andq	%rax, %rdx	# tmp114, D.2905$/;"	v
+rax	bin.s	/^	andq	%rax, %rdx	# tmp95, D.2900$/;"	v
+rax	bin.s	/^	movabsq	$1085102592571150095, %rax	#, tmp100$/;"	v
+rax	bin.s	/^	movabsq	$1085102592571150095, %rax	#, tmp119$/;"	v
+rax	bin.s	/^	movabsq	$281470681808895, %rax	#, tmp129$/;"	v
+rax	bin.s	/^	movabsq	$3689348814741910323, %rax	#, tmp114$/;"	v
+rax	bin.s	/^	movabsq	$3689348814741910323, %rax	#, tmp115$/;"	v
+rax	bin.s	/^	movabsq	$3689348814741910323, %rax	#, tmp95$/;"	v
+rax	bin.s	/^	movabsq	$3689348814741910323, %rax	#, tmp96$/;"	v
+rax	bin.s	/^	movabsq	$6148914691236517205, %rax	#, tmp108$/;"	v
+rax	bin.s	/^	movabsq	$6148914691236517205, %rax	#, tmp93$/;"	v
+rax	bin.s	/^	movabsq	$71777214294589695, %rax	#, tmp125$/;"	v
+rax	bin.s	/^	movabsq	$72340172838076673, %rax	#, tmp104$/;"	v
+rax	bin.s	/^	movabsq	$72340172838076673, %rax	#, tmp122$/;"	v
+rax	bin.s	/^	movq	$-1, %rax	#, D.2904$/;"	v
+rax	bin.s	/^	movq	%rax, %rdi	# tmp84,$/;"	v
+rax	bin.s	/^	movq	%rax, %rdi	# tmp88,$/;"	v
+rax	bin.s	/^	movq	%rax, %rdi	# tmp99,$/;"	v
+rax	bin.s	/^	movq	%rax, %rsi	# D.2910,$/;"	v
+rax	bin.s	/^	movq	%rax, %rsi	# D.2911,$/;"	v
+rax	bin.s	/^	movq	%rax, %rsi	# tmp110,$/;"	v
+rax	bin.s	/^	movq	%rax, %rsi	# tmp111,$/;"	v
+rax	bin.s	/^	movq	%rax, %rsi	# tmp112,$/;"	v
+rax	bin.s	/^	movq	%rax, %rsi	# tmp113,$/;"	v
+rax	bin.s	/^	movq	%rax, %rsi	# tmp114,$/;"	v
+rax	bin.s	/^	movq	%rax, %rsi	# tmp115,$/;"	v
+rax	bin.s	/^	movq	%rax, %rsi	# tmp116,$/;"	v
+rax	bin.s	/^	movq	%rax, -16(%rsp)	# tmp111, x2$/;"	v
+rax	bin.s	/^	movq	%rax, -24(%rsp)	# tmp116, x4$/;"	v
+rax	bin.s	/^	movq	%rax, -32(%rsp)	# tmp120, x8$/;"	v
+rax	bin.s	/^	movq	%rax, -40(%rsp)	# tmp123, ct$/;"	v
+rax	bin.s	/^	movq	%rax, -48(%rsp)	# tmp128, x16$/;"	v
+rax	bin.s	/^	movq	%rax, -56(%rsp)	# tmp132, x32$/;"	v
+rax	bin.s	/^	movq	%rax, -64(%rsp)	# tmp135, w$/;"	v
+rax	bin.s	/^	movq	%rax, -64(%rsp)	# tmp142, w$/;"	v
+rax	bin.s	/^	movq	%rax, -64(%rsp)	# tmp149, w$/;"	v
+rax	bin.s	/^	movq	%rax, -64(%rsp)	# tmp156, w$/;"	v
+rax	bin.s	/^	movq	%rax, -64(%rsp)	# tmp163, w$/;"	v
+rax	bin.s	/^	movq	%rax, -8(%rsp)	# tmp101, x$/;"	v
+rax	bin.s	/^	movq	%rax, -8(%rsp)	# tmp102, x$/;"	v
+rax	bin.s	/^	movq	%rax, -8(%rsp)	# tmp86, x$/;"	v
+rax	bin.s	/^	movq	%rax, -8(%rsp)	# tmp97, x$/;"	v
+rax	bin.s	/^	movq	%rax, 16(%rsp)	# tmp106, x_6$/;"	v
+rax	bin.s	/^	movq	%rax, 16(%rsp)	# tmp89, x$/;"	v
+rax	bin.s	/^	movq	%rax, 24(%rsp)	# tmp103, x_5$/;"	v
+rax	bin.s	/^	movq	%rax, 32(%rsp)	# tmp100, x_4$/;"	v
+rax	bin.s	/^	movq	%rax, 40(%rsp)	# tmp97, x_3$/;"	v
+rax	bin.s	/^	movq	%rax, 48(%rsp)	# tmp94, x_2$/;"	v
+rax	bin.s	/^	movq	%rax, 8(%rsp)	# tmp109, x_7$/;"	v
+rax	bin.s	/^	shrq	$16, %rax	#, D.2910$/;"	v
+rax	bin.s	/^	shrq	$2, %rax	#, D.2900$/;"	v
+rax	bin.s	/^	shrq	$2, %rax	#, D.2905$/;"	v
+rax	bin.s	/^	shrq	$32, %rax	#, D.2910$/;"	v
+rax	bin.s	/^	shrq	$4, %rax	#, D.2900$/;"	v
+rax	bin.s	/^	shrq	$4, %rax	#, D.2905$/;"	v
+rax	bin.s	/^	shrq	$56, %rax	#, D.2901$/;"	v
+rax	bin.s	/^	shrq	$56, %rax	#, tmp123$/;"	v
+rax	bin.s	/^	shrq	$8, %rax	#, D.2910$/;"	v
+rax	bin.s	/^	subq	%rax, -80(%rsp)	# tmp138, i$/;"	v
+rax	bin.s	/^	subq	%rax, -80(%rsp)	# tmp145, i$/;"	v
+rax	bin.s	/^	subq	%rax, -80(%rsp)	# tmp152, i$/;"	v
+rax	bin.s	/^	subq	%rax, -80(%rsp)	# tmp159, i$/;"	v
+rax	bin.s	/^	subq	%rax, -80(%rsp)	# tmp166, i$/;"	v
+rax	bin.s	/^	subq	%rax, 16(%rsp)	# tmp86, x$/;"	v
 rct	demo/comb/fibgray-rec-demo.cc	/^ulong rct;  \/\/ count recursions (==work)$/;"	v
 rct	demo/comb/maxrep-gray-demo.cc	/^ulong rct;  \/\/ count recursions (==work)$/;"	v
 rct	demo/comb/mset-perm-lex-rec-demo.cc	/^ulong rct;  \/\/ count recursions$/;"	v
@@ -14801,6 +15140,21 @@ rct	src/comb/attic/combination-rec-demo.cc	/^ulong rct;  \/\/ count recursions (
 rct_	src/comb/combination-rec.h	/^    ulong rct_;  \/\/ count recursions (==work)$/;"	m	class:comb_rec	access:public
 rct_	src/comb/ksubset-rec.h	/^    ulong rct_;  \/\/ count recursions (==work)$/;"	m	class:ksubset_rec	access:public
 rct_	src/comb/mset-perm-lex-rec.h	/^    ulong rct_;  \/\/ count recursions (==work)$/;"	m	class:mset_perm_lex_rec	access:public
+rcx	bin.s	/^	andq	%rcx, %rdx	# D.2905, D.2905$/;"	v
+rcx	bin.s	/^	shrq	$16, %rcx	#, D.2905$/;"	v
+rcx	bin.s	/^	shrq	$8, %rcx	#, D.2905$/;"	v
+rdx	bin.s	/^	andq	%rdx, %rax	# D.2900, D.2900$/;"	v
+rdx	bin.s	/^	andq	%rdx, %rax	# D.2900, tmp101$/;"	v
+rdx	bin.s	/^	andq	%rdx, %rax	# D.2905, tmp120$/;"	v
+rdx	bin.s	/^	imulq	%rdx, %rax	# tmp103, tmp102$/;"	v
+rdx	bin.s	/^	imulq	%rdx, %rax	# tmp121, D.2905$/;"	v
+rdx	bin.s	/^	movabsq	$281470681808895, %rdx	#, tmp131$/;"	v
+rdx	bin.s	/^	movabsq	$71777214294589695, %rdx	#, tmp127$/;"	v
+rdx	bin.s	/^	movq	%rdx, %rcx	# tmp126, D.2905$/;"	v
+rdx	bin.s	/^	movq	%rdx, %rcx	# tmp130, D.2905$/;"	v
+rdx	bin.s	/^	movq	%rdx, %rsi	# D.2909,$/;"	v
+rdx	bin.s	/^	movq	%rdx, (%rsp)	# ma, ma$/;"	v
+rdx	bin.s	/^	subq	%rdx, %rax	# D.2905, tmp111$/;"	v
 read	src/ds/deque.h	/^    ulong read(ulong k, Type & z)  const$/;"	f	class:deque	access:public	signature:(ulong k, Type & z) const
 read	src/ds/ringbuffer.h	/^    ulong read(ulong k, Type &z)  const$/;"	f	class:ringbuffer	access:public	signature:(ulong k, Type &z) const
 read_first	src/ds/deque.h	/^    ulong read_first(Type & z)  const$/;"	f	class:deque	access:public	signature:(Type & z) const
@@ -15134,6 +15488,21 @@ rset::sort	src/ds/attic/rset.h	/^    void sort()  { ::quick_sort(x_, n_); }$/;"	
 rset::unique	src/ds/attic/rset.h	/^    void unique()  { sort();  ::unique(x_, n_); }$/;"	f	class:rset	access:public	signature:()
 rset::x_	src/ds/attic/rset.h	/^    Type  *x_;  \/\/ data$/;"	m	class:rset	access:public
 rset::~rset	src/ds/attic/rset.h	/^    ~rset()  { delete [] x_; }$/;"	f	class:rset	access:public	signature:()
+rsi	bin.s	/^	movq	%rsi, (%rsp)	# x, x$/;"	v
+rsi	bin.s	/^	movq	%rsi, -16(%rsp)	# m, m$/;"	v
+rsi	bin.s	/^	movq	%rsi, -80(%rsp)	# i, i$/;"	v
+rsi	bin.s	/^	movq	%rsi, 8(%rsp)	# mi, mi$/;"	v
+rsp	bin.lst	/^ 106 00c6 4883C408 		addq	$8, %rsp	#,$/;"	v
+rsp	bin.lst	/^ 347 039d 4883C418 		addq	$24, %rsp	#,$/;"	v
+rsp	bin.lst	/^ 374 03ca 4883C418 		addq	$24, %rsp	#,$/;"	v
+rsp	bin.lst	/^ 502 0528 4883C448 		addq	$72, %rsp	#,$/;"	v
+rsp	bin.s	/^	addq	$24, %rsp	#,$/;"	v
+rsp	bin.s	/^	addq	$72, %rsp	#,$/;"	v
+rsp	bin.s	/^	addq	$8, %rsp	#,$/;"	v
+rsp	bin.s	/^	movq	$6, 56(%rsp)	#, x_1$/;"	v
+rsp	bin.s	/^	subq	$24, %rsp	#,$/;"	v
+rsp	bin.s	/^	subq	$72, %rsp	#,$/;"	v
+rsp	bin.s	/^	subq	$8, %rsp	#,$/;"	v
 ruler_func	src/comb/ruler-func.h	/^    explicit ruler_func(ulong n)$/;"	f	class:ruler_func	access:public	signature:(ulong n)
 ruler_func	src/comb/ruler-func.h	/^    ruler_func(const ruler_func&);  \/\/ forbidden$/;"	p	class:ruler_func	access:private	signature:(const ruler_func&)
 ruler_func	src/comb/ruler-func.h	/^class ruler_func$/;"	c
@@ -15200,13 +15569,21 @@ rvo	demo/comb/no1x1-gray-demo.cc	/^ulong *rvo;  \/\/ bits of previous word$/;"	v
 rvo	demo/comb/no1xy1-gray-demo.cc	/^long *rvo;  \/\/ count transitions$/;"	v
 rvo	demo/comb/ntnz-gray-demo.cc	/^ulong *rvo;  \/\/ last string$/;"	v
 rvo	demo/comb/ntz-gray-demo.cc	/^ulong *rvo;  \/\/ last string$/;"	v
+s	bin.s	/^	movq	-8(%rsp), %rax	# s, D.2904$/;"	v
+s	bin.s	/^	movq	-8(%rsp), %rax	# s, tmp139$/;"	v
+s	bin.s	/^	movq	-8(%rsp), %rax	# s, tmp146$/;"	v
+s	bin.s	/^	movq	-8(%rsp), %rax	# s, tmp153$/;"	v
+s	bin.s	/^	movq	-8(%rsp), %rax	# s, tmp160$/;"	v
+s	bin.s	/^	movq	-8(%rsp), %rax	# s, tmp167$/;"	v
 s	demo/bits/debruijn-lookup-demo.cc	/^const ulong s = 32-5;$/;"	v
 s	demo/bits/debruijn-lookup-demo.cc	/^const ulong s = 64-6;$/;"	v
 s	demo/bits/debruijn-lookup-demo.cc	/^const ulong s = 8-3;$/;"	v
 s	demo/perm/swap-blocks-demo.cc	/^const char s[]="01234abcde78wxyzNNN";$/;"	v
+s	src/bits/crc32.o	/^/;"	v
 s	src/comb/attic/subset-monotone.h	/^    ulong s;$/;"	m	class:subset_monotone	access:protected
-s	src/comb/partition-gen.o	/^ELF/;"	v
 s	src/ds/attic/coroutine-paren-demo.cc	/^    typedef struct { int i,s,k,t; } vars;$/;"	m	struct:paren::__anon2	file:	access:public
+s	src/fht/fht0.o	/^ELF/;"	v
+s	src/fht/fhtdif.o	/^˜$/;"	v
 s0	src/perm/perminvert.cc	/^static const ulong s0 = ~s1;  \/\/ all bits but tag bit$/;"	v	file:
 s1	src/fft/fft8difcore.cc	107;"	d	file:
 s1	src/fft/fft8difcore.cc	125;"	d	file:
@@ -16381,13 +16758,20 @@ sync_x	src/comb/attic/combminchange.h	/^    void sync_x()$/;"	f	class:comb_minch
 sync_x	src/comb/attic/compositionalt.h	/^    void sync_x()  \/\/ aux$/;"	f	class:composition_alt	access:public	signature:()
 sync_x	src/comb/attic/subsetdebruijn.h	/^    void sync_x()$/;"	f	class:subset_debruijn	access:protected	signature:()
 sync_x	src/comb/subset-debruijn.h	/^    void sync_x()$/;"	f	class:subset_debruijn	access:protected	signature:()
-t	bin	/^@/;"	v
 t	demo/comb/schroeder-tree-demo.cc	/^int Comp[MAX], S[MAX], c[TMAX], q[TMAX], M[TMAX], t[MAX];$/;"	v
 t	demo/seq/A278479-demo.cc	/^    ulong t;$/;"	m	class:triang_num	file:	access:private
-t	src/bpol/bitpol2lhca.o	/^/;"	v
-t	src/comb/partition-conj.o	/^óÃ„/;"	v
+t	src/bpol/gf2n-minpoly.o	/^H‹D$H1D$(HÑd$ HÁd$HƒD$H‹D$H/;"	v
+t	src/comb/partition-conj.o	/^¸/;"	v
+t	src/convolution/fhtcnvla.o	/^/;"	v
+t	src/dctdst/dct4.o	/^/;"	v
 t	src/ds/attic/coroutine-paren-demo.cc	/^    typedef struct { int i,s,k,t; } vars;$/;"	m	struct:paren::__anon2	file:	access:public
-t	src/mod/maxorder.o	/^€/;"	v
+t	src/fft/fhtfft.o	/^/;"	v
+t	src/fht/fhtspect.o	/^/;"	v
+t	src/fht/twodimfht.o	/^/;"	v
+t	src/graph/digraph-paths.o	/^*«/;"	v
+t	src/mod/quadresidue.o	/^/;"	v
+t	src/mod/rabinmiller.o	/^x/;"	v
+t	src/realfft/realfftbyfht.o	/^/;"	v
 t1_	src/ds/attic/priorityqueue1.h	/^    Type1 *t1_;  \/\/ time:   t1[1..s]  one-based array!$/;"	m	class:priority_queue1	access:public
 t1_	src/ds/priorityqueue.h	/^    Type1 *t1_;  \/\/ time:   t1[1..s]  one-based array!$/;"	m	class:priority_queue	access:public
 t_	src/aux0/attic/funcemu.h	/^    ulong *t_;  \/\/ sTate stack$/;"	m	class:funcemu	access:public
@@ -16503,6 +16887,37 @@ timediff	src/aux0/attic/timer.h	/^inline double timediff(timeval &x, timeval &y)
 tiny_factors_tab	src/bits/tinyfactors.cc	/^extern const ulong tiny_factors_tab[BITS_PER_LONG] =$/;"	v
 tm_	src/bits/thue-morse.h	/^    ulong tm_;$/;"	m	class:thue_morse	access:public
 tmp	scripts/mkcompl.sh	/^    cp $CNAME \/tmp;$/;"	v
+tmp100	bin.s	/^	movq	%rax, 32(%rsp)	# tmp100, x_4$/;"	v
+tmp103	bin.s	/^	imulq	%rdx, %rax	# tmp103, tmp102$/;"	v
+tmp103	bin.s	/^	movq	%rax, 24(%rsp)	# tmp103, x_5$/;"	v
+tmp106	bin.s	/^	movq	%rax, 16(%rsp)	# tmp106, x_6$/;"	v
+tmp108	bin.s	/^	andq	%rax, %rdx	# tmp108, D.2905$/;"	v
+tmp109	bin.s	/^	movq	%rax, 8(%rsp)	# tmp109, x_7$/;"	v
+tmp110	bin.s	/^	movq	%rax, %rsi	# tmp110,$/;"	v
+tmp111	bin.s	/^	movq	%rax, %rsi	# tmp111,$/;"	v
+tmp112	bin.s	/^	movq	%rax, %rsi	# tmp112,$/;"	v
+tmp113	bin.s	/^	movq	%rax, %rsi	# tmp113,$/;"	v
+tmp114	bin.s	/^	andq	%rax, %rdx	# tmp114, D.2905$/;"	v
+tmp114	bin.s	/^	movq	%rax, %rsi	# tmp114,$/;"	v
+tmp115	bin.s	/^	movq	%rax, %rsi	# tmp115,$/;"	v
+tmp116	bin.s	/^	movq	%rax, %rsi	# tmp116,$/;"	v
+tmp118	bin.s	/^	addq	%rax, %rdx	# tmp118, D.2905$/;"	v
+tmp121	bin.s	/^	imulq	%rdx, %rax	# tmp121, D.2905$/;"	v
+tmp126	bin.s	/^	movq	%rdx, %rcx	# tmp126, D.2905$/;"	v
+tmp130	bin.s	/^	movq	%rdx, %rcx	# tmp130, D.2905$/;"	v
+tmp136	bin.s	/^	movl	%eax, %eax	# tmp136, tmp135$/;"	v
+tmp143	bin.s	/^	movzwl	%ax, %eax	# tmp143, tmp142$/;"	v
+tmp150	bin.s	/^	movzbl	%al, %eax	# tmp150, tmp149$/;"	v
+tmp84	bin.s	/^	movq	%rax, %rdi	# tmp84,$/;"	v
+tmp86	bin.s	/^	subq	%rax, 16(%rsp)	# tmp86, x$/;"	v
+tmp88	bin.s	/^	movq	%rax, %rdi	# tmp88,$/;"	v
+tmp89	bin.s	/^	movq	%rax, 16(%rsp)	# tmp89, x$/;"	v
+tmp90	bin.s	/^	addq	%rax, 16(%rsp)	# tmp90, x$/;"	v
+tmp94	bin.s	/^	movq	%rax, 48(%rsp)	# tmp94, x_2$/;"	v
+tmp95	bin.s	/^	andq	%rax, %rdx	# tmp95, D.2900$/;"	v
+tmp97	bin.s	/^	movq	%rax, 40(%rsp)	# tmp97, x_3$/;"	v
+tmp99	bin.s	/^	addq	%rax, %rdx	# tmp99, D.2900$/;"	v
+tmp99	bin.s	/^	movq	%rax, %rdi	# tmp99,$/;"	v
 to	doc/wfl-hilbert-doc.txt	/^node  2  decoding to  [0,1] ; set the vector to this.  At pace  1  of the$/;"	v
 to_num	src/comb/mixedradix-colex.h	/^    ulong to_num()  const$/;"	f	class:mixedradix_colex	access:public	signature:() const
 to_num	src/comb/mixedradix-endo-gray.h	/^    ulong to_num()  const$/;"	f	class:mixedradix_endo_gray	access:public	signature:() const
@@ -16664,9 +17079,12 @@ twodim_fht_convolution_core	doc/convolution-doc.txt	/^void twodim_fht_convolutio
 twodim_fht_convolution_core	src/convolution/realconvolution.h	/^void twodim_fht_convolution_core(const double *f, double *g, ulong nr, ulong nc);  \/\/ aux$/;"	p	signature:(const double *f, double *g, ulong nr, ulong nc)
 twodim_fht_convolution_core	src/convolution/twodimfhtcnvl.cc	/^twodim_fht_convolution_core(const double *f, double *g, ulong nr, ulong nc)$/;"	f	signature:(const double *f, double *g, ulong nr, ulong nc)
 twrk_	src/comb/composition-nz-i-smooth.h	/^    ulong twrk_;  \/\/ total work$/;"	m	class:composition_nz_i_smooth	access:public
-u	src/comb/lindenmayer-system.o	/^ELF/;"	v
 u	src/comb/perm-restrpref.h	/^    ulong *u;  \/\/ auxiliary table: undo operations$/;"	m	class:perm_restrpref	access:protected
-u	src/comb/test-gray.o	/^/;"	v
+u	src/fft/columnffts.o	/^/;"	v
+u	src/graph/mk-lyndon-gray-digraph.o	/^H‹D$H‰D$HƒD$H‹D$H;$’À„Àu¹H‹D$HƒÄ ÃH‰|$ØH‰t$ÐH‹D$ÐH‹Å/;"	v
+u	src/graph/mk-mtl-digraph.o	/^ELF/;"	v
+u	src/graph/mk-paren-gray-digraph.o	/^ELF/;"	v
+u	src/perm/permcompose.o	/^ELF/;"	v
 u_	src/comb/composition-nz-upstep.h	/^    ulong u_;   \/\/ maximal allowed up-step$/;"	m	class:composition_nz_upstep	access:public
 u_	src/comb/kperm-lex.h	/^    ulong u_;   \/\/ sort up to position u+1$/;"	m	class:kperm_lex	access:public
 u_unique	doc/sort-doc.txt	/^bool u_unique(const Type *f, ulong n);$/;"	p	file:	signature:(const Type *f, ulong n)
@@ -16738,8 +17156,6 @@ ushort	src/fxttypes.h	/^typedef  unsigned short       ushort;$/;"	t
 utab	src/bits/revbin-upd.h	27;"	d
 utab	src/bits/revbin-upd.h	53;"	d
 uu_	src/graph/lyndon-gray.h	/^    ulong uu_[BITS_PER_LONG];  \/\/ scratch space for sorting neighbors$/;"	m	class:lyndon_gray	access:public
-v	src/bpol/bitpol-normal.o	/^/;"	v
-v	src/comb/fact2perm.o	/^/;"	v
 vGET	src/bmat/bitmat-inverse.cc	35;"	d	file:
 vSET	src/bmat/bitmat-inverse.cc	37;"	d	file:
 v_	src/bpol/gf2n.h	/^    ulong v_;$/;"	m	class:GF2n	access:public
@@ -16894,7 +17310,6 @@ visit_	src/comb/ksubset-rec.h	/^    void (*visit_)(const ksubset_rec &, ulong);$
 visit_	src/comb/ksubset-twoclose.h	/^    void (*visit_)(const ksubset_twoclose &);$/;"	m	class:ksubset_twoclose	access:public
 visit_	src/comb/mset-perm-lex-rec.h	/^    void (*visit_)(const mset_perm_lex_rec &);  \/\/ function to call with each permutation$/;"	m	class:mset_perm_lex_rec	access:public
 visit_	src/comb/perm-rec.h	/^    void (*visit_)(const perm_rec &);  \/\/ function to call with each permutation$/;"	m	class:perm_rec	access:public
-vjL	src/comb/fact2perm-rev.o	/^ELF/;"	v
 vld_	src/comb/mixedradix-restrpref.h	/^    bool vld_;   \/\/ whether current word is valid$/;"	m	class:mixedradix_restrpref	access:public
 vn_	src/graph/digraph.h	/^    ulong *vn_;  \/\/ optional: sorted values for nodes$/;"	m	class:digraph	access:public
 vpop	demo/ds/queue-demo.cc	/^vpop(queue<ulong> &f)$/;"	f	file:	signature:(queue<ulong> &f)
@@ -16908,6 +17323,16 @@ vv	demo/bits/bitdemos.h	/^const char *vv[] =$/;"	v
 vv	demo/bits/bitsubset-demo.cc	/^const char *vv[] =$/;"	v
 vv	demo/bits/bitsubset-gray-demo.cc	/^const char *vv[] =$/;"	v
 vv	demo/bits/bitsubset-shift-demo.cc	/^const char *vv[] =$/;"	v
+w	bin.s	/^	movq	-64(%rsp), %rax	# w, tmp137$/;"	v
+w	bin.s	/^	movq	-64(%rsp), %rax	# w, tmp138$/;"	v
+w	bin.s	/^	movq	-64(%rsp), %rax	# w, tmp144$/;"	v
+w	bin.s	/^	movq	-64(%rsp), %rax	# w, tmp145$/;"	v
+w	bin.s	/^	movq	-64(%rsp), %rax	# w, tmp151$/;"	v
+w	bin.s	/^	movq	-64(%rsp), %rax	# w, tmp152$/;"	v
+w	bin.s	/^	movq	-64(%rsp), %rax	# w, tmp158$/;"	v
+w	bin.s	/^	movq	-64(%rsp), %rax	# w, tmp159$/;"	v
+w	bin.s	/^	movq	-64(%rsp), %rax	# w, tmp165$/;"	v
+w	bin.s	/^	movq	-64(%rsp), %rax	# w, tmp166$/;"	v
 w	src/ntt/attic/nttndim.cc	/^static mod *w;  \/\/ workspace$/;"	v	file:
 w_	src/bits/bit-rll2.h	/^    ulong w_;  \/\/ RLL-word$/;"	m	class:bit_rll2	access:public
 w_	src/bpol/fcsr.h	/^    ulong w_;     \/\/ word of the SRS,  1 <= w <= mask$/;"	m	class:fcsr	access:public
@@ -17196,26 +17621,61 @@ write_tail	src/comb/partition-odd-nonsquashing-desc.h	/^    ulong write_tail(ulo
 write_tail	src/comb/partition-strongly-decr-desc.h	/^    ulong write_tail(ulong s, ulong j)$/;"	f	class:partition_strongly_decr_desc	access:private	signature:(ulong s, ulong j)
 wrk_	src/comb/composition-nz-i-smooth.h	/^    ulong wrk_;   \/\/ work with last call of next()$/;"	m	class:composition_nz_i_smooth	access:public
 ww	src/graph/mk-special-digraphs.h	/^    ulong *ww;  \/\/ Lyndon words (==sv[] in digraph)$/;"	m	class:lyngray_dat	access:public
+x	bin.s	/^	andq	-8(%rsp), %rax	# x, D.2900$/;"	v
+x	bin.s	/^	movq	%rdi, (%rsp)	# x, x$/;"	v
+x	bin.s	/^	movq	%rdi, 16(%rsp)	# x, x$/;"	v
+x	bin.s	/^	movq	%rsi, (%rsp)	# x, x$/;"	v
+x	bin.s	/^	movq	(%rsp), %rax	# x, tmp90$/;"	v
+x	bin.s	/^	movq	(%rsp), %rax	# x, tmp91$/;"	v
+x	bin.s	/^	movq	(%rsp), %rsi	# x, tmp83$/;"	v
+x	bin.s	/^	movq	-72(%rsp), %rax	# x, tmp107$/;"	v
+x	bin.s	/^	movq	-72(%rsp), %rax	# x, tmp112$/;"	v
+x	bin.s	/^	movq	-72(%rsp), %rax	# x, tmp168$/;"	v
+x	bin.s	/^	movq	-8(%rsp), %rax	# x, D.2908$/;"	v
+x	bin.s	/^	movq	-8(%rsp), %rax	# x, tmp105$/;"	v
+x	bin.s	/^	movq	-8(%rsp), %rax	# x, tmp85$/;"	v
+x	bin.s	/^	movq	-8(%rsp), %rax	# x, tmp92$/;"	v
+x	bin.s	/^	movq	-8(%rsp), %rax	# x, tmp94$/;"	v
+x	bin.s	/^	movq	-8(%rsp), %rax	# x, tmp98$/;"	v
+x	bin.s	/^	movq	-8(%rsp), %rax	# x, tmp99$/;"	v
+x	bin.s	/^	movq	-8(%rsp), %rdx	# x, tmp103$/;"	v
+x	bin.s	/^	movq	16(%rsp), %rax	# x, D.2909$/;"	v
+x	bin.s	/^	movq	16(%rsp), %rax	# x, tmp88$/;"	v
+x	bin.s	/^	xorq	(%rsp), %rax	# x, D.2902$/;"	v
 x	demo/comb/combination-gray-rec-demo.cc	/^ulong *x;  \/\/ elements in combination at x[1] ... x[k]$/;"	v
 x	doc/wfl-hilbert-doc.txt	/^    e' (x) e  =  (el, er)' (x) (el, er)  =  (0, 1(^)(d-1)).$/;"	p	file:	signature:(el, er)
 x	src/bits/kolakoski-seq.h	/^    ulong x, y;$/;"	m	class:kolakoski_seq	access:private
-x	src/bits/print-bitset.o	/^ELF/;"	v
-x	src/bmat/bitmat-mult-mm.o	/^/;"	v
-x	src/bpol/gf2n.o	/^/;"	v
 x	src/comb/attic/permvisit.h	/^    ulong *x;  \/\/ current permutation$/;"	m	class:perm_visit	access:protected
 x	src/comb/attic/subset-monotone.h	/^    ulong *x;$/;"	m	class:subset_monotone	access:protected
 x	src/comb/attic/subsetdebruijn.h	/^    ulong *x;$/;"	m	class:subset_debruijn	access:protected
 x	src/comb/combination-pref.h	/^    ulong x, y;  \/\/ aux$/;"	m	class:combination_pref	access:private
-x	src/comb/mixedradix2num.o	/^ELF/;"	v
+x	src/comb/print-composition-unimodal.o	/^Ò/;"	v
 x	src/comb/subset-debruijn.h	/^    ulong *x;   \/\/ subset as delta set$/;"	m	class:subset_debruijn	access:protected
 x	src/ds/attic/coroutine-paren-demo.cc	/^    int *x;$/;"	m	class:paren	file:	access:protected
 x	src/ds/point2d.h	/^    Type x()  const  { return x_; }$/;"	f	class:point2d	access:public	signature:() const
 x	src/ds/point3d.h	/^    Type x()  const  { return x_; }$/;"	f	class:point3d	access:public	signature:() const
 x	src/ds/vector2d.h	/^    Type x()  const  { return x_; }$/;"	f	class:vector2d	access:public	signature:() const
 x	src/ds/vector3d.h	/^    Type x()  const  { return x_; }$/;"	f	class:vector3d	access:public	signature:() const
+x	src/graph/mk-fibrep-gray-digraph.o	/^/;"	v
 x	src/mod/chebyshev1.cc	126;"	d	file:
 x	src/mod/chebyshev1.cc	93;"	d	file:
 x	src/perm/attic/partition.h	/^    int *x;$/;"	m	class:partition	access:private
+x	src/perm/permcompose.o	/^/;"	v
+x	src/perm/perminvert.o	/^XK‘Ÿ/;"	v
+x16	bin.s	/^	andq	-48(%rsp), %rax	# x16, D.2905$/;"	v
+x16	bin.s	/^	movq	-48(%rsp), %rax	# x16, tmp143$/;"	v
+x16	bin.s	/^	movq	-48(%rsp), %rdx	# x16, tmp130$/;"	v
+x2	bin.s	/^	andq	-16(%rsp), %rax	# x2, D.2905$/;"	v
+x2	bin.s	/^	movq	-16(%rsp), %rax	# x2, tmp113$/;"	v
+x2	bin.s	/^	movq	-16(%rsp), %rax	# x2, tmp164$/;"	v
+x32	bin.s	/^	movq	-56(%rsp), %rax	# x32, tmp136$/;"	v
+x4	bin.s	/^	movq	-24(%rsp), %rax	# x4, tmp117$/;"	v
+x4	bin.s	/^	movq	-24(%rsp), %rax	# x4, tmp118$/;"	v
+x4	bin.s	/^	movq	-24(%rsp), %rax	# x4, tmp157$/;"	v
+x8	bin.s	/^	andq	-32(%rsp), %rax	# x8, D.2905$/;"	v
+x8	bin.s	/^	movq	-32(%rsp), %rax	# x8, tmp150$/;"	v
+x8	bin.s	/^	movq	-32(%rsp), %rdx	# x8, tmp121$/;"	v
+x8	bin.s	/^	movq	-32(%rsp), %rdx	# x8, tmp126$/;"	v
 x_	src/bits/bit-sl-gray.h	/^    ulong x_;   \/\/ Gray code word$/;"	m	class:bit_sl_gray	access:public
 x_	src/bits/bitcombshifts.h	/^    ulong x_;  \/\/ the combination$/;"	m	class:bit_comb_shifts	access:public
 x_	src/bits/bitfibgray.h	/^    ulong x_;  \/\/ current Fibonacci word$/;"	m	class:bit_fibgray	access:public
@@ -17287,6 +17747,24 @@ x_	src/ds/stack.h	/^    Type  *x_;  \/\/ data$/;"	m	class:stack	access:public
 x_	src/ds/vector2d.h	/^    Type x_, y_;$/;"	m	class:vector2d	access:protected
 x_	src/ds/vector3d.h	/^    Type x_, y_, z_;$/;"	m	class:vector3d	access:protected
 x_	src/mod/mod.h	/^    umod_t x_;$/;"	m	class:mod	access:public
+x_1	bin.s	/^	movq	56(%rsp), %rax	# x_1, tmp110$/;"	v
+x_1	bin.s	/^	movq	56(%rsp), %rax	# x_1, tmp92$/;"	v
+x_1	bin.s	/^	movq	56(%rsp), %rax	# x_1, tmp93$/;"	v
+x_1	bin.s	/^	movq	56(%rsp), %rax	# x_1, tmp98$/;"	v
+x_2	bin.s	/^	andq	48(%rsp), %rax	# x_2, tmp97$/;"	v
+x_2	bin.s	/^	movq	48(%rsp), %rax	# x_2, tmp111$/;"	v
+x_3	bin.s	/^	movq	40(%rsp), %rax	# x_3, tmp112$/;"	v
+x_3	bin.s	/^	movq	40(%rsp), %rax	# x_3, tmp99$/;"	v
+x_4	bin.s	/^	andq	32(%rsp), %rax	# x_4, tmp103$/;"	v
+x_4	bin.s	/^	movq	32(%rsp), %rax	# x_4, tmp101$/;"	v
+x_4	bin.s	/^	movq	32(%rsp), %rax	# x_4, tmp113$/;"	v
+x_5	bin.s	/^	andq	24(%rsp), %rax	# x_5, tmp106$/;"	v
+x_5	bin.s	/^	movq	24(%rsp), %rax	# x_5, tmp104$/;"	v
+x_5	bin.s	/^	movq	24(%rsp), %rax	# x_5, tmp114$/;"	v
+x_6	bin.s	/^	andq	16(%rsp), %rax	# x_6, tmp109$/;"	v
+x_6	bin.s	/^	movq	16(%rsp), %rax	# x_6, tmp107$/;"	v
+x_6	bin.s	/^	movq	16(%rsp), %rax	# x_6, tmp115$/;"	v
+x_7	bin.s	/^	movq	8(%rsp), %rax	# x_7, tmp116$/;"	v
 xbits_	src/comb/attic/comblex.h	/^    ulong xbits_;$/;"	m	class:comb_lex	access:public
 xct	demo/comb/fib-alt-gray-demo.cc	/^ulong xct = 0;$/;"	v
 xct	demo/comb/naf-pos-rec-demo.cc	/^ulong xct;   \/\/ count additional (wrt. Gray) transitions$/;"	v
@@ -17322,11 +17800,13 @@ xxo	demo/graph/graph-perm-doubly-adjacent-gray-demo.cc	/^ulong xxo[32];  \/\/ au
 xxo	demo/graph/graph-perm-star-transpositions-demo.cc	/^ulong xxo[32];  \/\/ aux (last permutation)$/;"	v
 xy	doc/wfl-hilbert-doc.txt	/^abbreviating  [x,y]  to  xy , yields the 2-space Hilbert walk$/;"	v
 y	src/bits/kolakoski-seq.h	/^    ulong x, y;$/;"	m	class:kolakoski_seq	access:private
+y	src/chirpzt/slowzt.o	/^ELF/;"	v
 y	src/comb/combination-pref.h	/^    ulong x, y;  \/\/ aux$/;"	m	class:combination_pref	access:private
 y	src/ds/point2d.h	/^    Type y()  const  { return y_; }$/;"	f	class:point2d	access:public	signature:() const
 y	src/ds/point3d.h	/^    Type y()  const  { return y_; }$/;"	f	class:point3d	access:public	signature:() const
 y	src/ds/vector2d.h	/^    Type y()  const  { return y_; }$/;"	f	class:vector2d	access:public	signature:() const
 y	src/ds/vector3d.h	/^    Type y()  const  { return y_; }$/;"	f	class:vector3d	access:public	signature:() const
+y	src/fht/fhtdif.o	/^¸/;"	v
 y_	src/comb/attic/binarydebruijn.h	/^    ulong *x_, *y_, *t_;$/;"	m	class:binary_debruijn	access:public
 y_	src/comb/dyck-pref.h	/^    ulong x_, y_;  \/\/ aux$/;"	m	class:dyck_pref	access:public
 y_	src/comb/dyck-pref2.h	/^    ulong x_, y_;  \/\/ aux$/;"	m	class:dyck_pref2	access:public
@@ -17423,11 +17903,11 @@ yyo	demo/graph/graph-perm-star-transpositions-demo.cc	/^ulong yyo[32];  \/\/ aux
 z	demo/comb/perm-restrpref-demo.cc	/^ulong *z;  \/\/ for zero-based permutations$/;"	v
 z	demo/seq/A003043-demo.cc	/^ulong *z;$/;"	v
 z	demo/seq/A178514-demo.cc	/^ulong z[32];$/;"	v
-z	src/bpol/gf2n.o	/^/;"	v
+z	src/aux0/version.o	/^/;"	v
 z	src/comb/lyndon-words.h	/^    ulong z;  \/\/ last (largest) letter$/;"	m	class:lyndon_words	access:protected
-z	src/comb/num-necklaces.o	/^/;"	v
 z	src/ds/point3d.h	/^    Type z()  const  { return z_; }$/;"	f	class:point3d	access:public	signature:() const
 z	src/ds/vector3d.h	/^    Type z()  const  { return z_; }$/;"	f	class:vector3d	access:public	signature:() const
+z	src/fft/slowft.o	/^/;"	v
 z_	src/comb/arrangement-rgs.h	/^    ulong *z_;  \/\/ 1 + number of nonzero digits in prefix$/;"	m	class:arrangement_rgs	access:public
 z_	src/comb/involution-zero-map-rgs.h	/^    ulong *z_;  \/\/ for non-zero values y: number of x with f(x)=y$/;"	m	class:involution_zero_map_rgs	access:public
 z_	src/comb/setpart-s-zero-map-rgs.h	/^    ulong *z_;  \/\/ for non-zero values y: number of x with f(x)=y$/;"	m	class:setpart_s_zero_map_rgs	access:public
@@ -17468,6 +17948,8 @@ zorder_prev	src/bits/zorder.h	/^static inline void zorder_prev(ulong &x, ulong &
 zq	demo/comb/fibgray-rec-demo.cc	/^bool zq;    \/\/ order: 0==>Lex  1==>Gray$/;"	v
 zq	demo/comb/maxrep-gray-demo.cc	/^bool zq;    \/\/ order: 0==>Lex  1==>Gray$/;"	v
 zq	demo/comb/pellgray-rec-demo.cc	/^bool zq;    \/\/ order: 0==>Lex,  1==>Gray$/;"	v
+~	src/graph/digraph-paths.o	/^É!/;"	v
+~@	src/fht/fhtdif.o	/^ELF/;"	v
 ~GF2n	src/bpol/gf2n.h	/^    ~GF2n()  { ; }$/;"	f	class:GF2n	access:public	signature:()
 ~acyclic_map	src/comb/acyclic-map.h	/^    ~acyclic_map()$/;"	f	class:acyclic_map	access:public	signature:()
 ~all_compositions_minchange	src/comb/attic/all-compositions-minchange.h	/^    ~all_compositions_minchange()  { delete [] xx_; }$/;"	f	class:all_compositions_minchange	access:public	signature:()

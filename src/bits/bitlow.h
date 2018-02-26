@@ -88,6 +88,7 @@ static inline ulong lowest_one_idx_parity(ulong x)
 static inline ulong lowest_one(ulong x)
 // Return word where only the lowest set bit in x is set.
 // Return 0 if no bit is set.
+// 110 -> 010
 {
 //    if ( 0==x )  return 0;
 //    return  ((x^(x-1)) >> 1) + 1;

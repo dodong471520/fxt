@@ -17,6 +17,7 @@
 static inline ulong highest_one(ulong x)
 // Return word where only the highest bit in x is set.
 // Return 0 if no bit is set.
+// 001010 -> 001000
 {
 #if defined  BITS_USE_ASM
     if ( 0==x )  return 0;
@@ -50,6 +51,7 @@ static inline ulong set_highest_zero(ulong x)
 static inline ulong highest_one_idx(ulong x)
 // Return index of highest bit set.
 // Return 0 if no bit is set.
+// 0001010 -> 3
 {
 #if defined  BITS_USE_ASM
     return  asm_bsr(x);

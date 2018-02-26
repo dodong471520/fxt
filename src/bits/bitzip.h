@@ -1,3 +1,4 @@
+// lidong
 #if !defined HAVE_BITZIP_H__
 #define      HAVE_BITZIP_H__
 // This file is part of the FXT library.
@@ -9,20 +10,28 @@
 
 #include "fxttypes.h"
 #include "bits/bitsperlong.h"
+#include "bits/print-bin.h"
 
 static inline ulong bit_zip(ulong x)
 // Return word with lower half bits in even indices
 //  and upper half bits in odd indices.
+//  1010 -> 10001000
+//  0x100000001 -> 0x3
 {
 #if 1
 
 #  if  BITS_PER_LONG == 64
     x = butterfly_16(x);
+    print_bin_l("\n3 ",x);
 #  endif
     x = butterfly_8(x);
+    print_bin_l("\n4 ",x);
     x = butterfly_4(x);
+    print_bin_l("\n5 ",x);
     x = butterfly_2(x);
+    print_bin_l("\n6 ",x);
     x = butterfly_1(x);
+    print_bin_l("\n7 ",x);
 
 #else
 
@@ -65,6 +74,7 @@ static inline ulong bit_unzip(ulong x)
 // Return word with even indexed bits in lower half
 //  and odd indexed bits in upper half.
 // Inverse of bit_zip()
+// 1a2b3c4d -> 1234abcd
 {
 #if 1
 
@@ -118,10 +128,15 @@ static inline ulong bit_zip0(ulong x)
 
 #  if  BITS_PER_LONG == 64
     x = (x | (x<<16)) & 0x0000ffff0000ffffUL;
+    print_bin_l("\n3 ",x);
     x = (x | (x<<8))  & 0x00ff00ff00ff00ffUL;
+    print_bin_l("\n4 ",x);
     x = (x | (x<<4))  & 0x0f0f0f0f0f0f0f0fUL;
+    print_bin_l("\n5 ",x);
     x = (x | (x<<2))  & 0x3333333333333333UL;
+    print_bin_l("\n6 ",x);
     x = (x | (x<<1))  & 0x5555555555555555UL;
+    print_bin_l("\n7 ",x);
 #  else
     x = (x | (x<<8))  & 0x00ff00ffUL;
     x = (x | (x<<4))  & 0x0f0f0f0fUL;
@@ -199,6 +214,7 @@ static inline ulong bit_unzip0(ulong x)
 static inline void bit_zip2(ulong x, ulong &lo, ulong &hi)
 // Bits of lower half word spread out into even positions of lo,
 // bits of upper half word spread out into even positions of hi.
+// 1234abcd -> 0a0b0c0d,01020304
 {
 #if 1
 
@@ -220,6 +236,7 @@ static inline void bit_zip2(ulong x, ulong &lo, ulong &hi)
 
 static inline ulong bit_unzip2(ulong lo, ulong hi)
 // Inverse of bit_zip2(x, lo, hi).
+// 0a0b0c0d,01020304 -> 1234abcd
 {
 #if 1
     return  bit_unzip( (hi<<1) | lo  );
@@ -232,6 +249,7 @@ static inline ulong bit_unzip2(ulong lo, ulong hi)
 static inline ulong bit_zip2(ulong x, ulong y)
 // 2-word version:
 // only the lower half of x and y are merged
+// abcd,1234 -> 1a2b3c4d
 {
     return  bit_zip( (y<<BPLH) + x );
 }
@@ -240,6 +258,7 @@ static inline ulong bit_zip2(ulong x, ulong y)
 static inline void bit_unzip2(ulong t, ulong &x, ulong &y)
 // 2-word version:
 // only the lower half of x and y are filled
+// 1a2b3c4d -> abcd,1234
 {
     t = bit_unzip(t);
     y = t >> BPLH;

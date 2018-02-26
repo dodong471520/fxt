@@ -1,3 +1,4 @@
+// lidong
 #if !defined HAVE_BRANCHLESS_H__
 #define      HAVE_BRANCHLESS_H__
 // This file is part of the FXT library.
@@ -67,6 +68,7 @@ static inline ulong upos_min(ulong a, ulong b)
 static inline ulong upos_abs_diff(ulong a, ulong b)
 // Return abs(a-b)
 // Both a and b must not have the most significant bit set
+// 90 100 -> 10
 {
 #if 1
     ulong d1 = b - a;
@@ -85,6 +87,7 @@ static inline ulong upos_abs_diff(ulong a, ulong b)
 static inline void upos_sort2(ulong &a, ulong &b)
 // Set {a, b} := {min(a, b), max(a,b)}
 // Both a and b must not have the most significant bit set
+// 30,20 -> 20,30
 {
 #if 1
     ulong d = b - a;
@@ -156,6 +159,8 @@ static inline ushort sub_sat16(ushort a, ushort b)
 static inline long max0(long x)
 // Return max(0, x), i.e. return zero for negative input
 // No restriction on input range
+// 100 ,0 -> 100
+// -100,0 -> 0
 {
     return  x & ~(x >> (BITS_PER_LONG-1));
 }
@@ -164,6 +169,8 @@ static inline long max0(long x)
 static inline long min0(long x)
 // Return min(0, x), i.e. return zero for positive input
 // No restriction on input range
+// 100, 0 -> 0
+// -100,0 -> -100
 {
     return  x & (x >> (BITS_PER_LONG-1));
 }

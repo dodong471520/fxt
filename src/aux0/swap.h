@@ -1,3 +1,4 @@
+// lidong
 #if !defined  HAVE_SWAP_H__
 #define       HAVE_SWAP_H__
 // This file is part of the FXT library.

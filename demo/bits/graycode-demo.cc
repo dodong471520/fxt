@@ -19,7 +19,7 @@ main(int argc, char **argv)
     ulong n = 64;
     NXARG(n, "List extends up to n-1 (n<=256)");
 
-    cout << "      v             gray_code(v)    bits/sorted   inverse_gray_code(v)/parity(v)"
+    cout << "      v             gray_code(v)      inverse_gray_code(v)/parity(v)  bits/sorted "
          << endl;
 
     for (ulong v=0; v<n; ++v)
@@ -35,10 +35,6 @@ main(int argc, char **argv)
         print_bin("", g, 8);
         cout << "     ";
 
-        ulong bc = (1UL<<bit_count(g))-1;
-        print_bin("", bc, 8);
-        cout << "     ";
-
         ulong i = inverse_gray_code(v);
         print_bin("", i, 8);
         cout << " = ";
@@ -46,6 +42,11 @@ main(int argc, char **argv)
 
         cout << "      P= ";
         cout << parity(v);
+        cout << "     ";
+
+        ulong bc = (1UL<<bit_count(g))-1;
+        print_bin("", bc, 8);
+
         cout << endl;
     }
 

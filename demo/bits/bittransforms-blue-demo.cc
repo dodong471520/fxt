@@ -1,3 +1,4 @@
+// lidong
 
 #include "bits/bittransforms.h"
 
@@ -6,6 +7,7 @@
 #include "bits/bitsperlong.h"
 #include "fxttypes.h"
 #include "bits/print-bin.h"
+#include "bits/parity.h"
 
 #include "nextarg.h"
 
@@ -43,6 +45,7 @@ main(int argc, char **argv)
 
         ulong b = blue_code(k);
         print_bin("   b=", b , pns);
+        cout << " " << setw(2) << parity(k);
         cout << " " << setw(2) << bit_count(b);
         cout << ( b == k ? "*" : " ");
 

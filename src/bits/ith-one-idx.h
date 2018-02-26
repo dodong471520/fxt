@@ -1,3 +1,4 @@
+// lidong
 #if !defined  HAVE_ITH_ONE_IDX_H__
 #define       HAVE_ITH_ONE_IDX_H__
 // This file is part of the FXT library.
@@ -15,6 +16,7 @@
 static inline ulong ith_one_idx(ulong x, ulong i)
 // Return index of the i-th set bit of x
 // where 0 <= i < bit_count(x).
+// 110110 , 3 -> 5
 {
 #if  BITS_PER_LONG == 32
     ulong x2 = x - ((x>>1) & 0x55555555UL);                     // 0-2 in 2 bits

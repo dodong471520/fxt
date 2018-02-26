@@ -1,3 +1,4 @@
+// lidong
 
 #include "bits/nextgray.h"
 #include "bits/graycode.h"
@@ -26,6 +27,8 @@ main(int argc, char **argv)
     {
         cout << setw(4) << k;
         print_bin("  ", k , pn);
+
+        print_bin("  ", gray_code(k) , pn);
 
         print_bin("  ", x , pn);
 

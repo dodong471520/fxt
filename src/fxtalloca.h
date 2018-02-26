@@ -1,3 +1,4 @@
+// lidong
 #if !defined  HAVE_FXTALLOCA_H__
 #define       HAVE_FXTALLOCA_H__
 // This file is part of the FXT library.

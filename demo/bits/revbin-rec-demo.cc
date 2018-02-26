@@ -1,3 +1,4 @@
+// lidong
 
 // demo-is-self-contained
 
@@ -14,6 +15,8 @@ void revbin_rec(ulong f, ulong n)
 {
     print_bin("  ", ct, ldn);
     print_bin("  ", f, ldn);
+    print_bin("  ", n, ldn);
+    printf(",%lu",ct);
     cout << endl;
     ++ct;
     for (ulong m=N>>1; m>n; m>>=1)  revbin_rec(f+m, m);

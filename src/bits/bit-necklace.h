@@ -1,3 +1,4 @@
+// lidong
 #if !defined  HAVE_BIT_NECKLACE_H__
 #define       HAVE_BIT_NECKLACE_H__
 // This file is part of the FXT library.
@@ -11,6 +12,8 @@
 #include "bits/bitperiodic.h"  // bit_copy_periodic()
 #include "bits/bithigh.h"  // highest_zero_idx()
 #include "bits/tinyfactors.h"
+#include "bits/print-bin.h"
+#include "fxtio.h"
 
 // Cf. comb/binary-necklace.h for binary necklaces as array
 
@@ -61,6 +64,7 @@ public:
     {
         if ( a_==mm_ )  { first();  return 0; }
 
+        print_bin_l("\ntfb:",tfb_);
         do
         {
 #if 0
@@ -69,14 +73,19 @@ public:
             j_ = n_ - 1;
             ulong jb = 1UL << j_;
             while ( 0!=(a_ & jb) )  { --j_;  jb>>=1; }
+            printf("\nj:%lu,%lu",j_+1,n_);
 #endif
             j2_ = 1UL << j_;
             ++j_;
             a_ |= j2_;
 //            a_ = bit_copy_periodic(a_, j_);  a_ &= mm_;
+            print_bin_l("\nj2:",j2_);
+            print_bin_l("\na:",a_);
             a_ = bit_copy_periodic(a_, j_, n_);
+            print_bin_l("\na:",a_);
         }
         while ( 0==(tfb_ & j2_) );  // necklaces only
+        printf("\n");
 
         return  j_;
     }

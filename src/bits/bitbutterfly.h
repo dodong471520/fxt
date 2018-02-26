@@ -1,3 +1,4 @@
+// lidong
 #if !defined HAVE_BITBUTTERFLY_H__
 #define      HAVE_BITBUTTERFLY_H__
 // This file is part of the FXT library.
@@ -7,6 +8,7 @@
 
 #include "fxttypes.h"
 #include "bits/bitsperlong.h"
+#include "bits/print-bin.h"
 
 
 //: The butterfly_*() functions are used in bit_zip() and bit_unzip()
@@ -78,6 +80,7 @@ static inline ulong butterfly_8(ulong x)
 
 static inline ulong butterfly_4(ulong x)
 // Swap in each block of 16 bits the two central blocks of 4 bits.
+// 0101_1010_0110_1010 -> 0101_0110_1010_1010
 {
 #if BIT_BUTTERFLY_VER == 1
 
@@ -86,10 +89,14 @@ static inline ulong butterfly_4(ulong x)
 #else
     const ulong ml = 0x0f000f00UL;
 #endif
+    // print_bin_l("\n3 ",ml);
     const ulong s = 4;
     const ulong mr = ml >> s;
+    // print_bin_l("\n4 ",mr);
     const ulong t = ((x & ml) >> s ) | ((x & mr) << s );
+    // print_bin_l("\n5 ",t);
     x = (x & ~(ml | mr)) | t;
+    // print_bin_l("\n6 ",x);
     return  x;
 
 #else
@@ -99,9 +106,13 @@ static inline ulong butterfly_4(ulong x)
 #else
     const ulong m = 0x0ff00ff0UL;
 #endif
+    // print_bin_l("\n3 ",m);
     ulong c = x & m;
+    // print_bin_l("\n4 ",c);
     c ^= (c<<4) ^ (c>>4);
+    // print_bin_l("\n5 ",c);
     c &= m;
+    // print_bin_l("\n6 ",c);
     return  x ^ c;
 
 #endif

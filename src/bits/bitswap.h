@@ -1,3 +1,4 @@
+// lidong
 #if !defined HAVE_BITSWAP_H__
 #define      HAVE_BITSWAP_H__
 // This file is part of the FXT library.
@@ -15,6 +16,8 @@ static inline ulong bit_swap_01(ulong a, ulong k1, ulong k2)
 // Bits must have different values (!)
 // (i.e. one is zero, the other one)
 // k1==k2 is allowed (a is unchanged then)
+// 1000,0,3 -> 0001
+// 1001,0,3 -> 0000
 {
     return  a ^ ( (1UL<<k1) ^ (1UL<<k2) );
 }
@@ -24,6 +27,7 @@ static inline ulong bit_swap_01(ulong a, ulong k1, ulong k2)
 static inline ulong bit_swap(ulong a, ulong k1, ulong k2)
 // Return a with bits at positions [k1] and [k2] swapped.
 // k1==k2 is allowed (a is unchanged then)
+// 1000,0,3 -> 0001
 {
 #if 1  // Branch free:
     ulong x = ((a>>k1) ^ (a>>k2)) & 1;  // one if bits differ
@@ -41,6 +45,7 @@ static inline ulong bit_swap(ulong a, ulong k1, ulong k2)
 
 static inline ulong bit_swap_1(ulong x)
 // Return x with neighbor bits swapped.
+// 1010 -> 0101
 {
 #if  BITS_PER_LONG == 32
     ulong m = 0x55555555UL;
@@ -56,6 +61,7 @@ static inline ulong bit_swap_1(ulong x)
 
 static inline ulong bit_swap_2(ulong x)
 // Return x with groups of 2 bits swapped.
+// 1100 -> 0011
 {
 #if  BITS_PER_LONG == 32
     ulong m = 0x33333333UL;
@@ -70,6 +76,7 @@ static inline ulong bit_swap_2(ulong x)
 
 static inline ulong bit_swap_4(ulong x)
 // Return x with groups of 4 bits swapped.
+// 0xf0 -> 0x0f
 {
 #if  BITS_PER_LONG == 32
     ulong m = 0x0f0f0f0fUL;
@@ -84,6 +91,7 @@ static inline ulong bit_swap_4(ulong x)
 
 static inline ulong bit_swap_8(ulong x)
 // Return x with groups of 8 bits swapped.
+// 0xff00 -> 0x00ff
 {
 #if  BITS_PER_LONG == 32
     ulong m = 0x00ff00ffUL;
@@ -102,6 +110,7 @@ static inline ulong bit_swap_16(ulong x)
 //
 // For 32 bit words this is identical to either of
 //   rotate_left(x,16) or rotate_right(x,16)
+//   0xffff0000 -> 0x0000ffff
 {
 #if  BITS_PER_LONG == 32
 //    ulong m = 0x0000ffffUL;
